@@ -71,7 +71,7 @@ export const defaultSiteContent = (): SiteContent => ({
       {
         title: "Meta ads & paid social",
         body: "Creative testing, account structure, and CAPI-led measurement so scaling spend does not scale waste.",
-        img: "https://images.unsplash.com/photo-1611162617474-5b21e879641f?w=900&q=85",
+        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=85",
       },
       {
         title: "Performance creative",
@@ -147,7 +147,7 @@ export const defaultSiteContent = (): SiteContent => ({
       {
         title: "Paid social creative pack",
         category: "Meta · performance creative",
-        img: "https://images.unsplash.com/photo-1611162617474-5b21e879641f?w=800&q=85",
+        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=85",
         href: "#book-call",
       },
       {
