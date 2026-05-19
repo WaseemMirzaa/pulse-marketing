@@ -3,7 +3,7 @@
 const FOXFORM_URL = "https://forms.foxform.app/6sajits67zlv";
 const formUrl =
   process.env.NEXT_PUBLIC_CONTACT_FORM_URL?.trim() ||
-  `${FOXFORM_URL}?v=3`;
+  `${FOXFORM_URL}?v=4`;
 
 export function Contact() {
   return (
@@ -41,7 +41,7 @@ export function Contact() {
               src={formUrl}
               title="Contact PulseLift"
               width="100%"
-              height={600}
+              height={720}
               className="w-full border-0"
               style={{ border: "none" }}
               frameBorder={0}
