@@ -39,8 +39,11 @@ export function Contact() {
             <iframe
               src={formUrl}
               title="Contact PulseLift"
-              className="min-h-[600px] w-full border-0"
+              width="100%"
+              height={600}
+              className="w-full border-0"
               style={{ border: "none" }}
+              frameBorder={0}
               loading="lazy"
             />
           </div>
