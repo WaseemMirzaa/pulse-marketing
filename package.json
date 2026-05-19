@@ -1,9 +1,15 @@
 {
   "name": "pulse-marketing",
   "private": true,
+  "workspaces": ["web"],
   "scripts": {
-    "build": "npm run build --prefix web",
-    "dev": "npm run dev --prefix web",
-    "start": "npm run start --prefix web"
+    "build": "npm run build --workspace=pulse-marketing-web",
+    "dev": "npm run dev --workspace=pulse-marketing-web",
+    "start": "npm run start --workspace=pulse-marketing-web"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
