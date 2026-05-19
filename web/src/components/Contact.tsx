@@ -1,8 +1,9 @@
 "use client";
 
+const FOXFORM_URL = "https://forms.foxform.app/6sajits67zlv";
 const formUrl =
   process.env.NEXT_PUBLIC_CONTACT_FORM_URL?.trim() ||
-  "https://forms.foxform.app/6sajits67zlv";
+  `${FOXFORM_URL}?v=3`;
 
 export function Contact() {
   return (
