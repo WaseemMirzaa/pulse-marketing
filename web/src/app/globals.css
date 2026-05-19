@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page: #f5f4f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-page font-sans text-zinc-800 antialiased;
+}
+
+::selection {
+  @apply bg-lift-soft text-ink;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
