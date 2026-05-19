@@ -36,7 +36,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="#book-call"
             className="rounded-full bg-ink px-6 py-2.5 text-[13px] font-semibold uppercase tracking-wide text-white shadow-card transition hover:bg-zinc-800"
           >
             Book a call
@@ -67,7 +67,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="#book-call"
               className="mt-2 rounded-full bg-ink py-3 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >

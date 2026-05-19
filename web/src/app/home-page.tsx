@@ -10,6 +10,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { Process } from "@/components/Process";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBand } from "@/components/CtaBand";
+import { BookCall } from "@/components/BookCall";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
@@ -29,6 +30,7 @@ export default function HomePage() {
         <Process />
         <Testimonials />
         <CtaBand />
+        <BookCall />
         <Contact />
         <Footer />
         <Chatbot />

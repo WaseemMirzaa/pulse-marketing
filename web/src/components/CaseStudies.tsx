@@ -20,7 +20,7 @@ export function CaseStudies() {
             <p className="mt-4 max-w-xl text-zinc-600 leading-relaxed">{w.intro}</p>
           </div>
           <a
-            href="#contact"
+            href="#book-call"
             className="inline-flex w-fit items-center gap-2 rounded-full border border-zinc-300 bg-paper px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-lift/50 hover:text-lift"
           >
             {w.cta}

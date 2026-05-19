@@ -11,3 +11,4 @@ api/dist
 
 # Optional: keep local CMS edits out of git
 # api/data/site-content.json
+.vercel

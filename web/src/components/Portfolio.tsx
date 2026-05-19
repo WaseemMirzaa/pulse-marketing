@@ -21,7 +21,7 @@ export function Portfolio() {
             <p className="mt-4 max-w-xl text-zinc-600 leading-relaxed">{p.intro}</p>
           </div>
           <Link
-            href="#contact"
+            href="#book-call"
             className="inline-flex w-fit items-center gap-2 rounded-full border border-zinc-300 bg-page px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-lift/50"
           >
             {p.cta}

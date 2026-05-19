@@ -1,6 +1,6 @@
 export type Stat = { value: string; label: string };
 
-export type ServiceItem = { title: string; body: string };
+export type ServiceItem = { title: string; body: string; img: string };
 
 export type PortfolioItem = { title: string; category: string; img: string; href: string };
 
@@ -8,7 +8,7 @@ export type CaseItem = { title: string; tag: string; result: string; img: string
 
 export type ProcessStep = { n: string; title: string; body: string };
 
-export type Quote = { quote: string; name: string; role: string };
+export type Quote = { quote: string; name: string; role: string; avatar: string };
 
 export type SiteContent = {
   version: number;
@@ -33,6 +33,7 @@ export type SiteContent = {
   process: { kicker: string; title: string; intro: string; steps: ProcessStep[] };
   testimonials: { kicker: string; title: string; quotes: Quote[] };
   cta: { kicker: string; title: string; sub: string; button: string };
+  bookCall: { kicker: string; title: string; sub: string; calendlyUrl: string };
 };
 
 export const defaultSiteContent = (): SiteContent => ({
@@ -45,8 +46,8 @@ export const defaultSiteContent = (): SiteContent => ({
     sub: "Meta ads, performance creative, and SEO engineered around pipeline and profit—not slides that age in a week.",
     primaryCta: "Start a project",
     secondaryCta: "View outcomes",
-    heroImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=85",
-    heroImageAlt: "Team collaborating in a modern studio",
+    heroImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=85",
+    heroImageAlt: "Marketing team reviewing campaign performance on screens",
     stats: [
       { value: "3.1×", label: "ROAS" },
       { value: "97%", label: "Retention" },
@@ -70,18 +71,22 @@ export const defaultSiteContent = (): SiteContent => ({
       {
         title: "Meta ads & paid social",
         body: "Creative testing, account structure, and CAPI-led measurement so scaling spend does not scale waste.",
+        img: "https://images.unsplash.com/photo-1611162617474-5b21e879641f?w=900&q=85",
       },
       {
         title: "Performance creative",
         body: "Hooks, angles, and UGC-style packs engineered for thumb-stopping relevance—not awards-show reels.",
+        img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
       },
       {
         title: "SEO & content systems",
         body: "Technical foundations, intent-led clusters, and internal linking that compound traffic over quarters.",
+        img: "https://images.unsplash.com/photo-1432888498266-38ffec068eaf?w=900&q=85",
       },
       {
         title: "Analytics & attribution",
         body: "Clean event schemas, server-side tagging, and dashboards leadership actually uses in weekly reviews.",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=85",
       },
     ],
   },
@@ -108,7 +113,7 @@ export const defaultSiteContent = (): SiteContent => ({
         title: "B2B SaaS pipeline rebuild",
         tag: "Meta + landing",
         result: "61% lower CPL in 90 days",
-        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=85",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85",
         featured: true,
       },
       {
@@ -122,7 +127,7 @@ export const defaultSiteContent = (): SiteContent => ({
         title: "Category SEO takeover",
         tag: "Technical + content",
         result: "Top 3 for 38 money keywords",
-        img: "https://images.unsplash.com/photo-1432888498266-38ffec068eaf?w=900&q=85",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=85",
         featured: false,
       },
     ],
@@ -137,25 +142,25 @@ export const defaultSiteContent = (): SiteContent => ({
         title: "Lifecycle email redesign",
         category: "CRM · retention",
         img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=85",
-        href: "#contact",
+        href: "#book-call",
       },
       {
         title: "Paid social creative pack",
         category: "Meta · performance creative",
         img: "https://images.unsplash.com/photo-1611162617474-5b21e879641f?w=800&q=85",
-        href: "#contact",
+        href: "#book-call",
       },
       {
         title: "Enterprise landing system",
         category: "CRO · landing",
         img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=85",
-        href: "#contact",
+        href: "#book-call",
       },
       {
         title: "Technical SEO migration",
         category: "SEO · engineering",
         img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=85",
-        href: "#contact",
+        href: "#book-call",
       },
     ],
   },
@@ -190,12 +195,14 @@ export const defaultSiteContent = (): SiteContent => ({
           "They replaced three vendors. Our Meta account finally talks to our CRM—and finance trusts the numbers.",
         name: "Jordan M.",
         role: "VP Growth, Series B SaaS",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&q=85",
       },
       {
         quote:
           "SEO was a black box. Now we ship clusters on a cadence and see compounding sessions every quarter.",
         name: "Priya K.",
         role: "CMO, DTC wellness",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&q=85",
       },
     ],
   },
@@ -204,6 +211,12 @@ export const defaultSiteContent = (): SiteContent => ({
     title: "Growth you can defend in a board meeting",
     sub: "Two-week discovery sprints, explicit milestones, and no mystery retainers.",
     button: "Book a strategy call",
+  },
+  bookCall: {
+    kicker: "Book a call",
+    title: "Pick a time that works for you",
+    sub: "30-minute intro to align on goals, stack, and whether PulseLift is the right partner—no generic deck.",
+    calendlyUrl: "https://calendly.com/thepulselyft/30min",
   },
 });
 

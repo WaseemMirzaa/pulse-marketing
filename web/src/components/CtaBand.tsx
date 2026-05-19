@@ -19,7 +19,7 @@ export function CtaBand() {
           </h2>
           <p className="relative mx-auto mt-5 max-w-lg text-zinc-300 leading-relaxed">{c.sub}</p>
           <Link
-            href="#contact"
+            href="#book-call"
             className="relative mt-10 inline-flex rounded-full bg-lift-bright px-10 py-3.5 text-sm font-semibold text-ink shadow-lift transition hover:bg-white"
           >
             {c.button}

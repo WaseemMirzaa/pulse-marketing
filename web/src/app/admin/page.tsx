@@ -286,6 +286,11 @@ export default function AdminPage() {
                     items[i] = { ...items[i], body: v };
                     setContent({ ...content, services: { ...content.services, items } });
                   }} multiline />
+                  <Field label="Image URL" value={it.img ?? ""} onChange={(v) => {
+                    const items = [...content.services.items];
+                    items[i] = { ...items[i], img: v };
+                    setContent({ ...content, services: { ...content.services, items } });
+                  }} />
                 </div>
               ))}
             </div>
@@ -440,8 +445,19 @@ export default function AdminPage() {
                     quotes[i] = { ...quotes[i]!, role: v };
                     setContent({ ...content, testimonials: { ...content.testimonials, quotes } });
                   }} />
+                  <Field label="Avatar URL" value={content.testimonials.quotes[i]?.avatar ?? ""} onChange={(v) => {
+                    const quotes = [...content.testimonials.quotes];
+                    quotes[i] = { ...quotes[i]!, avatar: v };
+                    setContent({ ...content, testimonials: { ...content.testimonials, quotes } });
+                  }} />
                 </div>
               ))}
+              <hr className="border-zinc-100" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">Book a call</p>
+              <Field label="Kicker" value={content.bookCall?.kicker ?? ""} onChange={(v) => setContent({ ...content, bookCall: { ...(content.bookCall ?? defaultSiteContent().bookCall), kicker: v } })} />
+              <Field label="Title" value={content.bookCall?.title ?? ""} onChange={(v) => setContent({ ...content, bookCall: { ...(content.bookCall ?? defaultSiteContent().bookCall), title: v } })} />
+              <Field label="Sub" value={content.bookCall?.sub ?? ""} onChange={(v) => setContent({ ...content, bookCall: { ...(content.bookCall ?? defaultSiteContent().bookCall), sub: v } })} multiline />
+              <Field label="Calendly URL" value={content.bookCall?.calendlyUrl ?? ""} onChange={(v) => setContent({ ...content, bookCall: { ...(content.bookCall ?? defaultSiteContent().bookCall), calendlyUrl: v } })} />
               <hr className="border-zinc-100" />
               <Field label="CTA kicker" value={content.cta.kicker} onChange={(v) => setContent({ ...content, cta: { ...content.cta, kicker: v } })} />
               <Field label="CTA title" value={content.cta.title} onChange={(v) => setContent({ ...content, cta: { ...content.cta, title: v } })} />

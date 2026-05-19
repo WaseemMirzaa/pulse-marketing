@@ -23,8 +23,11 @@ export class ChatService {
     if (/process|how (do|you) work|engagement/.test(m)) {
       return "We diagnose, ship a growth system (paid + creative + SEO + tracking), then compound weekly with your data. Small senior squad, async-first.";
     }
-    if (/contact|call|meeting|email|reach/.test(m)) {
-      return "Scroll to Contact and send a note—we typically reply within one business day. You can also leave your question here and I will do my best.";
+    if (/book|call|calendly|schedule|meeting/.test(m)) {
+      return "Use the Book a call section on the page to pick a time, or send a note via Contact—we typically reply within one business day.";
+    }
+    if (/contact|email|reach|form/.test(m)) {
+      return "Use the Contact section to submit the form—we typically reply within one business day. You can also leave your question here and I will do my best.";
     }
     if (/who|about (you|pulselift)|team/.test(m)) {
       return "PulseLift is a performance marketing studio focused on measurable revenue—Meta ads, performance creative, and SEO.";
