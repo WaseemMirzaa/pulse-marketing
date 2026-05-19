@@ -1,53 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
-
-const FOXFORM_ID = "6sajits67zlv";
-const FOXFORM_ORIGIN = "https://forms.foxform.app";
-
-function buildFormSrc(redirectUrl: string) {
-  const base = process.env.NEXT_PUBLIC_CONTACT_FORM_URL?.trim() || `${FOXFORM_ORIGIN}/${FOXFORM_ID}`;
-  const url = new URL(base.split("?")[0]);
-  url.searchParams.set("v", "5");
-  url.searchParams.set("redirect", redirectUrl);
-  url.searchParams.set("redirect_url", redirectUrl);
-  url.searchParams.set("success_url", redirectUrl);
-  return url.toString();
-}
+const FOXFORM_URL = "https://forms.foxform.app/6sajits67zlv";
+const formUrl =
+  process.env.NEXT_PUBLIC_CONTACT_FORM_URL?.trim() ||
+  `${FOXFORM_URL}?v=3`;
 
 export function Contact() {
-  const router = useRouter();
-  const [formSrc, setFormSrc] = useState(() => buildFormSrc("/thank-you"));
-
-  useEffect(() => {
-    setFormSrc(buildFormSrc(`${window.location.origin}/thank-you`));
-  }, []);
-
-  useEffect(() => {
-    function onMessage(event: MessageEvent) {
-      if (event.origin !== FOXFORM_ORIGIN) return;
-
-      const data = event.data;
-      const raw = typeof data === "string" ? data : JSON.stringify(data ?? "");
-      if (/submit|complete|success|thank/i.test(raw)) {
-        router.push("/thank-you");
-      }
-
-      if (data && typeof data === "object") {
-        const type = String((data as { type?: string }).type ?? (data as { event?: string }).event ?? "");
-        if (/submit|complete|success/i.test(type)) {
-          router.push("/thank-you");
-        }
-      }
-    }
-
-    window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
-  }, [router]);
-
-  const iframeSrc = useMemo(() => formSrc, [formSrc]);
-
   return (
     <section id="contact" className="scroll-mt-24 bg-page pb-28 pt-4">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -80,15 +38,14 @@ export function Contact() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-paper shadow-card lg:col-span-7">
             <iframe
-              src={iframeSrc}
+              src={formUrl}
               title="Contact PulseLift"
               width="100%"
-              height={720}
+              height={600}
               className="w-full border-0"
               style={{ border: "none" }}
               frameBorder={0}
               loading="lazy"
-              allow="fullscreen"
             />
           </div>
         </div>
