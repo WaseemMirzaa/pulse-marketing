@@ -1,11 +1,31 @@
 "use client";
 
-const FOXFORM_URL = "https://forms.foxform.app/6sajits67zlv";
-const formUrl =
-  process.env.NEXT_PUBLIC_CONTACT_FORM_URL?.trim() ||
-  `${FOXFORM_URL}?v=3`;
+import { useEffect, useRef } from "react";
+
+const JOTFORM_ID = process.env.NEXT_PUBLIC_JOTFORM_ID ?? "261392216292456";
+const JOTFORM_SCRIPT = `https://form.jotform.com/jsform/${JOTFORM_ID}`;
 
 export function Contact() {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = formRef.current;
+    if (!container || container.querySelector("script[data-jotform]")) return;
+
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = JOTFORM_SCRIPT;
+    script.async = true;
+    script.dataset.jotform = JOTFORM_ID;
+
+    container.appendChild(script);
+
+    return () => {
+      script.remove();
+      container.replaceChildren();
+    };
+  }, []);
+
   return (
     <section id="contact" className="scroll-mt-24 bg-page pb-28 pt-4">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -36,18 +56,10 @@ export function Contact() {
               Or book a call directly →
             </a>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-paper shadow-card lg:col-span-7">
-            <iframe
-              src={formUrl}
-              title="Contact PulseLift"
-              width="100%"
-              height={600}
-              className="w-full border-0"
-              style={{ border: "none" }}
-              frameBorder={0}
-              loading="lazy"
-            />
-          </div>
+          <div
+            ref={formRef}
+            className="min-h-[600px] overflow-hidden rounded-2xl border border-zinc-200/90 bg-paper p-4 shadow-card sm:p-6 lg:col-span-7 [&_iframe]:w-full"
+          />
         </div>
       </div>
     </section>
