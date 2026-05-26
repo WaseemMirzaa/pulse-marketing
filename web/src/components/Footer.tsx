@@ -9,7 +9,7 @@ export function Footer() {
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-lift-soft text-sm text-lift ring-1 ring-lift/25">
               P
             </span>
-            Pulse<span className="text-lift">Lift</span>
+            Pulse<span className="text-lift">Lyft</span>
           </p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-600">
             Performance marketing, Meta ads, and SEO for teams who measure twice and scale once.
