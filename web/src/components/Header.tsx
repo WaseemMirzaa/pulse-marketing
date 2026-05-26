@@ -22,7 +22,7 @@ export function Header() {
             <span className="font-display text-sm font-semibold text-lift">P</span>
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-ink">
-            Pulse<span className="text-lift">Lift</span>
+            Pulse<span className="text-lift">Lyft</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">

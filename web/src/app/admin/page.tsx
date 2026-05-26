@@ -10,7 +10,7 @@ import {
   type Stat,
 } from "@/lib/siteContent";
 
-const SESSION_KEY = "pulselift_admin_key";
+const SESSION_KEY = "pulselyft_admin_key";
 const apiBase = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001";
 
 function Field({

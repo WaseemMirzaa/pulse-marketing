@@ -46,7 +46,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mt-14 text-center text-[11px] uppercase tracking-widest text-zinc-400">
-        © {new Date().getFullYear()} PulseLift — demo brand
+        © {new Date().getFullYear()} PulseLyft — demo brand
       </p>
     </footer>
   );

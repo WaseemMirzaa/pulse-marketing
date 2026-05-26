@@ -178,7 +178,7 @@ export const DEFAULT_SITE_CONTENT = {
   bookCall: {
     kicker: "Book a call",
     title: "Pick a time that works for you",
-    sub: "30-minute intro to align on goals, stack, and whether PulseLift is the right partner—no generic deck.",
+    sub: "30-minute intro to align on goals, stack, and whether PulseLyft is the right partner—no generic deck.",
     calendlyUrl: "https://calendly.com/thepulselyft/30min",
   },
 } as const;

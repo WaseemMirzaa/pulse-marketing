@@ -37,7 +37,7 @@ export async function sendContactEmail(payload: ContactPayload): Promise<{ sent:
 
   const to = process.env.CONTACT_TO_EMAIL!;
   const from =
-    process.env.CONTACT_FROM_EMAIL ?? process.env.SMTP_USER ?? "noreply@pulselift.com";
+    process.env.CONTACT_FROM_EMAIL ?? process.env.SMTP_USER ?? "noreply@pulselyft.com";
 
   const companyLine = payload.company ? `\nCompany: ${payload.company}` : "";
 
@@ -45,7 +45,7 @@ export async function sendContactEmail(payload: ContactPayload): Promise<{ sent:
     from,
     to,
     replyTo: payload.email,
-    subject: `PulseLift inquiry — ${payload.name}`,
+    subject: `PulseLyft inquiry — ${payload.name}`,
     text: `Name: ${payload.name}\nEmail: ${payload.email}${companyLine}\n\n${payload.message}`,
     html: `
       <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>

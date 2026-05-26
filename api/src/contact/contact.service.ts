@@ -39,7 +39,7 @@ export class ContactService {
       from,
       to,
       replyTo: dto.email,
-      subject: `PulseLift inquiry — ${dto.name}`,
+      subject: `PulseLyft inquiry — ${dto.name}`,
       text: `Name: ${dto.name}\nEmail: ${dto.email}${companyLine}\n\n${dto.message}`,
     });
 

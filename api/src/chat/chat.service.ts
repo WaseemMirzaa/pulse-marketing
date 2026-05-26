@@ -6,7 +6,7 @@ export class ChatService {
     const m = userMessage.toLowerCase().trim();
 
     if (/hello|hi\b|hey\b|good (morning|afternoon|evening)/.test(m)) {
-      return "Hi — I am the PulseLift assistant. Ask about Meta ads, SEO, pricing, or how to get in touch.";
+      return "Hi — I am the PulseLyft assistant. Ask about Meta ads, SEO, pricing, or how to get in touch.";
     }
     if (/meta|facebook|instagram|paid social|ads\b/.test(m)) {
       return "We run Meta ads with structured creative testing, clean account architecture, and CAPI-friendly measurement. Want a fit call? Use the Contact section or say “contact”.";
@@ -29,8 +29,8 @@ export class ChatService {
     if (/contact|email|reach|form/.test(m)) {
       return "Use the Contact section to submit the form—we typically reply within one business day. You can also leave your question here and I will do my best.";
     }
-    if (/who|about (you|pulselift)|team/.test(m)) {
-      return "PulseLift is a performance marketing studio focused on measurable revenue—Meta ads, performance creative, and SEO.";
+    if (/who|about (you|pulselyft)|team/.test(m)) {
+      return "PulseLyft is a performance marketing studio focused on measurable revenue—Meta ads, performance creative, and SEO.";
     }
     if (m.length < 4) {
       return "Could you add a bit more detail? For example: “Meta ads for B2B SaaS” or “SEO technical audit”.";

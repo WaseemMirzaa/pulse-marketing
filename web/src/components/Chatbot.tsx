@@ -66,7 +66,7 @@ export function Chatbot() {
         >
           <div className="flex items-center justify-between border-b border-zinc-200/90 bg-page px-4 py-3">
             <div>
-              <p className="text-sm font-semibold text-ink">PulseLift assistant</p>
+              <p className="text-sm font-semibold text-ink">PulseLyft assistant</p>
               <p className="text-[11px] text-zinc-500">Answers common questions</p>
             </div>
             <button

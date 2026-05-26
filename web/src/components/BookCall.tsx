@@ -38,7 +38,7 @@ export function BookCall() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-page shadow-card lg:col-span-8">
             <iframe
-              title="Book a call with PulseLift"
+              title="Book a call with PulseLyft"
               src={url}
               className="min-h-[680px] w-full border-0 bg-white"
               loading="lazy"

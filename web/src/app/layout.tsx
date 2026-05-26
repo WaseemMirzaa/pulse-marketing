@@ -15,7 +15,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "PulseLift — Performance Marketing & SEO",
+  title: "PulseLyft — Performance Marketing & SEO",
   description:
     "Meta ads, paid acquisition, and search growth for brands that want measurable revenue—not vanity metrics.",
 };
