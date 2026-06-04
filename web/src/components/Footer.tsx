@@ -32,6 +32,9 @@ export function Footer() {
             <Link href="/admin" className="text-zinc-600 transition hover:text-ink">
               Admin
             </Link>
+            <Link href="/blog" className="text-zinc-600 transition hover:text-ink">
+              Blog
+            </Link>
             <Link href="#contact" className="text-zinc-600 transition hover:text-ink">
               Contact
             </Link>
