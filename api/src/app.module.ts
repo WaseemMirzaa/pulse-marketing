@@ -7,6 +7,10 @@ import { OfferingsModule } from "./offerings/offerings.module";
 import { ChatModule } from "./chat/chat.module";
 import { ContentModule } from "./content/content.module";
 import { LeadsModule } from "./leads/leads.module";
+import { BlogModule } from "./blog/blog.module";
+import { PortfolioModule } from "./portfolio/portfolio.module";
+import { AnalyticsModule } from "./analytics/analytics.module";
+import { SitemapModule } from "./sitemap/sitemap.module";
 
 @Module({
   imports: [
@@ -21,6 +25,10 @@ import { LeadsModule } from "./leads/leads.module";
     ChatModule,
     ContentModule,
     LeadsModule,
+    BlogModule,
+    PortfolioModule,
+    AnalyticsModule,
+    SitemapModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })
