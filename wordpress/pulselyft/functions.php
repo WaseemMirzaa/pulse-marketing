@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '1.2.1' );
+	define( 'PULSELYFT_VERSION', '1.3.0' );
 }
 
 require_once get_template_directory() . '/inc/content.php';
@@ -269,6 +269,7 @@ function pulselyft_handle_contact() {
 	$name    = isset( $_POST['pl_name'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_name'] ) ) : '';
 	$email   = isset( $_POST['pl_email'] ) ? sanitize_email( wp_unslash( $_POST['pl_email'] ) ) : '';
 	$company = isset( $_POST['pl_company'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_company'] ) ) : '';
+	$topic   = isset( $_POST['pl_topic'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_topic'] ) ) : '';
 	$message = isset( $_POST['pl_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['pl_message'] ) ) : '';
 
 	if ( '' === $name || ! is_email( $email ) || '' === $message ) {
@@ -280,10 +281,11 @@ function pulselyft_handle_contact() {
 	$to      = is_email( $to ) ? $to : get_option( 'admin_email' );
 	$subject = sprintf( /* translators: %s: sender name. */ __( 'New enquiry from %s', 'pulselyft' ), $name );
 	$body    = sprintf(
-		"Name: %s\nEmail: %s\nCompany: %s\n\nMessage:\n%s\n",
+		"Name: %s\nEmail: %s\nCompany: %s\nTopic: %s\n\nMessage:\n%s\n",
 		$name,
 		$email,
 		$company,
+		$topic,
 		$message
 	);
 	$headers = array(

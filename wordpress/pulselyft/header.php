@@ -12,7 +12,7 @@ $brand = pulselyft_brand();
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<meta name="theme-color" content="#0f0f10">
+	<meta name="theme-color" content="#14111f">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script>
 		/* Set the colour theme before paint to avoid a flash. */

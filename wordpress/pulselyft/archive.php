@@ -6,19 +6,19 @@
  */
 
 get_header();
-?>
-<div class="pl-archive">
-	<div class="pl-container">
-		<header class="pl-archive__head pl-reveal">
-			<p class="pl-kicker pl-kicker--lift"><?php esc_html_e( 'Archive', 'pulselyft' ); ?></p>
-			<h1 class="pl-h2"><?php the_archive_title(); ?></h1>
-			<?php if ( get_the_archive_description() ) : ?>
-				<div class="pl-lede" style="margin-top:1rem;"><?php the_archive_description(); ?></div>
-			<?php endif; ?>
-		</header>
 
+$desc = get_the_archive_description();
+pulselyft_page_hero(
+	__( 'Archive', 'pulselyft' ),
+	wp_strip_all_tags( get_the_archive_title() ),
+	$desc ? wp_strip_all_tags( $desc ) : ''
+);
+?>
+
+<div class="pl-blogwrap">
+	<div class="pl-container">
 		<?php if ( have_posts() ) : ?>
-			<ul class="pl-blog__grid" style="margin-top:3.5rem;">
+			<ul class="pl-blog__grid">
 				<?php
 				while ( have_posts() ) :
 					the_post();
@@ -34,7 +34,7 @@ get_header();
 			) );
 			?>
 		<?php else : ?>
-			<p class="pl-lede" style="margin-top:2rem;"><?php esc_html_e( 'Nothing here yet.', 'pulselyft' ); ?></p>
+			<p class="pl-lede"><?php esc_html_e( 'Nothing here yet.', 'pulselyft' ); ?></p>
 		<?php endif; ?>
 	</div>
 </div>

@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -82,6 +82,16 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 1.3.0 =
+* Redesign: new modern "Iris" violet palette (indigo + rose accents) replacing
+  the green scheme, in both light and dark modes.
+* Fix a long-standing bug where the border tokens were self-referential, which
+  made borders render as harsh dark lines.
+* Blog redesign: hero band, featured lead post, category chips, author bylines,
+  dates, share buttons, and a "Keep reading" related-posts block.
+* Contact redesign: info cards (email / book a call / response time), social
+  links, and a richer two-column form with a topic selector.
 
 = 1.2.1 =
 * Pages are now fully editable from wp-admin → Pages: the page Title drives the
