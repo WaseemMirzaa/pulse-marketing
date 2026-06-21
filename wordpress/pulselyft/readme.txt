@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 3.0.0
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -90,16 +90,14 @@ in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
 
-= 3.0.0 =
-* Full block (FSE) theme: every template and the header/footer are now editable
-  in the Site Editor (Appearance → Editor). Added templates/ (front-page, index,
-  page, single, archive, search, 404) and parts/ (header, footer); registered
-  template parts in theme.json.
-* Pages are seeded with editable section blocks (the homepage uses the Full
-  Homepage pattern; About/Services/Pricing/Contact use their section patterns),
-  so 100% of content is edited in the WordPress block editor.
-* Site chrome (colour-theme bootstrap, skip link, scroll progress, back-to-top,
-  chat assistant) moved to PHP hooks so it works across all block templates.
+= 3.1.0 =
+* Revert to the classic (non-block) WordPress theme. The full block/FSE build
+  could render a blank homepage if the Home page content was not seeded; the
+  classic theme renders the homepage reliably via front-page.php.
+* Pages (About, Services, Pricing, Contact, Privacy, Terms) are real WordPress
+  pages with dummy content, editable in the normal page editor. The "PulseLyft"
+  block patterns remain available, and the homepage can optionally be built from
+  blocks via Appearance → Customize → Homepage → "Page content (blocks)".
 
 = 2.1.1 =
 * Complete the block-pattern library so every homepage section is available and
