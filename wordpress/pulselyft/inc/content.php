@@ -225,6 +225,38 @@ function pulselyft_default_content() {
 			'intro'  => 'Practical notes from programs we run—no fluff, no recycled listicles.',
 		),
 
+		'faq' => array(
+			'kicker' => 'FAQ',
+			'title'  => 'Answers before you book',
+			'intro'  => 'The questions prospective partners ask most. Still unsure? Start a chat or book a call—real answers, no sales theatre.',
+			'items'  => array(
+				array(
+					'q' => 'How quickly can we launch?',
+					'a' => 'Most programs go live within two to four weeks: a discovery sprint to audit accounts, analytics, and SERP reality, then the first structured tests and tracking ship together. Median time to first scale test across our portfolio is 4.2 weeks.',
+				),
+				array(
+					'q' => 'What does an engagement cost?',
+					'a' => 'Every engagement opens with a fixed-scope two-week discovery sprint, then a monthly program priced to your channels and ad budget—with explicit milestones and no mystery retainers. Book a call and we will size it precisely.',
+				),
+				array(
+					'q' => 'Which channels do you run?',
+					'a' => 'Meta ads and paid social, performance creative, SEO and content systems, plus analytics and attribution—orchestrated as one full-funnel system rather than disconnected point services.',
+				),
+				array(
+					'q' => 'How do you report on performance?',
+					'a' => 'One weekly dashboard your leadership actually opens: spend, MER/ROAS, CAC, payback window, and pipeline influenced—built on clean, server-side event schemas your finance team can trust.',
+				),
+				array(
+					'q' => 'Do we keep ownership of our accounts and data?',
+					'a' => 'Always. Ad accounts, analytics, pixels, and content remain yours. We operate inside your stack with documented access, so nothing is held hostage if we ever part ways.',
+				),
+				array(
+					'q' => 'What if we already have an in-house team?',
+					'a' => 'Great—most of our partners do. We plug in as senior operators with async-first rituals, augmenting your team on strategy, creative velocity, and measurement instead of replacing it.',
+				),
+			),
+		),
+
 		'brand' => array(
 			'namePrefix' => 'Pulse',
 			'nameAccent' => 'Lyft',

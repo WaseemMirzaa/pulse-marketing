@@ -81,6 +81,10 @@ $socials = array_filter( $socials );
 	</p>
 </footer>
 
+<button type="button" class="pl-totop" id="pl-totop" aria-label="<?php esc_attr_e( 'Back to top', 'pulselyft' ); ?>">
+	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
 <?php get_template_part( 'template-parts/chatbot' ); ?>
 
 <?php wp_footer(); ?>

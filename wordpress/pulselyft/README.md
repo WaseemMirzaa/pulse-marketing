@@ -30,9 +30,23 @@ build step, no Tailwind runtime, no CDN dependency).
 | Lift / bright / soft | `#65a30d` / `#84cc16` / `#ecfccb` | `tailwind.config.ts` |
 | Shadows, mesh gradient, grid-fade, float & marquee animations | reproduced 1:1 | `tailwind.config.ts` |
 
-**Sections** (same order as `web/src/app/home-page.tsx`):
+**Sections** (mirrors `web/src/app/home-page.tsx`, plus an FAQ):
 Hero → Logo strip → Services → Metrics → Case studies → Portfolio → Process →
-Testimonials → CTA band → Blog → Book a call → Contact → Footer → Chat assistant.
+Testimonials → **FAQ** → CTA band → Blog → Book a call → Contact → Footer → Chat assistant.
+
+### Agency-grade polish (v1.1)
+
+This goes beyond a straight port — the extras that separate a premium theme:
+
+- **Light & dark modes** — system-aware, one-tap toggle in the header, persisted to
+  `localStorage`, with a no-flash inline script. Built on semantic CSS design tokens.
+- **Motion design** — staggered scroll-reveals, animated stat counters, glossy button
+  sweeps, premium card lift, and a subtle film-grain texture. Everything honours
+  `prefers-reduced-motion`.
+- **Smart chrome** — sticky shrinking header, **scrollspy** active-link highlighting, a
+  top **scroll-progress** bar, and a **back-to-top** button.
+- **FAQ accordion** with `FAQPage` JSON-LD for Google rich results.
+- **Custom scrollbar** + refined `:focus-visible` states.
 
 **Services** (identical to `web/src/lib/siteContent.ts`):
 Meta ads & paid social · Performance creative · SEO & content systems ·
@@ -93,9 +107,12 @@ add_filter( 'pulselyft_default_content', function ( $content ) {
 
 ## Features
 
+- **Light & dark modes** — system-aware, persisted header toggle, no-flash, token-based.
+- **Premium motion** — staggered reveals, animated counters, scrollspy header, scroll
+  progress, back-to-top, glossy buttons, grain texture (all reduced-motion aware).
 - **SEO out of the box** (`inc/seo.php`): `<title>` tag support, meta description,
   canonical, robots, Open Graph, Twitter cards, and JSON-LD
-  (`ProfessionalService` + `WebSite` on the homepage, `Article` on posts).
+  (`ProfessionalService` + `WebSite` + **`FAQPage`** on the homepage, `Article` on posts).
   Automatically **defers to Yoast / Rank Math / SEOPress / AIOSEO** if installed.
 - **Accessible & semantic** — skip link, ARIA labels, landmark elements, reduced-motion support.
 - **Performance** — no jQuery dependency on the front end, lazy-loaded imagery,
@@ -131,10 +148,11 @@ pulselyft/
 │   ├── chatbot.php
 │   ├── post-card.php
 │   └── sections/             hero, logos, services, metrics, case-studies,
-│                             portfolio, process, testimonials, cta-band,
+│                             portfolio, process, testimonials, faq, cta-band,
 │                             blog, book-call, contact
 └── assets/js/
-    ├── main.js               Mobile nav, scroll reveal, chatbot
+    ├── main.js               Theme toggle, header/scrollspy/progress, reveals,
+    │                         counters, FAQ accordion, mobile nav, chatbot
     └── customize-preview.js  Live Customizer preview
 ```
 

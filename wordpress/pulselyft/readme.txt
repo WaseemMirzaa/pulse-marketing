@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -25,18 +25,22 @@ All key content is editable in Appearance -> Customize -> "PulseLyft Landing Pag
 
 == Features ==
 
-* One-page landing layout with 12 content sections.
+* One-page landing layout with 13 content sections (incl. an FAQ accordion).
+* Light AND dark modes — system-aware, one-tap toggle, persisted, no flash of wrong theme.
+* Agency-grade motion: staggered scroll-reveals, animated stat counters, glossy button
+  sweeps, premium card lift, and a film-grain texture — all respect prefers-reduced-motion.
+* Sticky shrinking header with scrollspy active-link, a scroll progress bar, and back-to-top.
 * Faithful design system in hand-written CSS — no build step, no Tailwind runtime, no CDN.
 * SEO out of the box: title tag, meta description, canonical, robots, Open Graph,
-  Twitter cards, and JSON-LD (ProfessionalService + WebSite, Article on posts).
-  Automatically defers to Yoast / Rank Math / SEOPress / All in One SEO if active.
+  Twitter cards, and JSON-LD (ProfessionalService + WebSite, FAQPage rich results,
+  Article on posts). Automatically defers to Yoast / Rank Math / SEOPress / AIOSEO if active.
 * WordPress Customizer controls for brand, hero, CTAs, booking URL, contact, chatbot, socials.
 * Blog support: front-page teaser using your recent posts (with a built-in fallback),
   plus single, archive, search, and 404 templates.
 * Native wp_mail contact form (nonce + honeypot) or an embedded Jotform.
 * REST-backed FAQ chat assistant; optionally point it at an external API.
 * theme.json palette + fonts for the block editor.
-* Accessible: skip link, ARIA labels, landmarks, reduced-motion support.
+* Accessible: skip link, ARIA labels, landmarks, focus-visible styles, reduced-motion support.
 
 == Installation ==
 
@@ -63,6 +67,13 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 1.1.0 =
+* Add light/dark colour modes (system-aware, persisted, no-flash) with a header toggle.
+* Add premium motion: staggered scroll-reveals, animated counters, glossy buttons, card lift, grain texture.
+* Add sticky shrinking header with scrollspy, scroll progress bar, and back-to-top.
+* Add an FAQ accordion section with FAQPage rich-result schema.
+* Refactor colours to semantic design tokens for consistent theming.
 
 = 1.0.0 =
 * Initial release. WordPress port of the PulseLyft landing page.

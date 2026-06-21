@@ -19,6 +19,7 @@ pulselyft_section( 'case-studies' );
 pulselyft_section( 'portfolio' );
 pulselyft_section( 'process' );
 pulselyft_section( 'testimonials' );
+pulselyft_section( 'faq' );
 pulselyft_section( 'cta-band' );
 pulselyft_section( 'blog' );
 pulselyft_section( 'book-call' );

@@ -14,6 +14,17 @@ $brand = pulselyft_brand();
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="theme-color" content="#0f0f10">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script>
+		/* Set the colour theme before paint to avoid a flash. */
+		(function () {
+			try {
+				var stored = localStorage.getItem('pl-theme');
+				var dark = stored ? stored === 'dark'
+					: window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (dark) { document.documentElement.setAttribute('data-theme', 'dark'); }
+			} catch (e) {}
+		})();
+	</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -21,6 +32,8 @@ $brand = pulselyft_brand();
 <?php wp_body_open(); ?>
 
 <a class="screen-reader-text" href="#pl-main"><?php esc_html_e( 'Skip to content', 'pulselyft' ); ?></a>
+
+<div class="pl-progress" id="pl-progress" aria-hidden="true"></div>
 
 <header class="pl-header" id="pl-header">
 	<div class="pl-header__inner">
@@ -66,6 +79,10 @@ $brand = pulselyft_brand();
 			}
 			$book = is_front_page() ? '#book-call' : home_url( '/#book-call' );
 			?>
+			<button type="button" class="pl-theme-toggle" aria-label="<?php esc_attr_e( 'Toggle dark mode', 'pulselyft' ); ?>">
+				<svg class="pl-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round"/></svg>
+				<svg class="pl-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg>
+			</button>
 			<a href="<?php echo esc_url( $book ); ?>" class="pl-btn pl-btn--primary pl-btn--sm"><?php esc_html_e( 'Book a call', 'pulselyft' ); ?></a>
 		</nav>
 
@@ -94,6 +111,10 @@ $brand = pulselyft_brand();
 			}
 			?>
 			<a href="<?php echo esc_url( $book ); ?>" class="pl-btn pl-btn--primary"><?php esc_html_e( 'Book a call', 'pulselyft' ); ?></a>
+			<button type="button" class="pl-theme-toggle" aria-label="<?php esc_attr_e( 'Toggle dark mode', 'pulselyft' ); ?>" style="margin-top:0.5rem;">
+				<svg class="pl-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round"/></svg>
+				<svg class="pl-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg>
+			</button>
 		</div>
 	</div>
 </header>

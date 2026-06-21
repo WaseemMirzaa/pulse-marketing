@@ -181,6 +181,27 @@ function pulselyft_json_ld() {
 				'query-input' => 'required name=search_term_string',
 			),
 		);
+
+		// FAQPage rich-result schema.
+		$faqs = pulselyft_get( 'faq.items' );
+		if ( is_array( $faqs ) && $faqs ) {
+			$entities = array();
+			foreach ( $faqs as $faq ) {
+				$entities[] = array(
+					'@type'          => 'Question',
+					'name'           => $faq['q'],
+					'acceptedAnswer' => array(
+						'@type' => 'Answer',
+						'text'  => $faq['a'],
+					),
+				);
+			}
+			$nodes[] = array(
+				'@context'   => 'https://schema.org',
+				'@type'      => 'FAQPage',
+				'mainEntity' => $entities,
+			);
+		}
 	} elseif ( is_singular( 'post' ) ) {
 		$post = get_queried_object();
 		$nodes[] = array(
