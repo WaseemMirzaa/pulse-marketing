@@ -278,6 +278,47 @@ add_action( 'after_switch_theme', 'pulselyft_provision_site' );
 add_action( 'admin_init', 'pulselyft_provision_site' );
 
 /**
+ * One-time: seed the Home page with the Full Homepage pattern so the homepage
+ * sections are editable from the Pages editor, and ensure a static front page.
+ * Only fills a Home page that is empty/short, so it never clobbers real edits.
+ */
+function pulselyft_seed_homepage() {
+	if ( get_option( 'pulselyft_home_seeded' ) || ! function_exists( 'pulselyft_patterns' ) ) {
+		return;
+	}
+	$home_id = (int) get_option( 'page_on_front' );
+	if ( ! $home_id ) {
+		$map = get_option( 'pulselyft_pages', array() );
+		if ( is_array( $map ) && ! empty( $map['home'] ) ) {
+			$home_id = (int) $map['home'];
+		}
+		if ( ! $home_id ) {
+			$p = get_page_by_path( 'home' );
+			if ( $p ) {
+				$home_id = (int) $p->ID;
+			}
+		}
+	}
+	if ( $home_id ) {
+		$existing = trim( wp_strip_all_tags( (string) get_post_field( 'post_content', $home_id ) ) );
+		if ( strlen( $existing ) < 200 ) {
+			$patterns = pulselyft_patterns();
+			if ( ! empty( $patterns['homepage'][1] ) ) {
+				wp_update_post( array( 'ID' => $home_id, 'post_content' => $patterns['homepage'][1] ) );
+			}
+		}
+		if ( 'page' !== get_option( 'show_on_front' ) ) {
+			update_option( 'show_on_front', 'page' );
+			update_option( 'page_on_front', $home_id );
+		} elseif ( ! get_option( 'page_on_front' ) ) {
+			update_option( 'page_on_front', $home_id );
+		}
+	}
+	update_option( 'pulselyft_home_seeded', PULSELYFT_VERSION );
+}
+add_action( 'admin_init', 'pulselyft_seed_homepage' );
+
+/**
  * Create and assign primary + footer menus if those locations are empty.
  *
  * @param array $ids Map of slug => page ID.

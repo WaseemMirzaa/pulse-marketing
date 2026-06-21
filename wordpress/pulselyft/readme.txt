@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 3.1.0
+Stable tag: 3.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -89,6 +89,14 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 3.2.0 =
+* Homepage sections are now editable from the Pages editor (Pages → Home), built
+  from the "Full homepage" block pattern, while staying safe: front-page.php
+  renders the Home page content when present and ALWAYS falls back to the designed
+  sections if it is empty — so the homepage can never go blank again.
+* New "Homepage source" default is "Automatic" (page content if present, else
+  designed sections); a one-time migration seeds the Home page with the pattern.
 
 = 3.1.0 =
 * Revert to the classic (non-block) WordPress theme. The full block/FSE build

@@ -46,18 +46,19 @@ function pulselyft_customize_register( $wp_customize ) {
 		'panel' => 'pulselyft_panel',
 	) );
 	$wp_customize->add_setting( 'pulselyft_home_source', array(
-		'default'           => 'sections',
+		'default'           => 'auto',
 		'sanitize_callback' => 'pulselyft_sanitize_home_source',
 		'transport'         => 'refresh',
 	) );
 	$wp_customize->add_control( 'pulselyft_home_source', array(
 		'label'       => __( 'Homepage source', 'pulselyft' ),
-		'description' => __( '“Designed sections” uses the built-in landing layout. “Page content (blocks)” renders the Home page you build in the block editor with the PulseLyft patterns.', 'pulselyft' ),
+		'description' => __( 'Automatic edits the homepage from Pages → Home (block editor) and falls back to the designed sections if empty. Choose “Designed sections” to always use the built-in layout.', 'pulselyft' ),
 		'section'     => 'pulselyft_home',
 		'type'        => 'radio',
 		'choices'     => array(
-			'sections' => __( 'Designed sections (default)', 'pulselyft' ),
-			'content'  => __( 'Page content (blocks)', 'pulselyft' ),
+			'auto'     => __( 'Automatic — Home page content, else designed (default)', 'pulselyft' ),
+			'content'  => __( 'Always the Home page content (blocks)', 'pulselyft' ),
+			'sections' => __( 'Always the designed sections', 'pulselyft' ),
 		),
 	) );
 
@@ -155,7 +156,7 @@ add_action( 'customize_register', 'pulselyft_customize_register' );
  * @return string
  */
 function pulselyft_sanitize_home_source( $value ) {
-	return in_array( $value, array( 'sections', 'content' ), true ) ? $value : 'sections';
+	return in_array( $value, array( 'auto', 'sections', 'content' ), true ) ? $value : 'auto';
 }
 
 /**
