@@ -4,61 +4,47 @@
 	"settings": {
 		"appearanceTools": true,
 		"layout": {
-			"contentSize": "768px",
-			"wideSize": "1152px"
+			"contentSize": "736px",
+			"wideSize": "1200px"
 		},
 		"color": {
 			"custom": true,
 			"customGradient": true,
 			"defaultPalette": false,
 			"palette": [
-				{ "slug": "ink", "color": "#0f0f10", "name": "Ink" },
-				{ "slug": "page", "color": "#f5f4f0", "name": "Page" },
+				{ "slug": "ink", "color": "#100e15", "name": "Ink" },
+				{ "slug": "page", "color": "#f3f1ec", "name": "Page" },
 				{ "slug": "paper", "color": "#ffffff", "name": "Paper" },
-				{ "slug": "lift", "color": "#65a30d", "name": "Lift" },
-				{ "slug": "lift-bright", "color": "#84cc16", "name": "Lift Bright" },
-				{ "slug": "lift-soft", "color": "#ecfccb", "name": "Lift Soft" },
-				{ "slug": "zinc-600", "color": "#52525b", "name": "Muted" }
+				{ "slug": "lift", "color": "#6d28d9", "name": "Violet" },
+				{ "slug": "accent-2", "color": "#db2777", "name": "Pink" },
+				{ "slug": "accent-3", "color": "#f59e0b", "name": "Amber" },
+				{ "slug": "muted", "color": "#6a6675", "name": "Muted" }
+			],
+			"gradients": [
+				{ "slug": "pulse", "gradient": "linear-gradient(100deg, #7c3aed 0%, #db2777 52%, #f59e0b 116%)", "name": "Pulse" }
 			]
 		},
 		"typography": {
 			"customFontSize": true,
 			"fontFamilies": [
-				{
-					"fontFamily": "\"Outfit\", system-ui, sans-serif",
-					"slug": "sans",
-					"name": "Outfit (Sans)"
-				},
-				{
-					"fontFamily": "\"Fraunces\", Georgia, serif",
-					"slug": "display",
-					"name": "Fraunces (Display)"
-				}
+				{ "fontFamily": "\"Inter\", system-ui, sans-serif", "slug": "sans", "name": "Inter (Sans)" },
+				{ "fontFamily": "\"Fraunces\", Georgia, serif", "slug": "display", "name": "Fraunces (Display)" },
+				{ "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace", "slug": "mono", "name": "JetBrains Mono" }
 			],
 			"fontSizes": [
 				{ "slug": "small", "size": "0.875rem", "name": "Small" },
-				{ "slug": "medium", "size": "1.125rem", "name": "Medium" },
+				{ "slug": "medium", "size": "1.05rem", "name": "Medium" },
 				{ "slug": "large", "size": "1.5rem", "name": "Large" },
-				{ "slug": "x-large", "size": "2.25rem", "name": "Extra Large" }
+				{ "slug": "x-large", "size": "2.4rem", "name": "Extra Large" }
 			]
 		},
-		"spacing": {
-			"units": ["px", "em", "rem", "vh", "vw", "%"]
-		}
+		"spacing": { "units": ["px", "em", "rem", "vh", "vw", "%"] }
 	},
 	"styles": {
-		"color": {
-			"background": "#f5f4f0",
-			"text": "#27272a"
-		},
-		"typography": {
-			"fontFamily": "\"Outfit\", system-ui, sans-serif",
-			"lineHeight": "1.6"
-		},
+		"color": { "background": "#f3f1ec", "text": "#3a3643" },
+		"typography": { "fontFamily": "\"Inter\", system-ui, sans-serif", "lineHeight": "1.6" },
 		"elements": {
-			"link": {
-				"color": { "text": "#65a30d" }
-			},
+			"link": { "color": { "text": "#6d28d9" } },
 			"h1": { "typography": { "fontFamily": "\"Fraunces\", Georgia, serif", "fontWeight": "500" } },
 			"h2": { "typography": { "fontFamily": "\"Fraunces\", Georgia, serif", "fontWeight": "500" } },
 			"h3": { "typography": { "fontFamily": "\"Fraunces\", Georgia, serif", "fontWeight": "500" } }

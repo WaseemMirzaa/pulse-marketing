@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.3.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -82,6 +82,17 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 2.0.0 =
+* "Editorial Studio" redesign — a complete frontend overhaul:
+  - New type system: Fraunces (display) + Inter (UI) + JetBrains Mono (labels).
+  - Signature violet → pink → amber "pulse" gradient used across accents.
+  - Restructured, type-forward hero (oversized headline, gradient word, stat row).
+  - Capabilities replace the bento grid with an interactive numbered list.
+  - Bold dark Impact band, editorial case studies, numbered process, restyled
+    testimonials (large dark quote), full-bleed gradient CTA, and a big footer.
+  - Hairline editorial grid, mono eyebrows, refined cards and buttons.
+* Carried forward across every page (blog, contact, about, services, pricing).
 
 = 1.3.0 =
 * Redesign: new modern "Iris" violet palette (indigo + rose accents) replacing

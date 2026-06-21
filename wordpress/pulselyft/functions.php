@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '1.3.0' );
+	define( 'PULSELYFT_VERSION', '2.0.0' );
 }
 
 require_once get_template_directory() . '/inc/content.php';
@@ -60,7 +60,7 @@ function pulselyft_assets() {
 	// Google Fonts: Fraunces (display) + Outfit (sans) — matches the web app.
 	wp_enqueue_style(
 		'pulselyft-fonts',
-		'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap',
 		array(),
 		null
 	);
