@@ -9,6 +9,9 @@ dist
 # Nest build
 api/dist
 
+# Built WordPress theme package (regenerate with wordpress/build-theme.sh)
+wordpress/*.zip
+
 # Optional: keep local CMS edits out of git
 # api/data/site-content.json
 .vercel
