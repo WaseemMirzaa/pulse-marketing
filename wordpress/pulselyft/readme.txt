@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -65,16 +65,30 @@ Yes. If Yoast, Rank Math, SEOPress, or All in One SEO is active, the theme's own
 meta/JSON-LD output steps aside so there are no duplicate tags.
 
 = Where did the About/Services/Pricing/Contact pages come from? =
-On first activation the theme creates them (plus Privacy, Terms, Home, and Blog),
-assigns the matching page templates, configures a static homepage + posts page,
-and builds the primary and footer menus. It only does this once and never
-overrides settings you already configured. Edit or delete any page freely.
+On first activation (or first admin load after an update) the theme creates them
+— plus Privacy, Terms, Home, and Blog — assigns the matching page templates,
+configures a static homepage + posts page, and builds the primary and footer
+menus. It only does this once and never overrides settings you already configured.
+
+= How do I edit the pages? =
+Go to wp-admin → Pages and open any page. On the templated pages (About,
+Services, Pricing, Contact) the page Title becomes the hero heading, the Excerpt
+becomes the hero sub-headline, and the page Content becomes the body copy.
+Privacy and Terms are ordinary editable pages. Structured blocks (pricing tiers,
+values, metrics, testimonials, FAQ) live in inc/content.php and the Customizer.
 
 = Do I need the contact form plugin? =
 No. A native, wp_mail-backed form is built in. You can instead paste a Jotform ID
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 1.2.1 =
+* Pages are now fully editable from wp-admin → Pages: the page Title drives the
+  hero heading, the Excerpt drives the hero sub, and the Content (the editor)
+  drives the body copy. Templates seed real starter content on creation.
+* Provisioning now also runs on first admin load, so pages appear even after an
+  in-place theme update (still idempotent — runs once, never overrides settings).
 
 = 1.2.0 =
 * Add a complete multi-page site: About, Services, Pricing, and Contact page

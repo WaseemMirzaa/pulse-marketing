@@ -48,6 +48,12 @@ overrides settings you already have):
 - **Structure wired up**: a static homepage (`front-page.php`) + a posts page,
   and **primary + footer menus** including the new pages. On sub-pages, in-page
   anchors automatically resolve back to the homepage.
+- **Editable in wp-admin → Pages**: all pages appear in the Pages list. On the
+  templated pages the **Title** drives the hero heading, the **Excerpt** drives
+  the hero sub-headline, and the **Content** drives the body copy (seeded with
+  real starter text). Privacy/Terms are ordinary editable pages. Structured
+  blocks (pricing tiers, values, metrics, FAQ) come from `inc/content.php` /
+  Customizer. Provisioning also self-heals on first admin load after an update.
 
 ### Agency-grade polish (v1.1)
 

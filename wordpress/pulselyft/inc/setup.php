@@ -156,24 +156,67 @@ function pulselyft_legal_content( $which ) {
 }
 
 /**
+ * Render the editable page body (the_content) inside a styled prose section,
+ * if the current page has any content. Lets editors change copy from wp-admin.
+ */
+function pulselyft_editable_intro() {
+	if ( trim( get_the_content() ) === '' ) {
+		return;
+	}
+	echo '<section class="pl-section pl-section--paper" style="padding-block:4rem;"><div class="pl-container"><div class="pl-prose entry-content pl-reveal" style="max-width:48rem;margin-top:0;">';
+	the_content();
+	echo '</div></div></section>';
+}
+
+/**
+ * Build the seed content (Gutenberg blocks) + excerpt for a templated page,
+ * sourced from the content tree so the editor starts with real, editable copy.
+ *
+ * @param string $slug Page slug.
+ * @return array{content:string,excerpt:string}
+ */
+function pulselyft_page_seed( $slug ) {
+	$map = array(
+		'about'    => array( 'pages.about.story', 'pages.about.sub' ),
+		'services' => array( 'pages.services.body', 'pages.services.sub' ),
+		'pricing'  => array( 'pages.pricing.body', 'pages.pricing.sub' ),
+		'contact'  => array( 'pages.contact.body', 'pages.contact.sub' ),
+	);
+	if ( ! isset( $map[ $slug ] ) ) {
+		return array( 'content' => '', 'excerpt' => '' );
+	}
+	$paras   = pulselyft_get( $map[ $slug ][0] );
+	$excerpt = (string) pulselyft_get( $map[ $slug ][1] );
+	$content = '';
+	if ( is_array( $paras ) ) {
+		foreach ( $paras as $p ) {
+			$content .= "<!-- wp:paragraph -->\n<p>" . $p . "</p>\n<!-- /wp:paragraph -->\n\n";
+		}
+	}
+	return array( 'content' => trim( $content ), 'excerpt' => $excerpt );
+}
+
+/**
  * Create a page if one with the slug does not already exist.
  *
  * @param string $slug    Slug.
  * @param string $title   Title.
  * @param string $content Optional content HTML.
+ * @param string $excerpt Optional excerpt.
  * @return int Page ID.
  */
-function pulselyft_ensure_page( $slug, $title, $content = '' ) {
+function pulselyft_ensure_page( $slug, $title, $content = '', $excerpt = '' ) {
 	$existing = get_page_by_path( $slug );
 	if ( $existing ) {
 		return (int) $existing->ID;
 	}
 	$id = wp_insert_post( array(
-		'post_type'    => 'page',
-		'post_status'  => 'publish',
-		'post_title'   => $title,
-		'post_name'    => $slug,
-		'post_content' => $content,
+		'post_type'      => 'page',
+		'post_status'    => 'publish',
+		'post_title'     => $title,
+		'post_name'      => $slug,
+		'post_content'   => $content,
+		'post_excerpt'   => $excerpt,
 		'comment_status' => 'closed',
 	) );
 	return is_wp_error( $id ) ? 0 : (int) $id;
@@ -201,12 +244,19 @@ function pulselyft_provision_site() {
 	$ids = array();
 	foreach ( $pages as $slug => $title ) {
 		$content = '';
+		$excerpt = '';
 		if ( 'privacy-policy' === $slug ) {
 			$content = pulselyft_legal_content( 'privacy' );
 		} elseif ( 'terms' === $slug ) {
 			$content = pulselyft_legal_content( 'terms' );
+		} elseif ( 'home' === $slug ) {
+			$content = "<!-- wp:paragraph -->\n<p>This is your homepage. Its sections (hero, services, pricing teaser, testimonials, FAQ, and more) are managed in <strong>Appearance &rarr; Customize &rarr; PulseLyft Landing Page</strong>.</p>\n<!-- /wp:paragraph -->";
+		} elseif ( in_array( $slug, array( 'about', 'services', 'pricing', 'contact' ), true ) ) {
+			$seed    = pulselyft_page_seed( $slug );
+			$content = $seed['content'];
+			$excerpt = $seed['excerpt'];
 		}
-		$ids[ $slug ] = pulselyft_ensure_page( $slug, $title, $content );
+		$ids[ $slug ] = pulselyft_ensure_page( $slug, $title, $content, $excerpt );
 	}
 	update_option( 'pulselyft_pages', $ids );
 
@@ -222,6 +272,10 @@ function pulselyft_provision_site() {
 	update_option( 'pulselyft_setup_done', PULSELYFT_VERSION );
 }
 add_action( 'after_switch_theme', 'pulselyft_provision_site' );
+// Safety net: also provision on first admin load (covers in-place theme
+// updates where the activation hook does not fire). Self-guards, so it
+// only ever runs once.
+add_action( 'admin_init', 'pulselyft_provision_site' );
 
 /**
  * Create and assign primary + footer menus if those locations are empty.
