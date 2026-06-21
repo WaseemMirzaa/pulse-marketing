@@ -2,23 +2,27 @@
 /**
  * Front page.
  *
- * Two modes (Appearance → Customize → Homepage):
- *  - "sections" (default): the designed, built-in landing layout.
- *  - "content": renders the Home page you build in the block editor with the
- *    PulseLyft block patterns — so the homepage is fully editable too.
+ * Renders the Home page's block content when it is substantial (so the homepage
+ * sections are editable from the Pages editor) and ALWAYS falls back to the
+ * designed sections otherwise — so the homepage can never render blank.
  *
- * Section order mirrors web/src/app/home-page.tsx.
+ * Appearance → Customize → Homepage:
+ *  - "auto" (default): page content if present, else the designed sections.
+ *  - "content": always the Home page content (blocks).
+ *  - "sections": always the designed sections.
  *
  * @package PulseLyft
  */
 
 get_header();
 
-$source   = get_theme_mod( 'pulselyft_home_source', 'sections' );
-$front_id = (int) get_option( 'page_on_front' );
-$has_blocks = $front_id && '' !== trim( (string) get_post_field( 'post_content', $front_id ) );
+$source      = get_theme_mod( 'pulselyft_home_source', 'auto' );
+$front_id    = (int) get_option( 'page_on_front' );
+$content     = $front_id ? (string) get_post_field( 'post_content', $front_id ) : '';
+$substantial = strlen( trim( wp_strip_all_tags( $content ) ) ) > 400;
+$use_content = ( 'content' === $source ) || ( 'auto' === $source && $substantial );
 
-if ( 'content' === $source && $has_blocks ) :
+if ( $use_content && have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 		?>
