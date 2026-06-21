@@ -257,6 +257,108 @@ function pulselyft_default_content() {
 			),
 		),
 
+		'pages' => array(
+			'about' => array(
+				'kicker'       => 'About',
+				'title'        => 'A senior squad obsessed with profit, not vanity',
+				'sub'          => 'PulseLyft is a performance marketing studio for teams who measure twice and scale once. We run paid, creative, and search as one accountable system—wired to pipeline, payback, and LTV.',
+				'storyHeading' => 'Why we exist',
+				'story'        => array(
+					'Most growth programs stall because channels are run in isolation: an agency for ads, a freelancer for SEO, and a dashboard nobody trusts. The result is spend that scales faster than profit.',
+					'We started PulseLyft to operate differently—one senior team across paid, creative, and search, aligned to the same revenue targets your finance team already tracks. No juniors learning on your budget, no vanity slides.',
+					'The outcome is a growth system that compounds: clean measurement, a steady cadence of creative tests, and search that builds equity quarter over quarter.',
+				),
+				'values'       => array(
+					array( 'title' => 'Profit over applause', 'body' => 'We optimize for payback and LTV, not impressions or award reels. If it does not move the model, we do not ship it.' ),
+					array( 'title' => 'Evidence over opinion', 'body' => 'Every decision traces to clean data—server-side events, documented definitions, and one source of truth.' ),
+					array( 'title' => 'Velocity over perfection', 'body' => 'We ship structured tests weekly and let the market vote. Momentum beats month-long deliberation.' ),
+					array( 'title' => 'Ownership, always', 'body' => 'Your accounts, pixels, and content stay yours. We operate inside your stack with documented access—nothing held hostage.' ),
+				),
+			),
+			'services' => array(
+				'kicker'   => 'Services',
+				'title'    => 'Full-funnel growth, run as one system',
+				'sub'      => 'Paid, creative, search, and measurement—orchestrated by senior operators against the CAC, payback, and LTV targets you already track.',
+				'included' => array(
+					array( 'title' => 'Strategy & benchmarking', 'body' => 'Account, analytics, and SERP audits with margin and payback guardrails before a dollar moves.' ),
+					array( 'title' => 'Performance creative', 'body' => 'Hooks, angles, and UGC-style packs produced on a cadence and engineered for relevance.' ),
+					array( 'title' => 'Media buying', 'body' => 'Disciplined account structure, bid/budget logic, and scaling tests across Meta and paid social.' ),
+					array( 'title' => 'Technical & content SEO', 'body' => 'Crawl health, Core Web Vitals, intent-led clusters, and internal linking that compounds.' ),
+					array( 'title' => 'Analytics & attribution', 'body' => 'Clean event schemas, CAPI, and server-side tagging your leadership can defend in a board meeting.' ),
+					array( 'title' => 'Weekly reporting', 'body' => 'One dashboard—spend, MER/ROAS, CAC, payback, pipeline influenced—reviewed in a tight loop.' ),
+				),
+			),
+			'pricing' => array(
+				'kicker' => 'Pricing',
+				'title'  => 'Plans that scale with your ambition',
+				'sub'    => 'Every engagement opens with a fixed-scope, two-week discovery sprint. No mystery retainers—just scoped milestones you can defend.',
+				'note'   => 'All plans include a dedicated senior lead, weekly reporting, and full ownership of your accounts and data. Advertising spend is billed separately by the platforms.',
+				'tiers'  => array(
+					array(
+						'name'     => 'Launch',
+						'price'    => '$3.5k',
+						'cadence'  => '/month',
+						'blurb'    => 'For early-stage teams finding their first scalable channel.',
+						'features' => array( 'One paid channel (Meta)', '4 creative concepts / month', 'Conversion tracking setup', 'Bi-weekly reporting' ),
+						'cta'      => 'Start with Launch',
+						'featured' => false,
+					),
+					array(
+						'name'     => 'Scale',
+						'price'    => '$7.5k',
+						'cadence'  => '/month',
+						'blurb'    => 'For teams ready to compound paid and search together.',
+						'features' => array( 'Paid social + SEO program', '10 creative concepts / month', 'Server-side tracking & CAPI', 'Weekly reporting + live dashboard', 'Landing page CRO' ),
+						'cta'      => 'Choose Scale',
+						'featured' => true,
+					),
+					array(
+						'name'     => 'Partner',
+						'price'    => 'Custom',
+						'cadence'  => '',
+						'blurb'    => 'A full-funnel program for multi-channel scale.',
+						'features' => array( 'Everything in Scale', 'Multi-channel media buying', 'Dedicated creative pod', 'Quarterly strategy offsites', 'Priority support & Slack' ),
+						'cta'      => 'Talk to us',
+						'featured' => false,
+					),
+				),
+			),
+			'contact' => array(
+				'kicker'  => 'Contact',
+				'title'   => 'Let us talk about your pipeline',
+				'sub'     => 'Tell us your goals, stack, and constraints. You will get a direct, human answer on fit—usually within one business day.',
+				'methods' => array(
+					array( 'label' => 'Book a call', 'value' => '30-minute intro', 'href' => '#book-call' ),
+					array( 'label' => 'Response time', 'value' => 'Within 1 business day', 'href' => '' ),
+				),
+			),
+		),
+
+		'legal' => array(
+			'privacy' => array(
+				'title' => 'Privacy Policy',
+				'intro' => 'This Privacy Policy explains how we collect, use, and protect your information when you visit our website or engage our services. Replace this starter copy with policy reviewed by your legal counsel.',
+				'sections' => array(
+					array( 'h' => 'Information we collect', 'p' => 'We collect details you provide directly—such as your name, email, company, and message—when you submit a form or book a call. We also collect standard analytics data (pages viewed, device, and referrer) to improve the site.' ),
+					array( 'h' => 'How we use information', 'p' => 'We use your information to respond to enquiries, deliver and improve our services, and—only with consent—send occasional updates. We do not sell your personal data.' ),
+					array( 'h' => 'Cookies & analytics', 'p' => 'We may use cookies and privacy-respecting analytics to understand site usage. You can control cookies through your browser settings.' ),
+					array( 'h' => 'Data retention & your rights', 'p' => 'We keep enquiry data only as long as needed to respond and meet legal obligations. You may request access, correction, or deletion of your data at any time by contacting us.' ),
+					array( 'h' => 'Contact', 'p' => 'Questions about this policy? Email us using the address in the site footer and we will respond promptly.' ),
+				),
+			),
+			'terms' => array(
+				'title' => 'Terms of Service',
+				'intro' => 'These Terms govern your use of this website and any services provided. Replace this starter copy with terms reviewed by your legal counsel.',
+				'sections' => array(
+					array( 'h' => 'Use of the site', 'p' => 'You agree to use this website lawfully and not to disrupt its operation or attempt unauthorized access.' ),
+					array( 'h' => 'Engagements & scope', 'p' => 'Services are delivered under a separate, signed statement of work that defines scope, milestones, fees, and timelines. Nothing on this site constitutes a binding offer.' ),
+					array( 'h' => 'Intellectual property', 'p' => 'Site content and branding are owned by us or our licensors. Deliverables produced during an engagement are governed by your statement of work.' ),
+					array( 'h' => 'Disclaimers & liability', 'p' => 'The site is provided “as is.” To the fullest extent permitted by law, we are not liable for indirect or consequential damages arising from its use.' ),
+					array( 'h' => 'Changes', 'p' => 'We may update these Terms from time to time. Continued use of the site constitutes acceptance of the revised Terms.' ),
+				),
+			),
+		),
+
 		'brand' => array(
 			'namePrefix' => 'Pulse',
 			'nameAccent' => 'Lyft',

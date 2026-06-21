@@ -63,18 +63,8 @@ $brand = pulselyft_brand();
 					'walker'         => new Pulselyft_Link_Walker(),
 				) );
 			} else {
-				$home = home_url( '/' );
-				$links = array(
-					'#services'  => __( 'Services', 'pulselyft' ),
-					'#work'      => __( 'Work', 'pulselyft' ),
-					'#portfolio' => __( 'Portfolio', 'pulselyft' ),
-					'#process'   => __( 'Process', 'pulselyft' ),
-					'#blog'      => __( 'Blog', 'pulselyft' ),
-					'#contact'   => __( 'Contact', 'pulselyft' ),
-				);
-				foreach ( $links as $href => $label ) {
-					$url = is_front_page() ? $href : $home . $href;
-					printf( '<a class="pl-nav__link" href="%s">%s</a>', esc_url( $url ), esc_html( $label ) );
+				foreach ( pulselyft_primary_nav() as $item ) {
+					printf( '<a class="pl-nav__link" href="%s">%s</a>', esc_url( $item['url'] ), esc_html( $item['label'] ) );
 				}
 			}
 			$book = is_front_page() ? '#book-call' : home_url( '/#book-call' );
@@ -103,10 +93,8 @@ $brand = pulselyft_brand();
 					'walker'         => new Pulselyft_Link_Walker( 'pl-mobile-link' ),
 				) );
 			} else {
-				$home = home_url( '/' );
-				foreach ( $links as $href => $label ) {
-					$url = is_front_page() ? $href : $home . $href;
-					printf( '<a href="%s">%s</a>', esc_url( $url ), esc_html( $label ) );
+				foreach ( pulselyft_primary_nav() as $item ) {
+					printf( '<a href="%s">%s</a>', esc_url( $item['url'] ), esc_html( $item['label'] ) );
 				}
 			}
 			?>

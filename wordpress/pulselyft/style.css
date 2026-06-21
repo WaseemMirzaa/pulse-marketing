@@ -3,8 +3,8 @@ Theme Name: PulseLyft
 Theme URI: https://pulselyft.example.com
 Author: PulseLyft Studio
 Author URI: https://pulselyft.example.com
-Description: PulseLyft — a high-converting, SEO-first landing page theme for a performance marketing studio (Meta ads, performance creative, SEO & content, analytics). Agency-grade polish: light & dark modes, animated counters, scroll-reveal motion, sticky scrollspy header, scroll progress, FAQ accordion with rich-result schema, and a built-in assistant. Fraunces + Outfit type with "lift" green accents. Editable through the WordPress Customizer.
-Version: 1.1.0
+Description: PulseLyft — a high-converting, SEO-first WordPress theme for a performance marketing studio (Meta ads, performance creative, SEO & content, analytics). Complete multi-page site (Home, About, Services, Pricing, Contact, Blog + legal) auto-provisioned on activation. Agency-grade polish: light & dark modes, animated counters, scroll-reveal motion, sticky scrollspy header, FAQ accordion with rich-result schema, and a built-in assistant. Fraunces + Outfit type with "lift" green accents. Editable through the WordPress Customizer.
+Version: 1.2.0
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
@@ -886,7 +886,66 @@ html { scrollbar-color: var(--zinc-300) transparent; scrollbar-width: thin; }
 [data-theme="dark"] .pl-chat__launcher:hover { background: #fff; }
 
 /* =========================================================================
-   27. WordPress core classes
+   27. Inner pages (About / Services / Pricing / Contact)
+   ========================================================================= */
+
+/* Sub-page hero band. */
+.pl-pagehead { position: relative; overflow: hidden; background: var(--paper); border-bottom: 1px solid var(--border); padding-top: calc(var(--header-h) + 3.5rem); padding-bottom: 3.5rem; }
+@media (min-width: 640px) { .pl-pagehead { padding-top: calc(var(--header-h) + 5rem); padding-bottom: 5rem; } }
+.pl-pagehead__bg { position: absolute; inset: 0; background-image: var(--mesh); opacity: 0.6; pointer-events: none; }
+.pl-pagehead__inner { position: relative; max-width: 48rem; }
+.pl-pagehead__title { margin-top: 1rem; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; color: var(--heading); font-size: 2.5rem; line-height: 1.05; }
+@media (min-width: 640px) { .pl-pagehead__title { font-size: 3.25rem; } }
+@media (min-width: 1024px) { .pl-pagehead__title { font-size: 3.75rem; } }
+.pl-pagehead__sub { margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.6; color: var(--text-muted); }
+
+/* Values grid (About). */
+.pl-values { margin-top: 3rem; display: grid; gap: 1rem; }
+@media (min-width: 640px) { .pl-values { grid-template-columns: repeat(2, 1fr); } }
+.pl-value { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-card); padding: 2rem; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.25s, box-shadow 0.3s; }
+.pl-value:hover { transform: translateY(-4px); border-color: var(--lift); box-shadow: var(--shadow-lg); }
+.pl-value__n { font-family: var(--font-display); font-weight: 500; font-size: 1rem; color: var(--lift); }
+.pl-value__title { margin-top: 0.75rem; font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; color: var(--heading); }
+.pl-value__body { margin-top: 0.6rem; font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); }
+
+/* Feature checklist (Services). */
+.pl-features { margin-top: 3rem; display: grid; gap: 1.5rem 2.5rem; }
+@media (min-width: 768px) { .pl-features { grid-template-columns: repeat(2, 1fr); } }
+.pl-feature { display: flex; gap: 1rem; align-items: flex-start; }
+.pl-feature__check { flex-shrink: 0; display: grid; place-items: center; height: 2.25rem; width: 2.25rem; border-radius: 9999px; background: var(--lift-soft); color: var(--lift); box-shadow: inset 0 0 0 1px rgba(101,163,13,0.25); }
+.pl-feature__check svg { height: 1.1rem; width: 1.1rem; }
+.pl-feature__title { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--heading); }
+.pl-feature__body { margin-top: 0.35rem; font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); }
+
+/* Pricing tiers. */
+.pl-pricing { margin-top: 1rem; display: grid; gap: 1.5rem; align-items: start; }
+@media (min-width: 900px) { .pl-pricing { grid-template-columns: repeat(3, 1fr); } }
+.pl-price { position: relative; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--paper); box-shadow: var(--shadow-card); padding: 2rem; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s, border-color 0.25s; }
+.pl-price:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.pl-price--featured { border-color: var(--lift); box-shadow: var(--shadow-lift); }
+@media (min-width: 900px) { .pl-price--featured { transform: scale(1.03); } .pl-price--featured:hover { transform: scale(1.03) translateY(-6px); } }
+.pl-price__badge { position: absolute; top: -0.8rem; left: 2rem; border-radius: 9999px; background: var(--lift); color: #fff; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.8rem; }
+.pl-price__name { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; color: var(--heading); }
+.pl-price__amount { margin-top: 0.75rem; display: flex; align-items: baseline; gap: 0.3rem; }
+.pl-price__value { font-family: var(--font-display); font-weight: 500; font-size: 2.5rem; color: var(--heading); }
+.pl-price__cadence { font-size: 0.95rem; color: var(--text-faint); }
+.pl-price__blurb { margin-top: 0.5rem; font-size: 0.92rem; line-height: 1.6; color: var(--text-muted); min-height: 2.6rem; }
+.pl-price__cta { margin-top: 1.5rem; width: 100%; }
+.pl-price__features { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+.pl-price__features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: var(--text-2); }
+.pl-price__features svg { flex-shrink: 0; height: 1.1rem; width: 1.1rem; color: var(--lift); margin-top: 0.05rem; }
+.pl-pricing__note { margin-top: 2.5rem; max-width: 44rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-faint); }
+
+/* Contact methods. */
+.pl-methods { display: grid; gap: 1rem; }
+@media (min-width: 640px) { .pl-methods { grid-template-columns: repeat(3, 1fr); } }
+.pl-method { border: 1px solid var(--border); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-card); padding: 1.5rem; }
+.pl-method__label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-faint); }
+.pl-method__value { margin-top: 0.5rem; display: inline-block; font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; color: var(--heading); }
+a.pl-method__value:hover { color: var(--lift); }
+
+/* =========================================================================
+   28. WordPress core classes
    ========================================================================= */
 .screen-reader-text {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
