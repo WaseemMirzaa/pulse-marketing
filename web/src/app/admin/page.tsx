@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   defaultSiteContent,
   mergeFetchedContent,
+  type BlogPost,
   type PortfolioItem,
   type SiteContent,
   type Stat,
@@ -12,6 +13,11 @@ import {
 
 const SESSION_KEY = "pulselyft_admin_key";
 const apiBase = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001";
+
+/** Keep slugs URL-safe as the editor types. */
+function slugify(v: string) {
+  return v.toLowerCase().replace(/[^a-z0-9-]+/g, "-");
+}
 
 function Field({
   label,
@@ -134,6 +140,44 @@ export default function AdminPage() {
         ...c.portfolio,
         items: c.portfolio.items.filter((_, j) => j !== i),
       },
+    }));
+  }
+
+  function updateBlogPost(i: number, patch: Partial<BlogPost>) {
+    setContent((c) => {
+      const posts = [...c.blog.posts];
+      posts[i] = { ...posts[i], ...patch };
+      return { ...c, blog: { ...c.blog, posts } };
+    });
+  }
+
+  function addBlogPost() {
+    setContent((c) => ({
+      ...c,
+      blog: {
+        ...c.blog,
+        posts: [
+          {
+            slug: `new-post-${c.blog.posts.length + 1}`,
+            title: "New post title",
+            excerpt: "Short summary shown on the blog list and cards.",
+            category: "Meta ads",
+            date: new Date().toISOString().slice(0, 10),
+            readTime: "5 min read",
+            author: "PulseLyft Team",
+            img: "",
+            body: ["Write your article here. Separate paragraphs with a blank line."],
+          },
+          ...c.blog.posts,
+        ],
+      },
+    }));
+  }
+
+  function removeBlogPost(i: number) {
+    setContent((c) => ({
+      ...c,
+      blog: { ...c.blog, posts: c.blog.posts.filter((_, j) => j !== i) },
     }));
   }
 
@@ -373,6 +417,60 @@ export default function AdminPage() {
                   <Field label="Category" value={it.category} onChange={(v) => updatePortfolioItem(i, { category: v })} />
                   <Field label="Image URL" value={it.img} onChange={(v) => updatePortfolioItem(i, { img: v })} />
                   <Field label="Link (href)" value={it.href} onChange={(v) => updatePortfolioItem(i, { href: v })} />
+                </div>
+              ))}
+            </div>
+          </details>
+
+          <details className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+            <summary className="cursor-pointer font-semibold text-zinc-900">Blog posts</summary>
+            <div className="mt-4 space-y-3">
+              <Field label="Section kicker" value={content.blog.kicker} onChange={(v) => setContent({ ...content, blog: { ...content.blog, kicker: v } })} />
+              <Field label="Section title" value={content.blog.title} onChange={(v) => setContent({ ...content, blog: { ...content.blog, title: v } })} />
+              <Field label="Section intro" value={content.blog.intro} onChange={(v) => setContent({ ...content, blog: { ...content.blog, intro: v } })} multiline />
+              <div className="flex items-center justify-between pt-1">
+                <p className="text-xs text-zinc-500">{content.blog.posts.length} post(s) · newest shown first</p>
+                <button type="button" onClick={addBlogPost} className="text-sm font-semibold text-lift underline">
+                  + Add post
+                </button>
+              </div>
+              {content.blog.posts.map((post, i) => (
+                <div key={i} className="rounded-lg border border-zinc-200 p-3">
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-zinc-500">Post {i + 1}</span>
+                    <div className="flex items-center gap-3">
+                      <a href={`/blog/${post.slug}`} target="_blank" rel="noreferrer" className="text-xs font-medium text-lift underline">
+                        Preview
+                      </a>
+                      <button type="button" className="text-xs text-red-600" onClick={() => removeBlogPost(i)}>
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <Field label="Title" value={post.title} onChange={(v) => updateBlogPost(i, { title: v })} />
+                  <Field label="Slug (URL: /blog/…)" value={post.slug} onChange={(v) => updateBlogPost(i, { slug: slugify(v) })} />
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Field label="Category" value={post.category} onChange={(v) => updateBlogPost(i, { category: v })} />
+                    <Field label="Author" value={post.author} onChange={(v) => updateBlogPost(i, { author: v })} />
+                    <Field label="Date (YYYY-MM-DD)" value={post.date} onChange={(v) => updateBlogPost(i, { date: v })} />
+                    <Field label="Read time" value={post.readTime} onChange={(v) => updateBlogPost(i, { readTime: v })} />
+                  </div>
+                  <Field label="Cover image URL" value={post.img} onChange={(v) => updateBlogPost(i, { img: v })} />
+                  <Field label="Excerpt" value={post.excerpt} onChange={(v) => updateBlogPost(i, { excerpt: v })} multiline />
+                  <label className="block text-sm">
+                    <span className="font-medium text-zinc-700">Body</span>
+                    <textarea
+                      rows={10}
+                      className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-lift focus:outline-none focus:ring-1 focus:ring-lift"
+                      value={post.body.join("\n\n")}
+                      onChange={(e) => updateBlogPost(i, { body: e.target.value.split(/\n{2,}/) })}
+                    />
+                  </label>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    Separate paragraphs with a blank line. Start a line with{" "}
+                    <code className="rounded bg-zinc-100 px-1">## </code> for a sub-heading, or use{" "}
+                    <code className="rounded bg-zinc-100 px-1">- </code> lines for a bullet list.
+                  </p>
                 </div>
               ))}
             </div>

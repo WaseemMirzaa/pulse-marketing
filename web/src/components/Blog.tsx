@@ -2,23 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blogPosts";
+import { useSiteContent } from "@/context/SiteContentProvider";
 
 export function Blog() {
-  const posts = blogPosts.slice(0, 3);
+  const { content } = useSiteContent();
+  const posts = [...content.blog.posts].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3);
+
+  if (posts.length === 0) return null;
 
   return (
     <section id="blog" className="scroll-mt-24 bg-page py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-lift">Blog</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-lift">{content.blog.kicker}</p>
             <h2 className="mt-4 font-display text-4xl font-medium tracking-tight text-ink sm:text-5xl text-balance">
-              Playbooks for paid, search, and measurement
+              {content.blog.title}
             </h2>
-            <p className="mt-4 max-w-xl text-zinc-600 leading-relaxed">
-              Practical notes from programs we run—no fluff, no recycled listicles.
-            </p>
+            <p className="mt-4 max-w-xl text-zinc-600 leading-relaxed">{content.blog.intro}</p>
           </div>
           <Link
             href="/blog"

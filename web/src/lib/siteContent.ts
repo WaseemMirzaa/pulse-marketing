@@ -10,6 +10,18 @@ export type ProcessStep = { n: string; title: string; body: string };
 
 export type Quote = { quote: string; name: string; role: string; avatar: string };
 
+export type BlogPost = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime: string;
+  author: string;
+  img: string;
+  body: string[];
+};
+
 export type SiteContent = {
   version: number;
   hero: {
@@ -32,6 +44,7 @@ export type SiteContent = {
   portfolio: { kicker: string; title: string; intro: string; cta: string; items: PortfolioItem[] };
   process: { kicker: string; title: string; intro: string; steps: ProcessStep[] };
   testimonials: { kicker: string; title: string; quotes: Quote[] };
+  blog: { kicker: string; title: string; intro: string; posts: BlogPost[] };
   cta: { kicker: string; title: string; sub: string; button: string };
   bookCall: { kicker: string; title: string; sub: string; calendlyUrl: string };
 };
@@ -203,6 +216,68 @@ export const defaultSiteContent = (): SiteContent => ({
         name: "Priya K.",
         role: "CMO, DTC wellness",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&q=85",
+      },
+    ],
+  },
+  blog: {
+    kicker: "Blog",
+    title: "Insights that ship revenue",
+    intro:
+      "Frameworks and field notes on Meta ads, SEO, and measurement—written for operators, not spectators.",
+    posts: [
+      {
+        slug: "meta-ads-creative-testing-framework",
+        title: "A creative testing framework that actually scales Meta spend",
+        excerpt:
+          "Most teams burn budget on random creative swaps. Here is a simple structure for hooks, angles, and kill rules that keeps CAC honest.",
+        category: "Meta ads",
+        date: "2026-05-12",
+        readTime: "6 min read",
+        author: "Maya Chen",
+        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=85",
+        body: [
+          "Scaling Meta is rarely a bidding problem first—it is a creative throughput problem. When every new ad is a one-off, you cannot tell what actually moved CPL or MER.",
+          "## Test one layer at a time",
+          "Start with three layers: hook (first 2 seconds), angle (promise + proof), and format (static, UGC, carousel). Change the hook while holding angle and format constant for at least 48 hours of stable delivery.",
+          "Set kill rules before launch: if CPA is 2× target after 1,000 impressions with no purchase signal, pause. If it wins, graduate to a scaling ad set with capped daily increases—never duplicate winners across five ad sets on day one.",
+          "Document every test in a shared sheet: hypothesis, asset link, result, next action. That log becomes your creative playbook and cuts rework by half within a quarter.",
+        ],
+      },
+      {
+        slug: "seo-clusters-for-revenue-keywords",
+        title: "SEO clusters built for revenue keywords—not vanity traffic",
+        excerpt:
+          "Intent-led content systems compound when technical foundations and internal linking work together. A practical cadence for B2B and DTC teams.",
+        category: "SEO",
+        date: "2026-04-28",
+        readTime: "5 min read",
+        author: "Daniel Reyes",
+        img: "https://images.unsplash.com/photo-1432888498266-38ffec068eaf?w=1200&q=85",
+        body: [
+          "Traffic that does not map to pipeline is expensive decoration. Before writing, map money keywords to buyer stages: problem-aware, solution-aware, and vendor comparison.",
+          "Build clusters around one pillar page per core offer. Each supporting article should answer a specific long-tail query and link back with descriptive anchor text—not “click here.”",
+          "## Ship content and technical fixes together",
+          "Crawl budget, canonicals, Core Web Vitals on templates, and schema on FAQs. Google rewards sites that feel maintained, not just published.",
+          "Review rankings monthly but judge success on assisted conversions and demo requests from organic—not position alone.",
+        ],
+      },
+      {
+        slug: "attribution-leaders-trust",
+        title: "Attribution your leadership team will actually trust",
+        excerpt:
+          "Server-side events, clean UTMs, and a single weekly dashboard beat twelve conflicting reports every time.",
+        category: "Analytics",
+        date: "2026-04-10",
+        readTime: "4 min read",
+        author: "Priya Kapoor",
+        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85",
+        body: [
+          "When finance and marketing disagree on numbers, growth stalls. The fix is not another tool—it is one source of truth with documented definitions.",
+          "Standardize event names across Meta CAPI, GA4, and your CRM. Match on email hash or order ID where possible. Document what “lead” and “qualified lead” mean in writing.",
+          "## One dashboard, one weekly review",
+          "Build one weekly dashboard: spend, MER or ROAS, CAC, payback window, and pipeline influenced. Remove metrics that nobody acts on.",
+          "Run a 30-minute review every Monday. Decisions beat dashboards when the same five people look at the same five numbers.",
+        ],
       },
     ],
   },
