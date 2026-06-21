@@ -35,6 +35,13 @@ function pulselyft_patterns() {
 <!-- wp:button {"className":"pl-btn-outline"} --><div class="wp-block-button pl-btn-outline"><a class="wp-block-button__link wp-element-button" href="#work">View outcomes</a></div><!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
+<!-- wp:group {"className":"pl-hero__stats","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-hero__stats">
+<!-- wp:group {"layout":{"type":"default"}} --><div class="wp-block-group"><!-- wp:heading {"level":3,"className":"pl-stat__value"} --><h3 class="wp-block-heading pl-stat__value">3.1×</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-stat__label"} --><p class="pl-stat__label">ROAS</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"default"}} --><div class="wp-block-group"><!-- wp:heading {"level":3,"className":"pl-stat__value"} --><h3 class="wp-block-heading pl-stat__value">97%</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-stat__label"} --><p class="pl-stat__label">Retention</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"default"}} --><div class="wp-block-group"><!-- wp:heading {"level":3,"className":"pl-stat__value"} --><h3 class="wp-block-heading pl-stat__value">$48M</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-stat__label"} --><p class="pl-stat__label">Managed</p><!-- /wp:paragraph --></div><!-- /wp:group -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 </div>
@@ -43,25 +50,69 @@ function pulselyft_patterns() {
 	$logos = '
 <!-- wp:group {"className":"pl-logos","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-logos">
+<!-- wp:html --><div class="pl-logos__fade pl-logos__fade--l" aria-hidden="true"></div><div class="pl-logos__fade pl-logos__fade--r" aria-hidden="true"></div><!-- /wp:html -->
 <!-- wp:paragraph {"align":"center","className":"pl-logos__line"} --><p class="has-text-align-center pl-logos__line">Trusted by teams shipping at scale</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"align":"center","className":"pl-pat-logos"} --><p class="has-text-align-center pl-pat-logos">Nimbus &nbsp; Vertex &nbsp; Lumen &nbsp; Northline &nbsp; Helio &nbsp; Signal</p><!-- /wp:paragraph -->
+<!-- wp:group {"className":"pl-logos__viewport","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-logos__viewport">
+<!-- wp:group {"className":"pl-logos__track","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-logos__track">
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Nimbus</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Vertex</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Lumen</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Northline</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Helio</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Signal</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Aperture</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-logos__item"} --><p class="pl-logos__item">Craft</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->';
+
+	// One interactive capability row (numbered, hover-revealed thumb + arrow).
+	$cap_row = function ( $no, $title, $desc, $img ) {
+		return '
+<!-- wp:group {"className":"pl-cap","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-cap">
+<!-- wp:paragraph {"className":"pl-cap__no"} --><p class="pl-cap__no">' . $no . '</p><!-- /wp:paragraph -->
+<!-- wp:group {"className":"pl-cap__main","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-cap__main">
+<!-- wp:heading {"level":3,"className":"pl-cap__title"} --><h3 class="wp-block-heading pl-cap__title">' . $title . '</h3><!-- /wp:heading -->
+<!-- wp:paragraph {"className":"pl-cap__desc"} --><p class="pl-cap__desc">' . $desc . '</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:image {"className":"pl-cap__thumb","sizeSlug":"large"} --><figure class="wp-block-image pl-cap__thumb"><img src="' . $img . '" alt=""/></figure><!-- /wp:image -->
+<!-- wp:html --><span class="pl-cap__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><!-- /wp:html -->
+</div>
+<!-- /wp:group -->';
+	};
 
 	$caps = '
 <!-- wp:group {"className":"pl-section pl-section--paper","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--paper">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-container">
+<!-- wp:group {"className":"pl-sec-head","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-sec-head">
+<!-- wp:group {"className":"pl-sec-head__main","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-sec-head__main">
 <!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">Capabilities</p><!-- /wp:paragraph -->
 <!-- wp:heading {"className":"pl-h2"} --><h2 class="wp-block-heading pl-h2">Full-funnel performance, one system</h2><!-- /wp:heading -->
-<!-- wp:columns {"className":"pl-pat-cards"} -->
-<div class="wp-block-columns pl-pat-cards">
-<!-- wp:column {"className":"pl-pat-card"} --><div class="wp-block-column pl-pat-card"><!-- wp:heading {"level":3,"className":"pl-pat-card__title"} --><h3 class="wp-block-heading pl-pat-card__title">Meta ads &amp; paid social</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Creative testing, account structure, and CAPI-led measurement so scaling spend does not scale waste.</p><!-- /wp:paragraph --></div><!-- /wp:column -->
-<!-- wp:column {"className":"pl-pat-card"} --><div class="wp-block-column pl-pat-card"><!-- wp:heading {"level":3,"className":"pl-pat-card__title"} --><h3 class="wp-block-heading pl-pat-card__title">SEO &amp; content</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Technical foundations, intent-led clusters, and internal linking that compound traffic over quarters.</p><!-- /wp:paragraph --></div><!-- /wp:column -->
-<!-- wp:column {"className":"pl-pat-card"} --><div class="wp-block-column pl-pat-card"><!-- wp:heading {"level":3,"className":"pl-pat-card__title"} --><h3 class="wp-block-heading pl-pat-card__title">Analytics &amp; attribution</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Clean event schemas, server-side tagging, and dashboards leadership actually uses in weekly reviews.</p><!-- /wp:paragraph --></div><!-- /wp:column -->
 </div>
-<!-- /wp:columns -->
+<!-- /wp:group -->
+<!-- wp:paragraph {"className":"pl-sec-head__aside"} --><p class="pl-sec-head__aside">One team across paid, organic, and measurement—so the numbers in your board deck actually reconcile.</p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"pl-services__grid","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-services__grid">'
+	. $cap_row( '01', 'Meta ads &amp; paid social', 'Creative testing, account structure, and CAPI-led measurement so scaling spend does not scale waste.', 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=480&amp;q=80' )
+	. $cap_row( '02', 'SEO &amp; content', 'Technical foundations, intent-led clusters, and internal linking that compound traffic over quarters.', 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=480&amp;q=80' )
+	. $cap_row( '03', 'Analytics &amp; attribution', 'Clean event schemas, server-side tagging, and dashboards leadership actually uses in weekly reviews.', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&amp;q=80' )
+	. $cap_row( '04', 'Landing pages &amp; CRO', 'Fast, on-brand pages and structured experiments that turn the traffic you already pay for into pipeline.', 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=480&amp;q=80' )
+	. '</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 </div>
@@ -208,7 +259,7 @@ function pulselyft_patterns() {
 	$patterns = array(
 		'hero'         => array( __( 'PulseLyft: Hero', 'pulselyft' ), $hero ),
 		'logos'        => array( __( 'PulseLyft: Logo row', 'pulselyft' ), $logos ),
-		'capabilities' => array( __( 'PulseLyft: Capabilities (3 columns)', 'pulselyft' ), $caps ),
+		'capabilities' => array( __( 'PulseLyft: Capabilities (interactive list)', 'pulselyft' ), $caps ),
 		'stats'        => array( __( 'PulseLyft: Stat band (dark)', 'pulselyft' ), $stats ),
 		'work'         => array( __( 'PulseLyft: Case studies', 'pulselyft' ), $work ),
 		'process'      => array( __( 'PulseLyft: Process (3 steps)', 'pulselyft' ), $process ),
