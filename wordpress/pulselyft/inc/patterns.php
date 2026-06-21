@@ -1,10 +1,11 @@
 <?php
 /**
- * Block patterns — let editors build/edit pages in the WordPress block editor
- * with on-brand, fully-editable sections (text, images, buttons, colours).
+ * Block patterns — let editors build/edit every page and section in the
+ * WordPress block editor with on-brand, fully-editable content.
  *
- * Patterns reuse the theme's component classes so they render on-brand, and use
- * only core blocks so every word, link, and image is editable in Gutenberg.
+ * Each homepage section is available as a pattern (Inserter → Patterns →
+ * "PulseLyft"), plus a "Full homepage" composite. Patterns use core blocks +
+ * the theme's classes, so text, links, images, and colours are all editable.
  *
  * @package PulseLyft
  */
@@ -20,17 +21,11 @@ function pulselyft_register_patterns() {
 	if ( ! function_exists( 'register_block_pattern' ) ) {
 		return;
 	}
-
 	if ( function_exists( 'register_block_pattern_category' ) ) {
 		register_block_pattern_category( 'pulselyft', array( 'label' => __( 'PulseLyft', 'pulselyft' ) ) );
 	}
 
-	$patterns = array(
-
-		/* ----------------------------------------------------------- Hero */
-		'hero' => array(
-			'title'   => __( 'PulseLyft: Hero', 'pulselyft' ),
-			'content' => '
+	$hero = '
 <!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--page">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
@@ -47,35 +42,17 @@ function pulselyft_register_patterns() {
 </div>
 <!-- /wp:group -->
 </div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
 
-		/* ------------------------------------------------------- Stat band */
-		'stats' => array(
-			'title'   => __( 'PulseLyft: Stat band (dark)', 'pulselyft' ),
-			'content' => '
-<!-- wp:group {"className":"pl-metrics","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-metrics">
-<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-container">
-<!-- wp:columns -->
-<div class="wp-block-columns">
-<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">$48M+</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Ad spend managed</p><!-- /wp:paragraph --></div><!-- /wp:column -->
-<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">142%</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Median organic lift</p><!-- /wp:paragraph --></div><!-- /wp:column -->
-<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">4.2 wk</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Time to first scale test</p><!-- /wp:paragraph --></div><!-- /wp:column -->
-<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">97%</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Client retention</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+	$logos = '
+<!-- wp:group {"className":"pl-logos","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-logos">
+<!-- wp:paragraph {"align":"center","className":"pl-logos__line"} --><p class="has-text-align-center pl-logos__line">Trusted by teams shipping at scale</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"pl-pat-logos"} --><p class="has-text-align-center pl-pat-logos">Nimbus &nbsp; Vertex &nbsp; Lumen &nbsp; Northline &nbsp; Helio &nbsp; Signal</p><!-- /wp:paragraph -->
 </div>
-<!-- /wp:columns -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
 
-		/* ---------------------------------------------------- Capabilities */
-		'capabilities' => array(
-			'title'   => __( 'PulseLyft: Capabilities (3 columns)', 'pulselyft' ),
-			'content' => '
+	$caps = '
 <!-- wp:group {"className":"pl-section pl-section--paper","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--paper">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
@@ -92,13 +69,80 @@ function pulselyft_register_patterns() {
 </div>
 <!-- /wp:group -->
 </div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
 
-		/* --------------------------------------------------------- Pricing */
-		'pricing' => array(
-			'title'   => __( 'PulseLyft: Pricing (3 tiers)', 'pulselyft' ),
-			'content' => '
+	$stats = '
+<!-- wp:group {"className":"pl-metrics","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-metrics">
+<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-container">
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">$48M+</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Ad spend managed</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">142%</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Median organic lift</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">4.2 wk</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Time to first scale test</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:heading {"className":"pl-metric__value"} --><h3 class="wp-block-heading pl-metric__value">97%</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-metric__label"} --><p class="pl-metric__label">Client retention</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->';
+
+	$work = '
+<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--page">
+<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-container">
+<!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">Selected work</p><!-- /wp:paragraph -->
+<!-- wp:heading {"className":"pl-h2"} --><h2 class="wp-block-heading pl-h2">Outcomes, not mood boards</h2><!-- /wp:heading -->
+<!-- wp:columns {"className":"pl-pat-cards"} -->
+<div class="wp-block-columns pl-pat-cards">
+<!-- wp:column --><div class="wp-block-column"><!-- wp:group {"className":"pl-case","layout":{"type":"default"}} --><div class="wp-block-group pl-case"><!-- wp:image {"sizeSlug":"large"} --><figure class="wp-block-image size-large"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=85" alt=""/></figure><!-- /wp:image --><!-- wp:group {"className":"pl-case__body","layout":{"type":"default"}} --><div class="wp-block-group pl-case__body"><!-- wp:heading {"level":3,"className":"pl-case__title"} --><h3 class="wp-block-heading pl-case__title">B2B SaaS pipeline rebuild</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-case__result"} --><p class="pl-case__result">61% lower CPL in 90 days</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:group {"className":"pl-case","layout":{"type":"default"}} --><div class="wp-block-group pl-case"><!-- wp:image {"sizeSlug":"large"} --><figure class="wp-block-image size-large"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&amp;q=85" alt=""/></figure><!-- /wp:image --><!-- wp:group {"className":"pl-case__body","layout":{"type":"default"}} --><div class="wp-block-group pl-case__body"><!-- wp:heading {"level":3,"className":"pl-case__title"} --><h3 class="wp-block-heading pl-case__title">DTC omnichannel scale</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-case__result"} --><p class="pl-case__result">2.4× MER at same spend</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:group --></div><!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->';
+
+	$process = '
+<!-- wp:group {"className":"pl-section pl-section--paper","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--paper">
+<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-container">
+<!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">Engagement</p><!-- /wp:paragraph -->
+<!-- wp:heading {"className":"pl-h2"} --><h2 class="wp-block-heading pl-h2">How we plug into your team</h2><!-- /wp:heading -->
+<!-- wp:columns {"className":"pl-pat-cards"} -->
+<div class="wp-block-columns pl-pat-cards">
+<!-- wp:column --><div class="wp-block-column"><!-- wp:group {"className":"pl-step","layout":{"type":"default"}} --><div class="wp-block-group pl-step"><!-- wp:paragraph {"className":"pl-step__n"} --><p class="pl-step__n">01</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"className":"pl-step__title"} --><h3 class="wp-block-heading pl-step__title">Diagnose &amp; benchmark</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-step__text"} --><p class="pl-step__text">Audit accounts, analytics, and SERP reality. Align on margin, payback, and guardrails before spend moves.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:group {"className":"pl-step","layout":{"type":"default"}} --><div class="wp-block-group pl-step"><!-- wp:paragraph {"className":"pl-step__n"} --><p class="pl-step__n">02</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"className":"pl-step__title"} --><h3 class="wp-block-heading pl-step__title">Ship the growth system</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-step__text"} --><p class="pl-step__text">Launch structured tests, SEO fixes, and tracking—documented in a living roadmap the whole team can see.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:group {"className":"pl-step","layout":{"type":"default"}} --><div class="wp-block-group pl-step"><!-- wp:paragraph {"className":"pl-step__n"} --><p class="pl-step__n">03</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"className":"pl-step__title"} --><h3 class="wp-block-heading pl-step__title">Compound weekly</h3><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-step__text"} --><p class="pl-step__text">Creative velocity, query expansion, and bid/budget logic tuned in a tight feedback loop with your data.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->';
+
+	$tst = '
+<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--page">
+<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-container">
+<!-- wp:group {"className":"pl-quote pl-quote--lg","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-quote pl-quote--lg">
+<!-- wp:paragraph {"className":"pl-quote__lg-text"} --><p class="pl-quote__lg-text">They replaced three vendors. Our Meta account finally talks to our CRM—and finance trusts the numbers.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"pl-quote__cite"} --><p class="pl-quote__cite"><strong class="pl-quote__name">Jordan M.</strong> <span class="pl-quote__role">— VP Growth, Series B SaaS</span></p><!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->';
+
+	$pricing = '
 <!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--page">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
@@ -115,33 +159,9 @@ function pulselyft_register_patterns() {
 </div>
 <!-- /wp:group -->
 </div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
 
-		/* ----------------------------------------------------- Testimonial */
-		'testimonial' => array(
-			'title'   => __( 'PulseLyft: Testimonial (dark quote)', 'pulselyft' ),
-			'content' => '
-<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-section pl-section--page">
-<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-container">
-<!-- wp:group {"className":"pl-quote pl-quote--lg","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-quote pl-quote--lg">
-<!-- wp:paragraph {"className":"pl-quote__lg-text"} --><p class="pl-quote__lg-text">They replaced three vendors. Our Meta account finally talks to our CRM—and finance trusts the numbers.</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"pl-quote__cite"} --><p class="pl-quote__cite"><strong class="pl-quote__name">Jordan M.</strong> <span class="pl-quote__role">— VP Growth, Series B SaaS</span></p><!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->',
-		),
-
-		/* ------------------------------------------------------------- FAQ */
-		'faq' => array(
-			'title'   => __( 'PulseLyft: FAQ (accordion)', 'pulselyft' ),
-			'content' => '
+	$faq = '
 <!-- wp:group {"className":"pl-section pl-section--paper","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--paper">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
@@ -154,13 +174,25 @@ function pulselyft_register_patterns() {
 </div>
 <!-- /wp:group -->
 </div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
 
-		/* ------------------------------------------------------------- CTA */
-		'cta' => array(
-			'title'   => __( 'PulseLyft: CTA band (gradient)', 'pulselyft' ),
-			'content' => '
+	$contact = '
+<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--page">
+<!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-container">
+<!-- wp:columns {"className":"pl-contact-grid"} -->
+<div class="wp-block-columns pl-contact-grid">
+<!-- wp:column --><div class="wp-block-column"><!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">Contact</p><!-- /wp:paragraph --><!-- wp:heading {"className":"pl-h2"} --><h2 class="wp-block-heading pl-h2">Let us talk about your pipeline</h2><!-- /wp:heading --><!-- wp:paragraph {"className":"pl-lede"} --><p class="pl-lede">Tell us your goals, stack, and constraints. You will get a direct answer on fit—usually within one business day.</p><!-- /wp:paragraph --></div><!-- /wp:column -->
+<!-- wp:column --><div class="wp-block-column"><!-- wp:shortcode -->[pulselyft_contact_form]<!-- /wp:shortcode --></div><!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->';
+
+	$cta = '
 <!-- wp:group {"className":"pl-cta","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-cta">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
@@ -175,15 +207,28 @@ function pulselyft_register_patterns() {
 </div>
 <!-- /wp:group -->
 </div>
-<!-- /wp:group -->',
-		),
+<!-- /wp:group -->';
+
+	$patterns = array(
+		'hero'         => array( __( 'PulseLyft: Hero', 'pulselyft' ), $hero ),
+		'logos'        => array( __( 'PulseLyft: Logo row', 'pulselyft' ), $logos ),
+		'capabilities' => array( __( 'PulseLyft: Capabilities (3 columns)', 'pulselyft' ), $caps ),
+		'stats'        => array( __( 'PulseLyft: Stat band (dark)', 'pulselyft' ), $stats ),
+		'work'         => array( __( 'PulseLyft: Case studies', 'pulselyft' ), $work ),
+		'process'      => array( __( 'PulseLyft: Process (3 steps)', 'pulselyft' ), $process ),
+		'testimonial'  => array( __( 'PulseLyft: Testimonial (dark quote)', 'pulselyft' ), $tst ),
+		'pricing'      => array( __( 'PulseLyft: Pricing (3 tiers)', 'pulselyft' ), $pricing ),
+		'faq'          => array( __( 'PulseLyft: FAQ (accordion)', 'pulselyft' ), $faq ),
+		'contact'      => array( __( 'PulseLyft: Contact (form)', 'pulselyft' ), $contact ),
+		'cta'          => array( __( 'PulseLyft: CTA band (gradient)', 'pulselyft' ), $cta ),
+		'homepage'     => array( __( 'PulseLyft: Full homepage', 'pulselyft' ), $hero . $logos . $caps . $stats . $work . $process . $tst . $pricing . $faq . $cta ),
 	);
 
-	foreach ( $patterns as $slug => $pattern ) {
+	foreach ( $patterns as $slug => $data ) {
 		register_block_pattern( 'pulselyft/' . $slug, array(
-			'title'      => $pattern['title'],
+			'title'      => $data[0],
 			'categories' => array( 'pulselyft' ),
-			'content'    => $pattern['content'],
+			'content'    => $data[1],
 		) );
 	}
 }

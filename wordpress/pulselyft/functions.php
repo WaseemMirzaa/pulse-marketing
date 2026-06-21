@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '2.1.0' );
+	define( 'PULSELYFT_VERSION', '2.1.1' );
 }
 
 require_once get_template_directory() . '/inc/content.php';
@@ -307,6 +307,19 @@ function pulselyft_handle_contact() {
 }
 add_action( 'admin_post_nopriv_pulselyft_contact', 'pulselyft_handle_contact' );
 add_action( 'admin_post_pulselyft_contact', 'pulselyft_handle_contact' );
+
+/**
+ * [pulselyft_contact_form] — renders the native contact form so it can be
+ * placed in any block-built page or post.
+ *
+ * @return string
+ */
+function pulselyft_contact_form_shortcode() {
+	ob_start();
+	get_template_part( 'template-parts/contact-form' );
+	return ob_get_clean();
+}
+add_shortcode( 'pulselyft_contact_form', 'pulselyft_contact_form_shortcode' );
 
 /**
  * Excerpt tweaks.
