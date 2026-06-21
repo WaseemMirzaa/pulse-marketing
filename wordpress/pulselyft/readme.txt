@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 2.1.1
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -89,6 +89,17 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 3.0.0 =
+* Full block (FSE) theme: every template and the header/footer are now editable
+  in the Site Editor (Appearance → Editor). Added templates/ (front-page, index,
+  page, single, archive, search, 404) and parts/ (header, footer); registered
+  template parts in theme.json.
+* Pages are seeded with editable section blocks (the homepage uses the Full
+  Homepage pattern; About/Services/Pricing/Contact use their section patterns),
+  so 100% of content is edited in the WordPress block editor.
+* Site chrome (colour-theme bootstrap, skip link, scroll progress, back-to-top,
+  chat assistant) moved to PHP hooks so it works across all block templates.
 
 = 2.1.1 =
 * Complete the block-pattern library so every homepage section is available and

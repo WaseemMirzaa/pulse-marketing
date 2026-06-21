@@ -63,5 +63,10 @@
 			"h2": { "typography": { "fontFamily": "\"Fraunces\", Georgia, serif", "fontWeight": "500" } },
 			"h3": { "typography": { "fontFamily": "\"Fraunces\", Georgia, serif", "fontWeight": "500" } }
 		}
-	}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" }
+	],
+	"customTemplates": []
 }
