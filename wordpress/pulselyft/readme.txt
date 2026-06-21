@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -89,6 +89,14 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 2.1.1 =
+* Complete the block-pattern library so every homepage section is available and
+  editable in the block editor: added Logo row, Case studies, Process, Contact,
+  and a one-click "Full homepage" composite (alongside Hero, Capabilities, Stat
+  band, Pricing, Testimonial, FAQ, CTA).
+* Added a [pulselyft_contact_form] shortcode so the working contact form can be
+  dropped into any block-built page or post.
 
 = 2.1.0 =
 * Block-editor editing: editor styles so the block editor matches the front end,
