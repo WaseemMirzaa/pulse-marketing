@@ -10,12 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '1.2.1' );
+	define( 'PULSELYFT_VERSION', '2.1.0' );
 }
 
 require_once get_template_directory() . '/inc/content.php';
 require_once get_template_directory() . '/inc/nav-walker.php';
 require_once get_template_directory() . '/inc/setup.php';
+require_once get_template_directory() . '/inc/patterns.php';
 require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/seo.php';
 
@@ -39,7 +40,13 @@ function pulselyft_setup() {
 	) );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'align-wide' );
+	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
+	// Make the block editor render content in the theme's look.
+	add_editor_style( array(
+		'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap',
+		'style.css',
+	) );
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'pulselyft' ),
@@ -60,7 +67,7 @@ function pulselyft_assets() {
 	// Google Fonts: Fraunces (display) + Outfit (sans) — matches the web app.
 	wp_enqueue_style(
 		'pulselyft-fonts',
-		'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap',
 		array(),
 		null
 	);
@@ -269,6 +276,7 @@ function pulselyft_handle_contact() {
 	$name    = isset( $_POST['pl_name'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_name'] ) ) : '';
 	$email   = isset( $_POST['pl_email'] ) ? sanitize_email( wp_unslash( $_POST['pl_email'] ) ) : '';
 	$company = isset( $_POST['pl_company'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_company'] ) ) : '';
+	$topic   = isset( $_POST['pl_topic'] ) ? sanitize_text_field( wp_unslash( $_POST['pl_topic'] ) ) : '';
 	$message = isset( $_POST['pl_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['pl_message'] ) ) : '';
 
 	if ( '' === $name || ! is_email( $email ) || '' === $message ) {
@@ -280,10 +288,11 @@ function pulselyft_handle_contact() {
 	$to      = is_email( $to ) ? $to : get_option( 'admin_email' );
 	$subject = sprintf( /* translators: %s: sender name. */ __( 'New enquiry from %s', 'pulselyft' ), $name );
 	$body    = sprintf(
-		"Name: %s\nEmail: %s\nCompany: %s\n\nMessage:\n%s\n",
+		"Name: %s\nEmail: %s\nCompany: %s\nTopic: %s\n\nMessage:\n%s\n",
 		$name,
 		$email,
 		$company,
+		$topic,
 		$message
 	);
 	$headers = array(

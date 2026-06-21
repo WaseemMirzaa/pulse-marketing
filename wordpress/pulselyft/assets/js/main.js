@@ -33,7 +33,7 @@
 			} else {
 				document.documentElement.removeAttribute('data-theme');
 			}
-			if (meta) { meta.setAttribute('content', theme === 'dark' ? '#0a0a0b' : '#0f0f10'); }
+			if (meta) { meta.setAttribute('content', theme === 'dark' ? '#0c0a14' : '#14111f'); }
 			toggles.forEach(function (t) { t.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false'); });
 			if (persist) { try { localStorage.setItem('pl-theme', theme); } catch (e) {} }
 		}

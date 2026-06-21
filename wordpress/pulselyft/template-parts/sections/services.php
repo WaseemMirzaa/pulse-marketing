@@ -1,6 +1,6 @@
 <?php
 /**
- * Services — bento grid.
+ * Capabilities — interactive editorial list (v2, replaces the bento grid).
  *
  * @package PulseLyft
  */
@@ -26,18 +26,18 @@ $items = array_slice( $items, 0, 4 );
 
 		<ul class="pl-services__grid">
 			<?php foreach ( $items as $i => $item ) : ?>
-				<li class="pl-service pl-reveal">
-					<?php if ( ! empty( $item['img'] ) ) : ?>
-						<div class="pl-service__img" aria-hidden="true">
-							<img src="<?php echo esc_url( $item['img'] ); ?>" alt="" loading="lazy" decoding="async">
-						</div>
-					<?php endif; ?>
-					<div class="pl-service__body">
-						<span class="pl-service__num" aria-hidden="true"><?php echo esc_html( str_pad( (string) ( $i + 1 ), 2, '0', STR_PAD_LEFT ) ); ?></span>
-						<span class="pl-service__rule" aria-hidden="true"></span>
-						<h3 class="pl-service__title"><?php echo esc_html( $item['title'] ); ?></h3>
-						<p class="pl-service__text"><?php echo esc_html( $item['body'] ); ?></p>
+				<li class="pl-cap pl-reveal">
+					<span class="pl-cap__no" aria-hidden="true"><?php echo esc_html( str_pad( (string) ( $i + 1 ), 2, '0', STR_PAD_LEFT ) ); ?></span>
+					<div class="pl-cap__main">
+						<h3 class="pl-cap__title"><?php echo esc_html( $item['title'] ); ?></h3>
+						<p class="pl-cap__desc"><?php echo esc_html( $item['body'] ); ?></p>
 					</div>
+					<?php if ( ! empty( $item['img'] ) ) : ?>
+						<span class="pl-cap__thumb" aria-hidden="true"><img src="<?php echo esc_url( $item['img'] ); ?>" alt="" loading="lazy" decoding="async"></span>
+					<?php endif; ?>
+					<span class="pl-cap__arrow" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</span>
 				</li>
 			<?php endforeach; ?>
 		</ul>

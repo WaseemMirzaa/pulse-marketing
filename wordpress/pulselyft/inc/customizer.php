@@ -40,6 +40,27 @@ function pulselyft_customize_register( $wp_customize ) {
 		) );
 	};
 
+	/* --------------------------------------------------------------- Homepage */
+	$wp_customize->add_section( 'pulselyft_home', array(
+		'title' => __( 'Homepage', 'pulselyft' ),
+		'panel' => 'pulselyft_panel',
+	) );
+	$wp_customize->add_setting( 'pulselyft_home_source', array(
+		'default'           => 'sections',
+		'sanitize_callback' => 'pulselyft_sanitize_home_source',
+		'transport'         => 'refresh',
+	) );
+	$wp_customize->add_control( 'pulselyft_home_source', array(
+		'label'       => __( 'Homepage source', 'pulselyft' ),
+		'description' => __( '“Designed sections” uses the built-in landing layout. “Page content (blocks)” renders the Home page you build in the block editor with the PulseLyft patterns.', 'pulselyft' ),
+		'section'     => 'pulselyft_home',
+		'type'        => 'radio',
+		'choices'     => array(
+			'sections' => __( 'Designed sections (default)', 'pulselyft' ),
+			'content'  => __( 'Page content (blocks)', 'pulselyft' ),
+		),
+	) );
+
 	/* ------------------------------------------------------------------ Brand */
 	$wp_customize->add_section( 'pulselyft_brand', array(
 		'title' => __( 'Brand & Identity', 'pulselyft' ),
@@ -126,6 +147,16 @@ function pulselyft_customize_register( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'pulselyft_customize_register' );
+
+/**
+ * Sanitize the homepage source radio.
+ *
+ * @param string $value Raw value.
+ * @return string
+ */
+function pulselyft_sanitize_home_source( $value ) {
+	return in_array( $value, array( 'sections', 'content' ), true ) ? $value : 'sections';
+}
 
 /**
  * Live-preview JS for the title/description bindings.
