@@ -196,6 +196,25 @@
 		els.forEach(function (el) { io.observe(el); });
 	}
 
+	/* ---------------------------------------------------- Logo marquee loop */
+	// Duplicate each track's children once so the CSS translateX(-50%) loop is
+	// seamless. Editors only manage one clean set of logos in the block editor.
+	function initMarquee() {
+		if (reduceMotion) { return; } // CSS already disables the animation.
+		var tracks = document.querySelectorAll('.pl-logos__track');
+		tracks.forEach(function (track) {
+			if (track.dataset.plDup === '1') { return; }
+			var items = Array.prototype.slice.call(track.children);
+			if (!items.length) { return; }
+			items.forEach(function (item) {
+				var clone = item.cloneNode(true);
+				clone.setAttribute('aria-hidden', 'true');
+				track.appendChild(clone);
+			});
+			track.dataset.plDup = '1';
+		});
+	}
+
 	/* -------------------------------------------------------------- FAQ */
 	function initFaq() {
 		var faq = document.getElementById('pl-faq');
@@ -289,6 +308,7 @@
 		initScroll();
 		initReveals();
 		initCounters();
+		initMarquee();
 		initFaq();
 		initChat();
 	});

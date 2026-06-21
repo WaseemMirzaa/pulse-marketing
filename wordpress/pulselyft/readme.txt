@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 3.2.0
+Stable tag: 3.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -89,6 +89,18 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 3.3.0 =
+* The signature motion is now built into the Pages-editable homepage patterns,
+  so the effects survive even when the homepage is edited from Pages → Home:
+  - Hero now ends with an animated three-stat strip (count-up on scroll).
+  - The logo row is a true infinite marquee (JS seamlessly duplicates the
+    track; pauses on hover; respects prefers-reduced-motion) with edge fades.
+  - Capabilities is the interactive numbered hover-list (gradient wash,
+    reveal thumbnail, rotating arrow) instead of plain columns — four
+    fully-editable rows.
+* No new templates or settings; all sections remain editable in the block
+  editor and the homepage still falls back to the designed sections if empty.
 
 = 3.2.0 =
 * Homepage sections are now editable from the Pages editor (Pages → Home), built
