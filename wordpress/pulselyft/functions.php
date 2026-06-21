@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '3.0.0' );
+	define( 'PULSELYFT_VERSION', '3.1.0' );
 }
 
 require_once get_template_directory() . '/inc/content.php';
@@ -100,33 +100,6 @@ function pulselyft_assets() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pulselyft_assets' );
-
-/**
- * Output the colour-theme bootstrap (no flash) + theme-color meta early in head.
- */
-function pulselyft_head_theme() {
-	echo '<meta name="theme-color" content="#14111f">' . "\n";
-	echo '<script>(function(){try{var s=localStorage.getItem("pl-theme");var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;if(d){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();</script>' . "\n";
-}
-add_action( 'wp_head', 'pulselyft_head_theme', 1 );
-
-/**
- * Skip link + scroll-progress bar at the top of <body> (block themes).
- */
-function pulselyft_body_open() {
-	echo '<a class="screen-reader-text" href="#pl-main">' . esc_html__( 'Skip to content', 'pulselyft' ) . '</a>';
-	echo '<div class="pl-progress" id="pl-progress" aria-hidden="true"></div>';
-}
-add_action( 'wp_body_open', 'pulselyft_body_open' );
-
-/**
- * Back-to-top button + chat assistant at the footer (block themes).
- */
-function pulselyft_footer_widgets() {
-	echo '<button type="button" class="pl-totop" id="pl-totop" aria-label="' . esc_attr__( 'Back to top', 'pulselyft' ) . '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
-	get_template_part( 'template-parts/chatbot' );
-}
-add_action( 'wp_footer', 'pulselyft_footer_widgets' );
 
 /**
  * Preconnect to font + image hosts for performance/SEO.

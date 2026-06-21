@@ -15,12 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The block pattern map (slug => [title, content]). Reused by registration and
- * by page provisioning, so pages can be seeded with editable section blocks.
- *
- * @return array
+ * Register the pattern category + patterns.
  */
-function pulselyft_patterns() {
+function pulselyft_register_patterns() {
+	if ( ! function_exists( 'register_block_pattern' ) ) {
+		return;
+	}
+	if ( function_exists( 'register_block_pattern_category' ) ) {
+		register_block_pattern_category( 'pulselyft', array( 'label' => __( 'PulseLyft', 'pulselyft' ) ) );
+	}
+
 	$hero = '
 <!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-section pl-section--page">
@@ -86,8 +90,8 @@ function pulselyft_patterns() {
 <!-- /wp:group -->';
 
 	$work = '
-<!-- wp:group {"className":"pl-section pl-section--page","anchor":"work","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-section pl-section--page" id="work">
+<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--page">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-container">
 <!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">Selected work</p><!-- /wp:paragraph -->
@@ -173,8 +177,8 @@ function pulselyft_patterns() {
 <!-- /wp:group -->';
 
 	$contact = '
-<!-- wp:group {"className":"pl-section pl-section--page","anchor":"contact","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-section pl-section--page" id="contact">
+<!-- wp:group {"className":"pl-section pl-section--page","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-section pl-section--page">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-container">
 <!-- wp:columns {"className":"pl-contact-grid"} -->
@@ -189,8 +193,8 @@ function pulselyft_patterns() {
 <!-- /wp:group -->';
 
 	$cta = '
-<!-- wp:group {"className":"pl-cta","anchor":"book-call","layout":{"type":"default"}} -->
-<div class="wp-block-group pl-cta" id="book-call">
+<!-- wp:group {"className":"pl-cta","layout":{"type":"default"}} -->
+<div class="wp-block-group pl-cta">
 <!-- wp:group {"className":"pl-container","layout":{"type":"default"}} -->
 <div class="wp-block-group pl-container">
 <!-- wp:group {"className":"pl-cta__panel","layout":{"type":"default"}} -->
@@ -220,20 +224,7 @@ function pulselyft_patterns() {
 		'homepage'     => array( __( 'PulseLyft: Full homepage', 'pulselyft' ), $hero . $logos . $caps . $stats . $work . $process . $tst . $pricing . $faq . $cta ),
 	);
 
-	return $patterns;
-}
-
-/**
- * Register the pattern category + patterns.
- */
-function pulselyft_register_patterns() {
-	if ( ! function_exists( 'register_block_pattern' ) ) {
-		return;
-	}
-	if ( function_exists( 'register_block_pattern_category' ) ) {
-		register_block_pattern_category( 'pulselyft', array( 'label' => __( 'PulseLyft', 'pulselyft' ) ) );
-	}
-	foreach ( pulselyft_patterns() as $slug => $data ) {
+	foreach ( $patterns as $slug => $data ) {
 		register_block_pattern( 'pulselyft/' . $slug, array(
 			'title'      => $data[0],
 			'categories' => array( 'pulselyft' ),

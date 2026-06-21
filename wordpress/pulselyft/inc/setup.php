@@ -223,75 +223,6 @@ function pulselyft_ensure_page( $slug, $title, $content = '', $excerpt = '' ) {
 }
 
 /**
- * A page-hero band as editable blocks.
- *
- * @param string $eyebrow Eyebrow text.
- * @param string $title   H1.
- * @param string $sub     Sub-headline.
- * @return string
- */
-function pulselyft_pagehead_block( $eyebrow, $title, $sub ) {
-	return '<!-- wp:group {"className":"pl-pagehead","layout":{"type":"default"}} -->'
-		. '<div class="wp-block-group pl-pagehead"><!-- wp:group {"className":"pl-container pl-pagehead__inner","layout":{"type":"default"}} -->'
-		. '<div class="wp-block-group pl-container pl-pagehead__inner">'
-		. '<!-- wp:paragraph {"className":"pl-kicker pl-kicker--lift"} --><p class="pl-kicker pl-kicker--lift">' . esc_html( $eyebrow ) . '</p><!-- /wp:paragraph -->'
-		. '<!-- wp:heading {"level":1,"className":"pl-pagehead__title"} --><h1 class="wp-block-heading pl-pagehead__title">' . esc_html( $title ) . '</h1><!-- /wp:heading -->'
-		. '<!-- wp:paragraph {"className":"pl-pagehead__sub"} --><p class="pl-pagehead__sub">' . esc_html( $sub ) . '</p><!-- /wp:paragraph -->'
-		. '</div><!-- /wp:group --></div><!-- /wp:group -->';
-}
-
-/**
- * Build the full block content for a provisioned page from the pattern library,
- * so every page renders editable section blocks in the WordPress editor.
- *
- * @param string $slug Page slug.
- * @return string
- */
-function pulselyft_page_blocks( $slug ) {
-	$p   = function_exists( 'pulselyft_patterns' ) ? pulselyft_patterns() : array();
-	$get = function ( $k ) use ( $p ) {
-		return isset( $p[ $k ][1] ) ? $p[ $k ][1] : '';
-	};
-
-	switch ( $slug ) {
-		case 'home':
-			return $get( 'homepage' );
-
-		case 'about':
-			$story = pulselyft_get( 'pages.about.story' );
-			$prose = '';
-			if ( is_array( $story ) ) {
-				$prose = '<!-- wp:group {"className":"pl-section pl-section--paper","layout":{"type":"default"}} --><div class="wp-block-group pl-section pl-section--paper"><!-- wp:group {"className":"pl-container","layout":{"type":"default"}} --><div class="wp-block-group pl-container">';
-				foreach ( $story as $para ) {
-					$prose .= '<!-- wp:paragraph {"className":"pl-lede"} --><p class="pl-lede">' . esc_html( $para ) . '</p><!-- /wp:paragraph -->';
-				}
-				$prose .= '</div><!-- /wp:group --></div><!-- /wp:group -->';
-			}
-			return pulselyft_pagehead_block( 'About', pulselyft_get( 'pages.about.title' ), pulselyft_get( 'pages.about.sub' ) )
-				. $prose . $get( 'stats' ) . $get( 'testimonial' ) . $get( 'cta' );
-
-		case 'services':
-			return pulselyft_pagehead_block( 'Services', pulselyft_get( 'pages.services.title' ), pulselyft_get( 'pages.services.sub' ) )
-				. $get( 'capabilities' ) . $get( 'process' ) . $get( 'stats' ) . $get( 'cta' );
-
-		case 'pricing':
-			return pulselyft_pagehead_block( 'Pricing', pulselyft_get( 'pages.pricing.title' ), pulselyft_get( 'pages.pricing.sub' ) )
-				. $get( 'pricing' ) . $get( 'faq' ) . $get( 'cta' );
-
-		case 'contact':
-			return pulselyft_pagehead_block( 'Contact', pulselyft_get( 'pages.contact.title' ), pulselyft_get( 'pages.contact.sub' ) )
-				. $get( 'contact' );
-
-		case 'privacy-policy':
-			return pulselyft_legal_content( 'privacy' );
-
-		case 'terms':
-			return pulselyft_legal_content( 'terms' );
-	}
-	return '';
-}
-
-/**
  * Provision the full site on theme activation (runs once, idempotent).
  */
 function pulselyft_provision_site() {
@@ -312,7 +243,20 @@ function pulselyft_provision_site() {
 
 	$ids = array();
 	foreach ( $pages as $slug => $title ) {
-		$ids[ $slug ] = pulselyft_ensure_page( $slug, $title, pulselyft_page_blocks( $slug ), '' );
+		$content = '';
+		$excerpt = '';
+		if ( 'privacy-policy' === $slug ) {
+			$content = pulselyft_legal_content( 'privacy' );
+		} elseif ( 'terms' === $slug ) {
+			$content = pulselyft_legal_content( 'terms' );
+		} elseif ( 'home' === $slug ) {
+			$content = "<!-- wp:paragraph -->\n<p>This is your homepage. Its sections (hero, services, pricing teaser, testimonials, FAQ, and more) are managed in <strong>Appearance &rarr; Customize &rarr; PulseLyft Landing Page</strong>.</p>\n<!-- /wp:paragraph -->";
+		} elseif ( in_array( $slug, array( 'about', 'services', 'pricing', 'contact' ), true ) ) {
+			$seed    = pulselyft_page_seed( $slug );
+			$content = $seed['content'];
+			$excerpt = $seed['excerpt'];
+		}
+		$ids[ $slug ] = pulselyft_ensure_page( $slug, $title, $content, $excerpt );
 	}
 	update_option( 'pulselyft_pages', $ids );
 
