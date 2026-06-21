@@ -279,6 +279,9 @@ function pulselyft_default_content() {
 				'kicker'   => 'Services',
 				'title'    => 'Full-funnel growth, run as one system',
 				'sub'      => 'Paid, creative, search, and measurement—orchestrated by senior operators against the CAC, payback, and LTV targets you already track.',
+				'body'     => array(
+					'Great performance marketing is not a pile of disconnected tactics—it is one system where creative, media, and measurement reinforce each other. Below is what an engagement looks like and exactly what is included.',
+				),
 				'included' => array(
 					array( 'title' => 'Strategy & benchmarking', 'body' => 'Account, analytics, and SERP audits with margin and payback guardrails before a dollar moves.' ),
 					array( 'title' => 'Performance creative', 'body' => 'Hooks, angles, and UGC-style packs produced on a cadence and engineered for relevance.' ),
@@ -292,6 +295,9 @@ function pulselyft_default_content() {
 				'kicker' => 'Pricing',
 				'title'  => 'Plans that scale with your ambition',
 				'sub'    => 'Every engagement opens with a fixed-scope, two-week discovery sprint. No mystery retainers—just scoped milestones you can defend.',
+				'body'   => array(
+					'Pricing should be obvious, not negotiated in the dark. Pick the plan that matches your stage—every engagement starts with a two-week discovery sprint, so we both agree on scope before committing.',
+				),
 				'note'   => 'All plans include a dedicated senior lead, weekly reporting, and full ownership of your accounts and data. Advertising spend is billed separately by the platforms.',
 				'tiers'  => array(
 					array(
@@ -327,6 +333,9 @@ function pulselyft_default_content() {
 				'kicker'  => 'Contact',
 				'title'   => 'Let us talk about your pipeline',
 				'sub'     => 'Tell us your goals, stack, and constraints. You will get a direct, human answer on fit—usually within one business day.',
+				'body'    => array(
+					'Whether you are scaling paid, untangling attribution, or rebuilding your SEO foundation, we will give you a straight answer on fit. Reach out below and we will reply within one business day.',
+				),
 				'methods' => array(
 					array( 'label' => 'Book a call', 'value' => '30-minute intro', 'href' => '#book-call' ),
 					array( 'label' => 'Response time', 'value' => 'Within 1 business day', 'href' => '' ),

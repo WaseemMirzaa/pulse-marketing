@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PULSELYFT_VERSION' ) ) {
-	define( 'PULSELYFT_VERSION', '1.2.0' );
+	define( 'PULSELYFT_VERSION', '1.2.1' );
 }
 
 require_once get_template_directory() . '/inc/content.php';

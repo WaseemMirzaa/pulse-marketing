@@ -2,6 +2,9 @@
 /**
  * Template for the Contact page (slug "contact").
  *
+ * Editable in wp-admin: Title → hero heading, Excerpt → hero sub, Content →
+ * intro copy. Booking + form sections are reused from the homepage.
+ *
  * @package PulseLyft
  */
 
@@ -11,7 +14,14 @@ $c       = pulselyft_get( 'pages.contact' );
 $methods = isset( $c['methods'] ) ? $c['methods'] : array();
 $email   = pulselyft_get( 'brand.email', 'pulselyft_brand_email' );
 
-pulselyft_page_hero( $c['kicker'], $c['title'], $c['sub'] );
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		$sub = has_excerpt() ? get_the_excerpt() : $c['sub'];
+		pulselyft_page_hero( $c['kicker'], get_the_title(), $sub );
+		pulselyft_editable_intro();
+	endwhile;
+endif;
 ?>
 
 <section class="pl-section pl-section--paper pl-section--bordered" aria-label="<?php esc_attr_e( 'Ways to reach us', 'pulselyft' ); ?>" style="padding-block:4rem;">

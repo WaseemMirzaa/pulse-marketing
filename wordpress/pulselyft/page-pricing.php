@@ -2,20 +2,30 @@
 /**
  * Template for the Pricing page (slug "pricing").
  *
+ * Editable in wp-admin: Title → hero heading, Excerpt → hero sub, Content →
+ * intro copy. Tiers and the note come from the content tree (filterable).
+ *
  * @package PulseLyft
  */
 
 get_header();
 
-$p     = pulselyft_get( 'pages.pricing' );
-$tiers = isset( $p['tiers'] ) ? $p['tiers'] : array();
+$p           = pulselyft_get( 'pages.pricing' );
+$tiers       = isset( $p['tiers'] ) ? $p['tiers'] : array();
 $contact_url = pulselyft_page_url( 'contact' );
 $cta_url     = $contact_url ? $contact_url : home_url( '/#book-call' );
 
-pulselyft_page_hero( $p['kicker'], $p['title'], $p['sub'] );
+if ( have_posts() ) :
+	while ( have_posts() ) :
+		the_post();
+		$sub = has_excerpt() ? get_the_excerpt() : $p['sub'];
+		pulselyft_page_hero( $p['kicker'], get_the_title(), $sub );
+		pulselyft_editable_intro();
+	endwhile;
+endif;
 ?>
 
-<section class="pl-section pl-section--page" aria-label="<?php esc_attr_e( 'Pricing plans', 'pulselyft' ); ?>">
+<section class="pl-section pl-section--page" style="padding-top:1rem;" aria-label="<?php esc_attr_e( 'Pricing plans', 'pulselyft' ); ?>">
 	<div class="pl-container">
 		<ul class="pl-pricing">
 			<?php foreach ( $tiers as $tier ) : ?>
