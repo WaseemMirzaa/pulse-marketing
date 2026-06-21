@@ -64,10 +64,17 @@ $socials = array_filter( $socials );
 						'walker'         => new Pulselyft_Link_Walker( '' ),
 					) );
 				} else {
-					$email = pulselyft_get( 'brand.email', 'pulselyft_brand_email' );
-					printf( '<a href="mailto:%1$s">%1$s</a>', esc_attr( $email ) );
-					echo '<span>' . esc_html__( 'Privacy', 'pulselyft' ) . '</span>';
-					echo '<span>' . esc_html__( 'Terms', 'pulselyft' ) . '</span>';
+					$fnav = pulselyft_footer_nav();
+					if ( $fnav ) {
+						foreach ( $fnav as $item ) {
+							printf( '<a href="%s">%s</a>', esc_url( $item['url'] ), esc_html( $item['label'] ) );
+						}
+					} else {
+						$email = pulselyft_get( 'brand.email', 'pulselyft_brand_email' );
+						printf( '<a href="mailto:%1$s">%1$s</a>', esc_attr( $email ) );
+						echo '<span>' . esc_html__( 'Privacy', 'pulselyft' ) . '</span>';
+						echo '<span>' . esc_html__( 'Terms', 'pulselyft' ) . '</span>';
+					}
 				}
 				?>
 			</div>

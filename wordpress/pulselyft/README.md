@@ -34,6 +34,21 @@ build step, no Tailwind runtime, no CDN dependency).
 Hero → Logo strip → Services → Metrics → Case studies → Portfolio → Process →
 Testimonials → **FAQ** → CTA band → Blog → Book a call → Contact → Footer → Chat assistant.
 
+### Complete multi-page site (v1.2)
+
+Activating the theme provisions a full website (once, idempotently — it never
+overrides settings you already have):
+
+- **Pages created**: Home, About, Services, Pricing, Contact, Blog, Privacy
+  Policy, Terms.
+- **Designed page templates** (auto-applied by slug): `page-about.php`,
+  `page-services.php`, `page-pricing.php`, `page-contact.php` — each reuses the
+  homepage section components for a consistent look, plus page-specific blocks
+  (values, feature checklist, pricing tiers, contact methods).
+- **Structure wired up**: a static homepage (`front-page.php`) + a posts page,
+  and **primary + footer menus** including the new pages. On sub-pages, in-page
+  anchors automatically resolve back to the homepage.
+
 ### Agency-grade polish (v1.1)
 
 This goes beyond a straight port — the extras that separate a premium theme:
@@ -137,10 +152,15 @@ pulselyft/
 ├── theme.json                Block-editor palette & typography
 ├── functions.php             Setup, enqueue, REST chat, contact handler, helpers
 ├── front-page.php            The landing page (assembles all sections)
+├── page-about.php            About page template
+├── page-services.php         Services page template
+├── page-pricing.php          Pricing page template
+├── page-contact.php          Contact page template
 ├── header.php / footer.php   Fixed nav + footer + chatbot include
 ├── index.php archive.php single.php page.php 404.php searchform.php
 ├── inc/
 │   ├── content.php           Default content (mirrors siteContent.ts) + getters
+│   ├── setup.php             Page/menu provisioning + nav & page-hero helpers
 │   ├── customizer.php        Appearance → Customize options
 │   ├── seo.php               Meta tags + JSON-LD (plugin-aware)
 │   └── nav-walker.php        Flat anchor nav walker
