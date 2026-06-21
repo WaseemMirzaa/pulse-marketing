@@ -38,7 +38,21 @@
 				{ "slug": "x-large", "size": "2.4rem", "name": "Extra Large" }
 			]
 		},
-		"spacing": { "units": ["px", "em", "rem", "vh", "vw", "%"] }
+		"spacing": {
+			"units": ["px", "em", "rem", "vh", "vw", "%"],
+			"padding": true,
+			"margin": true,
+			"blockGap": true,
+			"customSpacingSize": true,
+			"spacingSizes": [
+				{ "slug": "30", "size": "1rem", "name": "S" },
+				{ "slug": "40", "size": "1.5rem", "name": "M" },
+				{ "slug": "50", "size": "2.5rem", "name": "L" },
+				{ "slug": "60", "size": "4rem", "name": "XL" },
+				{ "slug": "70", "size": "6rem", "name": "2XL" }
+			]
+		},
+		"border": { "color": true, "radius": true, "style": true, "width": true }
 	},
 	"styles": {
 		"color": { "background": "#f3f1ec", "text": "#3a3643" },

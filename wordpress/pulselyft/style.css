@@ -244,13 +244,19 @@ body::before {
   background-size: 64px 64px; mask-image: linear-gradient(to bottom, #000, transparent 75%); -webkit-mask-image: linear-gradient(to bottom, #000, transparent 75%);
 }
 .pl-hero__inner { position: relative; }
-.pl-hero__eyebrow { margin-bottom: 1.75rem; }
+.pl-hero__meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem; margin-bottom: 2.25rem; }
+.pl-hero__avail { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.pl-hero__dot { position: relative; width: 0.5rem; height: 0.5rem; border-radius: 999px; background: var(--lift); flex-shrink: 0; }
+.pl-hero__dot::after { content: ""; position: absolute; inset: 0; border-radius: 999px; background: var(--lift); animation: pl-ping 1.9s cubic-bezier(0,0,0.2,1) infinite; }
+@keyframes pl-ping { 0% { transform: scale(1); opacity: 0.55; } 100% { transform: scale(2.8); opacity: 0; } }
 .pl-hero__title { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.025em; line-height: 0.98; color: var(--heading); font-size: clamp(2.9rem, 1rem + 8vw, 6.5rem); max-width: 16ch; }
-.pl-hero__foot { margin-top: 3rem; display: grid; gap: 2.5rem; align-items: end; }
-@media (min-width: 900px) { .pl-hero__foot { grid-template-columns: 1.1fr 1fr; gap: 4rem; } }
+.pl-hero__foot { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 2.5rem; display: grid; gap: 2.5rem; align-items: start; }
+@media (min-width: 900px) { .pl-hero__foot { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; } }
 .pl-hero__sub { color: var(--text-muted); font-size: 1.12rem; line-height: 1.65; max-width: 34rem; }
 .pl-hero__cta { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.85rem; }
-.pl-hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; border-top: 1px solid var(--line); padding-top: 1.75rem; }
+.pl-hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.pl-hero__stats > div { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.pl-hero__stats > div:first-child { padding-left: 0; border-left: none; }
 .pl-stat__value { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.7rem, 1rem + 2vw, 2.6rem); color: var(--heading); line-height: 1; font-variant-numeric: tabular-nums; }
 .pl-stat__label { margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-faint); }
 .pl-animate-float { animation: pl-float 9s ease-in-out infinite; }
@@ -724,7 +730,33 @@ a.pl-method__value:hover { color: var(--lift); }
 [data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder { color: var(--text-faintest); }
 
 /* =========================================================================
-   25. WordPress core classes
+   25. Block patterns (editor-built sections) + editor canvas
+   ========================================================================= */
+/* Button helpers used by patterns (core buttons). */
+.wp-block-button.pl-btn-grad > .wp-block-button__link { background: var(--grad); color: #fff; border: none; border-radius: var(--r-pill); padding: 0.95rem 1.7rem; font-weight: 600; box-shadow: var(--shadow-pop); }
+.wp-block-button.pl-btn-outline > .wp-block-button__link { background: transparent; color: var(--heading); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 0.95rem 1.7rem; font-weight: 600; }
+.wp-block-button.pl-btn-light > .wp-block-button__link { background: #fff; color: var(--ink); border: none; border-radius: var(--r-pill); padding: 0.95rem 1.9rem; font-weight: 600; }
+
+/* Pattern card rows. */
+.pl-pat-cards { margin-top: 2.5rem; gap: 1.25rem; }
+.pl-pat-cards.wp-block-columns { align-items: stretch; }
+.pl-pat-card { border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--paper); box-shadow: var(--shadow-card); padding: 2rem; }
+.pl-pat-card__title { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; color: var(--heading); margin-bottom: 0.5rem; }
+.pl-pat-card--featured { border: 1.5px solid transparent; background: linear-gradient(var(--paper), var(--paper)) padding-box, var(--grad) border-box; box-shadow: var(--shadow-pop); }
+.pl-pat-price { font-family: var(--font-display); font-weight: 500; font-size: 2.2rem; color: var(--heading); }
+.pl-pat-price span { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-faint); }
+.pl-pat-card .wp-block-list { list-style: none; margin-top: 1rem; padding-left: 0; display: grid; gap: 0.55rem; color: var(--text-2); font-size: 0.92rem; }
+.pl-pat-card .wp-block-list li { display: flex; gap: 0.5rem; }
+.pl-pat-card .wp-block-list li::before { content: "—"; color: var(--lift); }
+.pl-pat-card .wp-block-buttons { margin-top: 1.5rem; }
+
+/* Editor canvas niceties (front-end CSS is shared via add_editor_style). */
+.editor-styles-wrapper { background: var(--page); font-family: var(--font-sans); color: var(--text); }
+.editor-styles-wrapper .pl-section { padding-block: 3rem; }
+.editor-styles-wrapper::before { display: none; }
+
+/* =========================================================================
+   26. WordPress core classes
    ========================================================================= */
 .alignleft { float: left; margin-right: 1.5rem; }
 .alignright { float: right; margin-left: 1.5rem; }

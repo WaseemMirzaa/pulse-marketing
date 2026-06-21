@@ -3,7 +3,7 @@ Contributors: pulselyftstudio
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: marketing, business, landing-page, one-page, custom-colors, custom-logo, custom-menu, featured-images, blog, full-width-template, seo
@@ -70,6 +70,13 @@ On first activation (or first admin load after an update) the theme creates them
 configures a static homepage + posts page, and builds the primary and footer
 menus. It only does this once and never overrides settings you already configured.
 
+= Can I edit pages in the block editor? =
+Yes. Open any page in the block editor and use the inserter (+) → Patterns →
+"PulseLyft" to drop in on-brand, fully-editable sections (hero, stats,
+capabilities, pricing, testimonial, FAQ, CTA). Colours, the pulse gradient, and
+fonts are exposed via theme.json. To build the homepage with blocks, set
+Appearance → Customize → Homepage → "Page content (blocks)" and edit the Home page.
+
 = How do I edit the pages? =
 Go to wp-admin → Pages and open any page. On the templated pages (About,
 Services, Pricing, Contact) the page Title becomes the hero heading, the Excerpt
@@ -82,6 +89,16 @@ No. A native, wp_mail-backed form is built in. You can instead paste a Jotform I
 in the Customizer to embed the same form used by the web app.
 
 == Changelog ==
+
+= 2.1.0 =
+* Block-editor editing: editor styles so the block editor matches the front end,
+  expanded theme.json (palette, pulse gradient, fonts, spacing), and a set of
+  on-brand block patterns (Hero, Stat band, Capabilities, Pricing, Testimonial,
+  FAQ, CTA) under a "PulseLyft" category — every word, link, and colour editable.
+* New "Homepage source" option (Appearance -> Customize -> Homepage): keep the
+  designed sections, or build the homepage in the block editor with the patterns.
+* Hero alignment refinement: a meta row (eyebrow + live "pulse" status) and a
+  precise spec-bar foot with hairline dividers between the stats.
 
 = 2.0.0 =
 * "Editorial Studio" redesign — a complete frontend overhaul:

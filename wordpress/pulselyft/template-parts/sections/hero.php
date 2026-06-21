@@ -13,13 +13,20 @@ $sub       = pulselyft_get( 'hero.sub', 'pulselyft_hero_sub' );
 $primary   = pulselyft_get( 'hero.primaryCta', 'pulselyft_hero_primary' );
 $secondary = pulselyft_get( 'hero.secondaryCta', 'pulselyft_hero_secondary' );
 $stats     = pulselyft_get( 'hero.stats' );
+$float     = pulselyft_get( 'hero.floatCard' );
+$avail     = ( is_array( $float ) && ! empty( $float['title'] ) ) ? $float['title'] : '';
 ?>
 <section class="pl-hero" aria-label="<?php esc_attr_e( 'Introduction', 'pulselyft' ); ?>">
 	<div class="pl-hero__bg" aria-hidden="true"></div>
 	<div class="pl-hero__grid" aria-hidden="true"></div>
 
 	<div class="pl-container pl-hero__inner">
-		<p class="pl-kicker pl-kicker--lift pl-hero__eyebrow pl-reveal"><?php echo esc_html( $badge ); ?></p>
+		<div class="pl-hero__meta pl-reveal">
+			<p class="pl-kicker pl-kicker--lift"><?php echo esc_html( $badge ); ?></p>
+			<?php if ( $avail ) : ?>
+				<p class="pl-hero__avail"><span class="pl-hero__dot" aria-hidden="true"></span><?php echo esc_html( $avail ); ?></p>
+			<?php endif; ?>
+		</div>
 
 		<h1 class="pl-hero__title pl-balance pl-reveal">
 			<?php echo esc_html( $before ); ?>
