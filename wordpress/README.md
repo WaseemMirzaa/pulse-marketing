@@ -10,8 +10,20 @@ and copy, with SEO baked in.
 
 ```
 wordpress/
-└── pulselyft/        ← the WordPress theme (install this)
+├── pulselyft/         ← classic theme, edited via the Customizer (zero plugins)
+└── pulselyft-gecko/   ← Gecko-based build, edited via WPBakery drag-and-drop
 ```
+
+There are **two themes**, same PulseLyft design, different editing model:
+
+| Theme | Editing | Plugins |
+|-------|---------|---------|
+| `pulselyft/` | WordPress Customizer + blocks | none |
+| `pulselyft-gecko/` | **WPBakery Page Builder (drag & drop)** | WPBakery (bundled by Gecko) |
+
+Pick `pulselyft-gecko/` when you want to rearrange, edit, and add sections
+visually without code — every page is auto-provisioned as a WPBakery page on
+activation. See [`pulselyft-gecko/README.md`](pulselyft-gecko/README.md).
 
 ## Quick start
 

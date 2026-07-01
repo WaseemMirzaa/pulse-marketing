@@ -11,8 +11,10 @@ set -euo pipefail
 
 cd "$(dirname "$0")"
 
-THEME_DIR="pulselyft"
-OUT="pulselyft.zip"
+# Which theme to build. Defaults to the classic `pulselyft` theme; pass a
+# directory name to build another, e.g. `./build-theme.sh pulselyft-gecko`.
+THEME_DIR="${1:-pulselyft}"
+OUT="${THEME_DIR}.zip"
 
 if [ ! -f "${THEME_DIR}/style.css" ]; then
   echo "Error: ${THEME_DIR}/style.css not found. Run this from the wordpress/ directory." >&2
