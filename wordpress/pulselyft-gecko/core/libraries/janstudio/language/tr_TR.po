@@ -1,0 +1,2567 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Project-Id-Version: Gecko\n"
+"POT-Creation-Date: 2017-05-14 18:06+0000\n"
+"PO-Revision-Date: 2017-11-03 14:37+0000\n"
+"Last-Translator: jan studio <cico77@hotmail.com>\n"
+"Language-Team: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ../../../..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Language: tr-TR\n"
+"Report-Msgid-Bugs-To: "
+
+#: core/admin/config/framework.config.php:253 
+#: core/libraries/vendors/visual-composer/maps/product.php:17 
+#: core/libraries/vendors/visual-composer/maps/products.php:33 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:15
+msgid "WooCommerce"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+#: core/admin/config/framework.config.php:276
+msgid "Gecko"
+msgstr ""
+
+#: core/admin/config/framework.config.php:572 
+#: core/admin/config/framework.config.php:590 
+#: core/libraries/janstudio/hooks/helper.php:265 
+#: core/libraries/vendors/visual-composer/maps/blog.php:12
+msgid "Blog"
+msgstr ""
+
+#: core/admin/config/framework.config.php:738
+msgid "Portfolio Listing"
+msgstr ""
+
+#: core/admin/config/framework.config.php:774 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:41
+msgid "How much items per page to show (-1 to show all portfolio)"
+msgstr ""
+
+#: core/admin/config/framework.config.php:786
+msgid "Typography"
+msgstr ""
+
+#: core/admin/config/framework.config.php:796 
+#: core/admin/config/framework.config.php:817
+msgid "Font Family"
+msgstr ""
+
+#: core/admin/config/framework.config.php:806
+msgid "Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:812
+msgid "Heading Font Settings"
+msgstr ""
+
+#: core/admin/config/framework.config.php:827
+msgid "H1 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:834
+msgid "H2 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:841
+msgid "H3 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:848
+msgid "H4 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:855
+msgid "H5 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:862
+msgid "H6 Font Size"
+msgstr ""
+
+#: core/admin/config/framework.config.php:874
+msgid "Color Scheme"
+msgstr ""
+
+#: core/admin/config/framework.config.php:879
+msgid "General Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:884
+msgid "Primary Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:885
+msgid "Main Color Scheme"
+msgstr ""
+
+#: core/admin/config/framework.config.php:891
+msgid "Secondary Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:892
+msgid "Secondary Color Scheme"
+msgstr ""
+
+#: core/admin/config/framework.config.php:897
+msgid "Section Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:902
+msgid "Body Background Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:908
+msgid "Body Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:914
+msgid "Heading Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:919
+msgid "Header Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:924
+msgid "Header Background Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:929
+msgid "Header Top Background Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:934
+msgid "Header Top Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:940
+msgid "Main Menu Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:946
+msgid "Main Menu Hover Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:952
+msgid "Sub Menu Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:958
+msgid "Sub Menu Hover Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:964
+msgid "Sub Menu Hover Background Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:969
+msgid "Footer Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:974
+msgid "Footer Primary Color"
+msgstr ""
+
+#: core/admin/config/framework.config.php:984 
+#: core/libraries/vendors/visual-composer/maps/member.php:36 
+#: core/libraries/vendors/visual-composer/maps/member.php:42 
+#: core/libraries/vendors/visual-composer/maps/member.php:48 
+#: core/libraries/vendors/visual-composer/maps/member.php:54 
+#: core/libraries/vendors/visual-composer/maps/member.php:60 
+#: core/libraries/vendors/visual-composer/maps/member.php:66 
+#: core/libraries/vendors/visual-composer/maps/member.php:72 
+#: core/libraries/vendors/visual-composer/maps/member.php:78
+msgid "Social Network"
+msgstr ""
+
+#: core/admin/config/framework.config.php:990
+msgid "Social Account"
+msgstr ""
+
+#: core/admin/config/framework.config.php:991
+msgid "Add New"
+msgstr ""
+
+#: core/admin/config/framework.config.php:992
+msgid "Add New Social Network"
+msgstr ""
+
+#: core/admin/config/framework.config.php:997
+msgid "URL"
+msgstr ""
+
+#: core/admin/config/framework.config.php:1002 
+#: core/libraries/vendors/visual-composer/maps/service.php:19
+msgid "Icon"
+msgstr ""
+
+#: core/admin/config/metabox.config.php:75
+msgid "Do Stuff"
+msgstr ""
+
+#: core/admin/config/metabox.config.php:130
+msgid "Url"
+msgstr ""
+
+#: core/admin/config/metabox.config.php:141
+msgid "Video"
+msgstr ""
+
+#. Author of the plugin/theme
+#: core/libraries/janstudio/hooks/action.php:134
+msgid "JanStudio"
+msgstr ""
+
+#: core/libraries/janstudio/hooks/helper.php:146 
+#: core/libraries/janstudio/hooks/helper.php:179
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: core/libraries/janstudio/hooks/helper.php:147
+msgid "By "
+msgstr ""
+
+#: core/libraries/janstudio/hooks/helper.php:151 
+#: core/libraries/janstudio/hooks/helper.php:177 
+#: core/libraries/janstudio/hooks/helper.php:1421
+msgid ", "
+msgstr ""
+
+#: core/libraries/janstudio/hooks/helper.php:154 
+#: core/libraries/janstudio/hooks/helper.php:1432
+#, php-format
+msgid "In %1$s"
+msgstr ""
+
+#: core/libraries/janstudio/hooks/helper.php:636
+msgid "Pingback:"
+msgstr ""
+
+#: core/libraries/janstudio/widgets/instagram.php:19
+msgid "Gecko - Instagram"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"The best woocommerce theme for online fashion store, furniture store, "
+"handemade store, organic store, wordpress personal portfolio, personal blog."
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.janstudio.net/gecko"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.janstudio.net"
+msgstr ""
+
+#: views/post/content-none.php:25
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Görünüşe göre ulaşmak istediğinizi bulamadık. Arama bölümünü kullanmak işe "
+"yarayabilir."
+
+#: views/post/content-single.php:30 views/post/content.php:16
+#, php-format
+msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Devamı<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: views/post/latest.php:37 core/libraries/janstudio/hooks/helper.php:597
+msgid "The photos should be at least 370px x 210px"
+msgstr "Fotoğraflar en azından 370 px * 210 px olmalı."
+
+#: core/admin/classes/framework.class.php:175
+msgid "Success. Imported backup options."
+msgstr "Başarılı. Yedekleme seçenekleri içe aktarıldı."
+
+#: core/admin/classes/framework.class.php:180
+msgid "Default options restored."
+msgstr "Varsayılan seçenekler yeniden aktif hale getirildi.."
+
+#: core/admin/classes/framework.class.php:199
+msgid "Default options restored for only this section."
+msgstr "Sadece bu bölümün varsayılan seçenekleri aktif hale getirildi."
+
+#: core/admin/classes/framework.class.php:366
+msgid "Settings saved."
+msgstr "Ayarlar kaydedildi."
+
+#: core/admin/classes/framework.class.php:367
+msgid "Save"
+msgstr "Kaydet"
+
+#: core/admin/classes/framework.class.php:367
+msgid "Saving..."
+msgstr "Kaydediyor..."
+
+#: core/admin/classes/framework.class.php:368
+msgid "Restore"
+msgstr "Yendiden yükle"
+
+#: core/admin/classes/framework.class.php:370
+msgid "Reset All Options"
+msgstr "Tüm seçenekleri sıfırla"
+
+#: core/admin/classes/framework.class.php:373
+msgid "show all options"
+msgstr "tüm seçenekleri göster"
+
+#: core/admin/classes/options.class.php:125
+msgid "CONFIG"
+msgstr "YAPILANDIRMA"
+
+#: core/admin/classes/options.class.php:131 
+#: core/admin/classes/options.class.php:151
+msgid "USAGE"
+msgstr "KULLANIM"
+
+#: core/admin/classes/options.class.php:137
+msgid "VALUE"
+msgstr "DEĞER"
+
+#: core/admin/classes/options.class.php:155 
+#: core/libraries/vendors/visual-composer/maps/products.php:79
+msgid "ID"
+msgstr "KİMLİK"
+
+#: core/admin/classes/shortcode.class.php:82 
+#: core/admin/classes/shortcode.class.php:90 
+#: core/admin/fields/textarea/textarea.php:27
+msgid "Add Shortcode"
+msgstr "Kısa kod ekle"
+
+#: core/admin/classes/shortcode.class.php:92
+msgid "Select a shortcode"
+msgstr "Bir kısa kod seç"
+
+#: core/admin/classes/shortcode.class.php:108
+msgid "Insert Shortcode"
+msgstr "Kısa kod gir"
+
+#: core/admin/config/framework.config.php:9
+msgid "Theme Options"
+msgstr "Tema seçenekleri"
+
+#: core/admin/config/framework.config.php:38
+msgid "General Layout"
+msgstr "Genel Görünüm"
+
+#: core/admin/config/framework.config.php:44
+msgid "Content Width"
+msgstr "İçerik Genişliği"
+
+#: core/admin/config/framework.config.php:45
+msgid "Set the maximum allowed width for content"
+msgstr "İçerik için izin verilen en fazla genişliği gir"
+
+#: core/admin/config/framework.config.php:52
+msgid "Enable Boxed Layout"
+msgstr "Kutulu Görünümü Etkinleştir"
+
+#: core/admin/config/framework.config.php:57 
+#: core/admin/config/framework.config.php:108 
+#: core/admin/config/framework.config.php:224 
+#: core/admin/config/framework.config.php:1045
+msgid "Background"
+msgstr "Arkaplan"
+
+#: core/admin/config/framework.config.php:63
+msgid "Custom CSS Style"
+msgstr "Özgün CSS stili"
+
+#: core/admin/config/framework.config.php:64
+msgid ""
+"Paste your CSS code here. Do not place any &lt;style&gt; tags in these areas "
+"as they are already added for your convenience"
+msgstr ""
+"CSS kodunuzu buraya yapıştırı. Rahatlığınız için zaten eklenecek "
+"olduklarından, herhangi bir &lt;style&gt; etiketi eklemeyin."
+
+#: core/admin/config/framework.config.php:70
+msgid "Custom JS Code"
+msgstr "Özgün JS Kodu"
+
+#: core/admin/config/framework.config.php:71
+msgid ""
+"Paste your Javscript code here. You can add your Google Analytics Code here. "
+"Do not place any &lt;script&gt; tags in these areas as they are already "
+"added for your convenience."
+msgstr ""
+"Javascript kodunuzu buraya yapıştırın. Google Analytics Kodu da buraya "
+"eklenebilir.Rahatlığınız için zaten ekleneceğinden, bu alana her hangi bir "
+"&lt;script&gt; etiketi eklemeyin."
+
+#: core/admin/config/framework.config.php:83
+msgid "Header"
+msgstr "Tepe menü"
+
+#: core/admin/config/framework.config.php:89 
+#: core/admin/config/framework.config.php:213 
+#: core/admin/config/framework.config.php:434 
+#: core/admin/config/framework.config.php:640 
+#: core/admin/config/framework.config.php:707
+msgid "Layout"
+msgstr "Görünüm"
+
+#: core/admin/config/framework.config.php:114
+msgid "Enable Header Sticky"
+msgstr "Tepe menü sabitliğini etkileştir"
+
+#: core/admin/config/framework.config.php:121
+msgid "Enable Header Transparent"
+msgstr "Tepe menü şeffaflığını etkinleştir"
+
+#: core/admin/config/framework.config.php:127
+msgid "Logo Settings"
+msgstr "Logo ayarları"
+
+#: core/admin/config/framework.config.php:132
+msgid "Logo"
+msgstr "Logo"
+
+#: core/admin/config/framework.config.php:133 
+#: core/admin/config/framework.config.php:141 
+#: core/admin/config/framework.config.php:149 
+#: core/admin/config/framework.config.php:157 
+#: core/admin/fields/background/background.php:33 
+#: core/admin/fields/background/background.php:34 
+#: core/admin/fields/upload/upload.php:23 
+#: core/admin/fields/upload/upload.php:24
+msgid "Upload"
+msgstr "Karşıya yükle"
+
+#: core/admin/config/framework.config.php:139
+msgid "Logo Retina"
+msgstr "Retina logosu"
+
+#: core/admin/config/framework.config.php:140
+msgid "Upload logo for retina devices, mobile devices"
+msgstr "Retina ve mobil cihazlar için logo yükle"
+
+#: core/admin/config/framework.config.php:147
+msgid "Transparent Header Logo"
+msgstr "Tepe menü için logo"
+
+#: core/admin/config/framework.config.php:148
+msgid "Add logo for transparent header layout"
+msgstr "Tepe menü tasarımı için logo yükle"
+
+#: core/admin/config/framework.config.php:155
+msgid "Transparent Header Logo Retina"
+msgstr "Retina için şeffaf tepe menü"
+
+#: core/admin/config/framework.config.php:156
+msgid ""
+"Add logo for transparent header layout for retina devices, mobile devices"
+msgstr "Retina ve mobil cihazlar için şeffaf başlığa uygun logo yükle"
+
+#: core/admin/config/framework.config.php:163
+msgid "Logo Max Width"
+msgstr "Logo en fazla genişlik"
+
+#: core/admin/config/framework.config.php:165 
+#: core/admin/config/framework.config.php:284 
+#: core/admin/config/framework.config.php:291 
+#: core/admin/config/metabox.config.php:54 
+#: core/admin/config/metabox.config.php:61 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:65 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:84 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:97 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:116 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:129
+msgid "Defined in pixels. Do not add the 'px' unit."
+msgstr "Piksel olarak tanımlanmalıdır. 'px' birimini eklemeyiniz."
+
+#: core/admin/config/framework.config.php:169
+msgid "Header Top Settings"
+msgstr "Tepe menü ayarları"
+
+#: core/admin/config/framework.config.php:174
+msgid "Header left content"
+msgstr "Sol tepe menü ayarları"
+
+#: core/admin/config/framework.config.php:175 
+#: core/admin/config/framework.config.php:183 
+#: core/admin/config/framework.config.php:190
+msgid "HTML, shortcode is allowed"
+msgstr "HTML ve kısa kod eklenebilir"
+
+#: core/admin/config/framework.config.php:182
+msgid "Center promo text"
+msgstr "Orta tanıtım cümlesi"
+
+#: core/admin/config/framework.config.php:189
+msgid "Header right content"
+msgstr "Tepe menü sağ içeriği"
+
+#: core/admin/config/framework.config.php:196
+msgid "Enable Currency Switcher"
+msgstr "Döviz dönüştürücüsünü etkinleştir"
+
+#: core/admin/config/framework.config.php:207
+msgid "Footer"
+msgstr "alt Menü"
+
+#: core/admin/config/framework.config.php:229
+msgid "Footer Background Overlay Color"
+msgstr "Alt menü arkaplan üst rengi"
+
+#: core/admin/config/framework.config.php:235
+msgid "Copyright Text"
+msgstr "fikri haklar yazısı"
+
+#: core/admin/config/framework.config.php:236
+msgid "HTML is allowed"
+msgstr "HTML kullanılabilir"
+
+#: core/admin/config/framework.config.php:259 
+#: core/admin/config/framework.config.php:264 
+#: core/admin/config/framework.config.php:577
+msgid "General Setting"
+msgstr "Genel ayarlar"
+
+#: core/admin/config/framework.config.php:269
+msgid "Enable Page Title"
+msgstr "Sayfa başlığını etkinleştir"
+
+#: core/admin/config/framework.config.php:275 
+#: core/admin/config/framework.config.php:589 
+#: core/admin/config/framework.config.php:743
+msgid "Page Title"
+msgstr "Sayfa başlığı"
+
+#: core/admin/config/framework.config.php:282 
+#: core/admin/config/metabox.config.php:52
+msgid "Padding top"
+msgstr "Tepe payı"
+
+#: core/admin/config/framework.config.php:289 
+#: core/admin/config/metabox.config.php:59
+msgid "Padding bottom"
+msgstr "Taban payı"
+
+#: core/admin/config/framework.config.php:296
+msgid "Description"
+msgstr "Tanım"
+
+#: core/admin/config/framework.config.php:297
+msgid "Online fashion, furniture, handmade... store"
+msgstr "çevrimiçi moda, mobilya, el işleri mağazası"
+
+#: core/admin/config/framework.config.php:303 
+#: core/admin/config/framework.config.php:603 
+#: core/admin/config/framework.config.php:755
+msgid "Page Title Background"
+msgstr "Sayfa başlığı arkaplanı"
+
+#: core/admin/config/framework.config.php:309
+msgid "Enable Catalog Mode"
+msgstr "Katalog modunu etkinleştir "
+
+#: core/admin/config/framework.config.php:317
+msgid "Sub Category Setting"
+msgstr "Alt kategori ayarları"
+
+#: core/admin/config/framework.config.php:322
+msgid "Sub Category"
+msgstr "Alt Kategori"
+
+#: core/admin/config/framework.config.php:327
+msgid "Sub-Categories Layout"
+msgstr "Alt-Kategorilerin Tasarımı"
+
+#: core/admin/config/framework.config.php:328
+msgid "Display sub-categories as grid or masonry"
+msgstr "Alt kategorileri ızgara ya da almaşıklı göster"
+
+#: core/admin/config/framework.config.php:339 
+#: core/admin/config/framework.config.php:627 
+#: core/admin/config/framework.config.php:760 
+#: core/libraries/vendors/visual-composer/maps/blog.php:47 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:38 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:30 
+#: core/libraries/vendors/visual-composer/maps/products.php:206 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:20
+msgid "Columns"
+msgstr "Sütunlar"
+
+#: core/admin/config/framework.config.php:340
+msgid "Display number of sub-category per row"
+msgstr "Satır başına kaç alt-kategori gösterileceği"
+
+#: core/admin/config/framework.config.php:354
+msgid "Product Listing Setting"
+msgstr "Ürün listeleme ayarı"
+
+#: core/admin/config/framework.config.php:359
+msgid "Product Listing"
+msgstr "Ürün listeleme"
+
+#: core/admin/config/framework.config.php:364 
+#: core/admin/config/framework.config.php:616 
+#: core/libraries/vendors/visual-composer/maps/blog.php:31
+msgid "Style"
+msgstr "Tarz"
+
+#: core/admin/config/framework.config.php:365
+msgid "Display product listing as grid or masonry"
+msgstr "Ürün listelesi ızgara ya da almaşıklı gösterim"
+
+#: core/admin/config/framework.config.php:376
+msgid "Pagination Style"
+msgstr "Sayfalama tarzı"
+
+#: core/admin/config/framework.config.php:378
+msgid "Number"
+msgstr "Sayı"
+
+#: core/admin/config/framework.config.php:379 
+#: core/libraries/janstudio/hooks/helper.php:1257 
+#: core/libraries/vendors/woocommerce/templates/loop/pagination.php:30
+msgid "Load More"
+msgstr "Daha fazla yükle"
+
+#: core/admin/config/framework.config.php:386
+msgid "Enable Infinite Scroll"
+msgstr "Sürekli form sayfa kaydırma"
+
+#: core/admin/config/framework.config.php:393
+msgid "Enable Isotope Category Filter"
+msgstr "Isotope kategori filtresini etkinleştir"
+
+#: core/admin/config/framework.config.php:400
+msgid "Exclude sub-categories in filter"
+msgstr "Filtrede alt-kategorileri hariç tut"
+
+#: core/admin/config/framework.config.php:407
+msgid "Flip Product Thumbnail"
+msgstr "Ürün küçük görselini döndür"
+
+#: core/admin/config/framework.config.php:413
+msgid "Number Of Column"
+msgstr "Sütun Sayısı"
+
+#: core/admin/config/framework.config.php:414
+msgid "Display number of product per row"
+msgstr "Satırda görüntülenen ürün sayısı"
+
+#: core/admin/config/framework.config.php:427 
+#: core/admin/config/framework.config.php:773 
+#: core/libraries/vendors/visual-composer/maps/blog.php:58 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:31 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:40 
+#: core/libraries/vendors/visual-composer/maps/products.php:144
+msgid "Per Page"
+msgstr "Sayfa başına"
+
+#: core/admin/config/framework.config.php:428 
+#: core/libraries/vendors/visual-composer/maps/products.php:145
+msgid "How much items per page to show (-1 to show all products)"
+msgstr "Sayfa başına kaç öğe gösterileceği (tüm ürünler için -1)"
+
+#: core/admin/config/framework.config.php:446 
+#: core/admin/config/framework.config.php:510 
+#: core/admin/config/framework.config.php:687 
+#: core/admin/config/framework.config.php:719 
+#: core/admin/config/metabox.config.php:39 
+#: core/admin/config/taxonomy.config.php:29
+msgid "Select Sidebar"
+msgstr "Yan-bar seçiniz"
+
+#: core/admin/config/framework.config.php:453 
+#: core/libraries/vendors/visual-composer/maps/product.php:21 
+#: core/libraries/vendors/visual-composer/maps/products.php:46
+msgid "Hover Style"
+msgstr "Hover(imleç üzerindeykenki) tarz"
+
+#: core/admin/config/framework.config.php:467
+msgid "Enable Products Attribute On Product List"
+msgstr "Ürün listelemede ürün özelliklerini etkinleştir"
+
+#: core/admin/config/framework.config.php:475
+msgid "Product Detail Setting"
+msgstr "Ürün ayrıntı ayarı"
+
+#: core/admin/config/framework.config.php:480
+msgid "Product Detail"
+msgstr "Ürün ayrıntı"
+
+#: core/admin/config/framework.config.php:485 
+#: core/admin/config/metabox.config.php:104
+msgid "Product Detail Style"
+msgstr "Ürün Detay Tarzı"
+
+#: core/admin/config/framework.config.php:497 
+#: core/admin/config/metabox.config.php:115
+msgid "Product Detail Layout"
+msgstr "Ürün Detay Görünümü"
+
+#: core/admin/config/framework.config.php:516
+msgid "Miscellaneous"
+msgstr "Çeşitli"
+
+#: core/admin/config/framework.config.php:521
+msgid "Enable Zoom Image"
+msgstr "Görsel büyütmeyi etkinleştir"
+
+#: core/admin/config/framework.config.php:526 
+#: core/admin/config/metabox.config.php:160
+msgid "Size Guide Image"
+msgstr "Beden tablosu görseli"
+
+#: core/admin/config/framework.config.php:531
+msgid "Shipping & Return Content"
+msgstr "Gönderim ve İade İçeriği"
+
+#: core/admin/config/framework.config.php:533
+msgid "HTML allowed"
+msgstr "HTML kullanılabilir"
+
+#: core/admin/config/framework.config.php:537
+msgid "Other products"
+msgstr "Diğer ürünler"
+
+#: core/admin/config/framework.config.php:542
+msgid "Number of product want to show"
+msgstr "İstenilen ürün gösterim sayısı"
+
+#: core/admin/config/framework.config.php:543
+msgid "Type number only"
+msgstr "Sadece tür sayısı"
+
+#: core/admin/config/framework.config.php:549
+msgid "Number of product want to show on a slide"
+msgstr "Bir slayt içerisinde görüntülenecek istenilen ürün sayısı"
+
+#: core/admin/config/framework.config.php:550
+msgid "Apply for related products and up-sell products"
+msgstr ""
+"ilgili ürünler ve teşvik ürünlerine de uygula\n"
+
+#: core/admin/config/framework.config.php:583
+msgid "Enable blog title"
+msgstr "Blog başlığını etkinleştir"
+
+#: core/admin/config/framework.config.php:596 
+#: core/admin/config/framework.config.php:749 
+#: core/admin/config/metabox.config.php:73
+msgid "Sub Title"
+msgstr "Alt başlık"
+
+#: core/admin/config/framework.config.php:597 
+#: core/admin/config/framework.config.php:750
+msgid "See our recent projects"
+msgstr "Son projelerimizi görün"
+
+#: core/admin/config/framework.config.php:610
+msgid "Blog Listing Setting"
+msgstr "Blog listeleme ayarları"
+
+#: core/admin/config/framework.config.php:628 
+#: core/admin/config/framework.config.php:761
+msgid "Display number of post per row"
+msgstr "Satırda görüntülenecek gönderi sayısı"
+
+#: core/admin/config/framework.config.php:652
+msgid "Enable featured post slider"
+msgstr "Öne çıkarılan gönderiler slaytını etkinleştir"
+
+#: core/admin/config/framework.config.php:658
+msgid "Choose posts"
+msgstr "Gönderileri seçin"
+
+#: core/admin/config/framework.config.php:674
+msgid "Number of slides to show"
+msgstr "Gösterilecek kayan görsel (slayt!) sayısı"
+
+#: core/admin/config/framework.config.php:679
+msgid " posts"
+msgstr "gönderiler"
+
+#: core/admin/config/framework.config.php:695
+msgid "Blog Detail Setting"
+msgstr "Blog ayrıntı ayarları"
+
+#: core/admin/config/framework.config.php:701
+msgid "Enable Blog Title"
+msgstr "Gönderi başlığını etkinleştir"
+
+#: core/admin/config/framework.config.php:733 
+#: core/admin/config/framework.config.php:744 
+#: core/libraries/janstudio/hooks/helper.php:1306 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:23
+msgid "Portfolio"
+msgstr "Portfolyo"
+
+#: core/admin/config/framework.config.php:791
+msgid "Body Font Settings"
+msgstr "Gövde metni ayarları"
+
+#: core/admin/config/framework.config.php:1033
+msgid "Maintenance Mode"
+msgstr "Bakım Modu"
+
+#: core/admin/config/framework.config.php:1039
+msgid "Enable Maintenance Mode"
+msgstr "Bakım Modunu Etkinleştir"
+
+#: core/admin/config/framework.config.php:1040
+msgid ""
+"Put your site is undergoing maintenance, only admin can see the front end"
+msgstr "Siteyi bakım moduna aldığınızda, ön yüzü sadece admin görebilir."
+
+#: core/admin/config/framework.config.php:1051 
+#: core/libraries/vendors/visual-composer/maps/products.php:77 
+#: core/libraries/vendors/visual-composer/maps/service.php:59
+msgid "Title"
+msgstr "Başlık"
+
+#: core/admin/config/framework.config.php:1052
+msgid "Sorry, we down for maintenance."
+msgstr "Kusura bakmayın, bakım çalışması yapıyoruz."
+
+#: core/admin/config/framework.config.php:1058
+msgid "Message"
+msgstr "Mesaj"
+
+#: core/admin/config/framework.config.php:1059
+msgid "Fortunately only for a short while."
+msgstr "Neyse ki sadece kısa bir zaman için."
+
+#: core/admin/config/framework.config.php:1065
+msgid "Extra Content"
+msgstr "Ek içerik"
+
+#: core/admin/config/framework.config.php:1066
+msgid "This content will be put at right bottom, HTML is allowed"
+msgstr "Bu içerik sağ alt tabana yerleştirilecek; HTML kullanılabilir."
+
+#: core/admin/config/framework.config.php:1072
+msgid "Enable Countdown"
+msgstr "Geri sayımı etkinleştir."
+
+#: core/admin/config/framework.config.php:1078
+msgid "Remaining Time - Date"
+msgstr "Kalan zaman - Gün"
+
+#: core/admin/config/framework.config.php:1118
+msgid "Remaining Time - Month"
+msgstr "Kalan zaman - Ay"
+
+#: core/admin/config/framework.config.php:1139
+msgid "Remaining Time - Year"
+msgstr "Kalan zaman - Yıl"
+
+#: core/admin/config/metabox.config.php:16
+msgid "Page Layout Options"
+msgstr "Sayfa görünüm seçenekleri"
+
+#: core/admin/config/metabox.config.php:27
+msgid "Page Layout"
+msgstr "Sayfa görünümü"
+
+#: core/admin/config/metabox.config.php:46
+msgid "Enable page title"
+msgstr "Sayfa başlığını etkinleştir"
+
+#: core/admin/config/metabox.config.php:66
+msgid "Enable sub-title"
+msgstr "Alt-başlığı etkinleştir"
+
+#: core/admin/config/metabox.config.php:93
+msgid "Product Detail Layout Options"
+msgstr "Ürün ayrıntısı görünüm seçenekleri"
+
+#: core/admin/config/metabox.config.php:105
+#, php-format
+msgid ""
+"Change layout for only this product. You can setup global for all product "
+"page layout at <a target=\"_blank\" href=\"%1$s\">here</a> (WooCommerce "
+"section)."
+msgstr ""
+"Sadece bu ürün için görünüm değiştir. Tüm ürün sayfası görünümlerine etki "
+"edecek genel ayarlamayı <a target=\"_blank\" href=\"%1$s\">buradan</a> "
+"yapabilirsiniz. (WooCommerce bölümü)."
+
+#: core/admin/config/metabox.config.php:125
+msgid "Video Thumbnail"
+msgstr "Video küçük görseli"
+
+#: core/admin/config/metabox.config.php:126
+msgid "Support Vimeo & Youtube"
+msgstr "Vimeo ve Youtube desteği"
+
+#: core/admin/config/metabox.config.php:131
+msgid "Self Hosted"
+msgstr "Burada barındırdırılıyor"
+
+#: core/admin/config/metabox.config.php:137
+msgid "Upload Video Thumbnail"
+msgstr "Video küçük görseli yükle"
+
+#: core/admin/config/metabox.config.php:142
+msgid "Select a video"
+msgstr "Bir video seç"
+
+#: core/admin/config/metabox.config.php:143
+msgid "Use this video"
+msgstr ""
+"Bu videoyu kullan\n"
+
+#: core/admin/config/metabox.config.php:149
+msgid "Video Thumbnail Link"
+msgstr "Video küçük görsel bağlantısı"
+
+#: core/admin/config/metabox.config.php:153
+msgid "New Arrival Product"
+msgstr "Yeni Gelmiş Ürün"
+
+#: core/admin/config/metabox.config.php:157
+msgid "Set number of days display new arrivals badge for product."
+msgstr ""
+"Ürünlerde \"yeni gelmiş\" rozetinin kaç gün görüntüleneceğini yazın\n"
+
+#: core/admin/config/metabox.config.php:163
+#, php-format
+msgid ""
+"Upload size guide image for only this product. You can use image size guide "
+"for all product at <a target=\"_blank\" href=\"%1$s\">here</a> (WooCommerce "
+"section)."
+msgstr ""
+"Sadece bu ürüne özel beden tablosu görseli yükleyin. Tüm ürünler için "
+"geçerli beden tablosu görselini <a target=\"_blank\" href=\"%1$s\">"
+"buradan</a> ayarlayabilirsiniz (WooCommerce bölümü)."
+
+#: core/admin/config/taxonomy.config.php:19
+msgid "Product Category Layout"
+msgstr "Ürün Kategorisi Görünümü"
+
+#: core/admin/functions/actions.php:32 
+#: core/admin/fields/typography/typography.php:107
+msgid "Error! Can not load json file."
+msgstr "Hata! json dosyası yüklenemiyor."
+
+#: core/admin/functions/actions.php:82 core/admin/fields/icon/icon.php:25
+msgid "Add Icon"
+msgstr "İkon ekle"
+
+#: core/admin/functions/actions.php:83
+msgid "Search a Icon..."
+msgstr ""
+"Bir ikon ara\n"
+
+#: core/admin/functions/actions.php:84
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: core/admin/functions/helpers.php:48
+msgid "This field class is not available!"
+msgstr "Bu alanın class'ına erişilemiyor!"
+
+#: core/admin/functions/validate.php:14
+msgid "Please write a valid email address!"
+msgstr "Lütfen geçerli bir e-posta adresi yazın."
+
+#: core/admin/functions/validate.php:33
+msgid "Please write a numeric data!"
+msgstr "Lütfen rakamsal bir bilgi girin. "
+
+#: core/admin/functions/validate.php:51
+msgid "Fatal Error! This field is required!"
+msgstr "Hata: bu alanın doldurulması zorunlu."
+
+#: core/admin/fields/background/background.php:35 
+#: core/admin/fields/upload/upload.php:25
+msgid "Use Image"
+msgstr "Görsel kullan"
+
+#: core/admin/fields/backup/backup.php:21
+msgid "Import a Backup"
+msgstr ""
+"Bir yedeği içe aktar\n"
+
+#: core/admin/fields/backup/backup.php:22
+msgid "copy-paste your backup string here"
+msgstr "yedek string'inizi kopyalayıp buraya yapıştırın"
+
+#: core/admin/fields/backup/backup.php:27
+msgid "Export and Download Backup"
+msgstr "Yedeği dışa aktar ve indir"
+
+#: core/admin/fields/backup/backup.php:28
+msgid "or"
+msgstr "ya da "
+
+#: core/admin/fields/backup/backup.php:29
+msgid "!!! Reset All Options !!!"
+msgstr "!!!Tüm seçenekleri sıfırla!!!"
+
+#: core/admin/fields/backup/backup.php:30
+msgid "Please be sure for reset all of framework options."
+msgstr ""
+"Lütfen tüm çalışma alanı seçeneklerini sıfırlamak istediğinizden emin olunuz."
+
+#: core/admin/fields/gallery/gallery.php:21
+msgid "Add Gallery"
+msgstr "Galeri ekle"
+
+#: core/admin/fields/gallery/gallery.php:22
+msgid "Edit Gallery"
+msgstr "Galeriyi elden geçir "
+
+#: core/admin/fields/gallery/gallery.php:23 
+#: core/libraries/vendors/woocommerce/templates/single-product/add-to-cart/variable.php:47
+msgid "Clear"
+msgstr "Temizle"
+
+#: core/admin/fields/group/group.php:21
+msgid "Adding"
+msgstr "Ekleme"
+
+#: core/admin/fields/group/group.php:43 core/admin/fields/group/group.php:75
+msgid "Remove"
+msgstr "Çıkarma"
+
+#: core/admin/fields/icon/icon.php:26
+msgid "Remove Icon"
+msgstr "Simgeyi uzaklaştır"
+
+#: core/admin/fields/image/image.php:22
+msgid "Add Image"
+msgstr "Görsel Ekle"
+
+#: core/admin/fields/sorter/sorter.php:24
+msgid "Enabled Modules"
+msgstr "Modüller etkinleştirilmiş"
+
+#: core/admin/fields/sorter/sorter.php:25
+msgid "Disabled Modules"
+msgstr "Etkisizleştirilmiş Modüller"
+
+#: core/admin/fields/switcher/switcher.php:20
+msgid "on"
+msgstr "Açık"
+
+#: core/admin/fields/switcher/switcher.php:20
+msgid "off"
+msgstr "Kapalı"
+
+#: core/admin/fields/typography/typography.php:73
+msgid "Web Safe Fonts"
+msgstr "İnternete uyumlu fontlar"
+
+#: core/admin/fields/typography/typography.php:79
+msgid "Google Fonts"
+msgstr "Google fontları"
+
+#: core/libraries/janstudio/classes/sidebar.php:36
+msgid "Missing sidebar name."
+msgstr "Yan bar ismi eksik"
+
+#: core/libraries/janstudio/classes/sidebar.php:38 
+#: core/libraries/janstudio/classes/sidebar.php:107
+msgid "Invalid request."
+msgstr "Geçersiz talep"
+
+#: core/libraries/janstudio/classes/sidebar.php:43 
+#: core/libraries/janstudio/classes/sidebar.php:112
+msgid "Nonce verification fails."
+msgstr "Anlık doğrulama yapılamadı."
+
+#: core/libraries/janstudio/classes/sidebar.php:105
+msgid "Missing sidebar ID."
+msgstr "Yan bar ID'si eksik."
+
+#: core/libraries/janstudio/classes/sidebar.php:160
+msgid "Add New Sidebar"
+msgstr "Yeni yan bar ekle."
+
+#: core/libraries/janstudio/classes/sidebar.php:171 
+#: core/libraries/vendors/visual-composer/maps/member.php:24
+msgid "Name"
+msgstr "Ad"
+
+#: core/libraries/janstudio/classes/sidebar.php:176
+msgid "Add"
+msgstr "Ekle"
+
+#: core/libraries/janstudio/classes/sidebar.php:237
+msgid "Adding custom sidebar fails."
+msgstr "Özel yan çubuk ekleme başasısız oldu."
+
+#: core/libraries/janstudio/classes/sidebar.php:271
+msgid "Are you sure you want to remove this custom sidebar?"
+msgstr "Bu özel yan çubuğu kaldırmak istediğinizden emin misiniz?"
+
+#: core/libraries/janstudio/classes/sidebar.php:290
+msgid "Removing custom sidebar fails."
+msgstr "Özel yan çubuk ekleme başarısız oldu."
+
+#: core/libraries/janstudio/hooks/action.php:56
+msgid "Primary Menu"
+msgstr "Birincil menü"
+
+#: core/libraries/janstudio/hooks/action.php:57
+msgid "Left Menu"
+msgstr "Sol menú"
+
+#: core/libraries/janstudio/hooks/action.php:58
+msgid "Right Menu"
+msgstr "Sağ menü"
+
+#: core/libraries/janstudio/hooks/action.php:59
+msgid "Footer Menu"
+msgstr "Alt menü"
+
+#: core/libraries/janstudio/hooks/action.php:78
+msgid "Primary Sidebar"
+msgstr "Birincil yan çubuk"
+
+#: core/libraries/janstudio/hooks/action.php:80
+msgid "The Primary Sidebar"
+msgstr "Birincil yan çubuk"
+
+#: core/libraries/janstudio/hooks/action.php:90
+msgid "Footer Area #"
+msgstr "En alt alan"
+
+#: core/libraries/janstudio/hooks/action.php:92
+#, php-format
+msgid "The #%s column in footer area"
+msgstr "En alt alandaki #% sütun"
+
+#: core/libraries/janstudio/hooks/helper.php:245
+msgid "Prev"
+msgstr "Önceki"
+
+#: core/libraries/janstudio/hooks/helper.php:246
+msgid "Next"
+msgstr "Sonraki"
+
+#: core/libraries/janstudio/hooks/helper.php:264
+msgid "Home"
+msgstr "Anasayfa"
+
+#: core/libraries/janstudio/hooks/helper.php:266
+msgid "Shop"
+msgstr "Mağaza"
+
+#: core/libraries/janstudio/hooks/helper.php:314 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:47
+msgid "Category"
+msgstr "Kategori"
+
+#: core/libraries/janstudio/hooks/helper.php:322
+msgid "Tag"
+msgstr "Etiket"
+
+#: core/libraries/janstudio/hooks/helper.php:408 
+#: core/libraries/janstudio/hooks/helper.php:412 
+#: core/libraries/janstudio/hooks/helper.php:416 
+#: core/libraries/janstudio/hooks/helper.php:423 
+#: core/libraries/janstudio/hooks/helper.php:427
+msgid " Archives"
+msgstr "Arşiv"
+
+#: core/libraries/janstudio/hooks/helper.php:432
+msgid "Archives"
+msgstr "Arşiv"
+
+#: core/libraries/janstudio/hooks/helper.php:443
+msgid "Author: "
+msgstr "Yazar"
+
+#: core/libraries/janstudio/hooks/helper.php:453
+msgid "Search results for: "
+msgstr "Şunun için arama sonuçları:"
+
+#: core/libraries/janstudio/hooks/helper.php:460
+msgid "Error 404"
+msgstr "Hata 404"
+
+#: core/libraries/janstudio/hooks/helper.php:464
+msgid "Front Page"
+msgstr "Ön sayfa"
+
+#: core/libraries/janstudio/hooks/helper.php:485
+msgid "Share this post on Facebook"
+msgstr "Bu gönderiyi Facebook'ta paylaş"
+
+#: core/libraries/janstudio/hooks/helper.php:488
+msgid "Share this post on Twitter"
+msgstr "Bu gönderiyi Twitter'da paylaş"
+
+#: core/libraries/janstudio/hooks/helper.php:491
+msgid "Share this post on Google Plus"
+msgstr "Bu gönderiyi Google+'da paylaş"
+
+#: core/libraries/janstudio/hooks/helper.php:494
+msgid "Share this post on Pinterest"
+msgstr "Bu gönderiyi Pinterest'te paylaş"
+
+#: core/libraries/janstudio/hooks/helper.php:497
+msgid "Share this post on Tumbr"
+msgstr "Bu gönderiyi Thumblr'da paylaş"
+
+#: core/libraries/janstudio/hooks/helper.php:537
+msgid "About Author"
+msgstr "Yazar hakkında"
+
+#: core/libraries/janstudio/hooks/helper.php:580
+msgid "Related Articles"
+msgstr "İlgili yazılar"
+
+#: core/libraries/janstudio/hooks/helper.php:638 
+#: core/libraries/janstudio/hooks/helper.php:677
+msgid "Edit"
+msgstr "Gözden geçir:"
+
+#: core/libraries/janstudio/hooks/helper.php:653
+msgid "Your comment is awaiting moderation."
+msgstr "Yorumunuz onay bekliyor."
+
+#: core/libraries/janstudio/hooks/helper.php:660
+msgid "Post author"
+msgstr "Gönderi yazarı"
+
+#: core/libraries/janstudio/hooks/helper.php:682
+msgid "Reply"
+msgstr "Cevapla"
+
+#: core/libraries/janstudio/hooks/helper.php:1258
+msgid "No More Item To Show"
+msgstr "Gösterilecek başka öğe yok"
+
+#: core/libraries/janstudio/hooks/helper.php:1259
+msgid "days"
+msgstr "gün"
+
+#: core/libraries/janstudio/hooks/helper.php:1260
+msgid "hrs"
+msgstr "saat"
+
+#: core/libraries/janstudio/hooks/helper.php:1261
+msgid "mins"
+msgstr "dakika"
+
+#: core/libraries/janstudio/hooks/helper.php:1262
+msgid "secs"
+msgstr "saniye"
+
+#: core/libraries/janstudio/hooks/helper.php:1298
+msgid "Article"
+msgstr "Yazı"
+
+#: core/libraries/janstudio/hooks/helper.php:1460
+msgid "Select a sidebar"
+msgstr "Bir yan bar seçin"
+
+#: core/libraries/janstudio/widgets/instagram.php:13
+msgid "Show off your favorite Instagram photos"
+msgstr "En sevilen Instagram fotoğraflarınızı gösterin"
+
+#: core/libraries/janstudio/widgets/instagram.php:105
+msgid "Title:"
+msgstr "Başlık:"
+
+#: core/libraries/janstudio/widgets/instagram.php:120
+msgid "Number of Photos:"
+msgstr "Fotoğraf adedi:"
+
+#: core/libraries/janstudio/widgets/instagram.php:125
+msgid "Columns (1-4):"
+msgstr "Sütun adedi (1-4):"
+
+#: core/libraries/vendors/woocommerce/init.php:89
+msgid "Filter"
+msgstr "Filtre"
+
+#: core/libraries/vendors/woocommerce/init.php:123
+msgid "WooCommerce Top Sidebar"
+msgstr "Woocommerce tepe yan çubuğu"
+
+#: core/libraries/vendors/woocommerce/init.php:125
+msgid ""
+"The sidebar area for woocommerce, It will display on top of archive product "
+"page"
+msgstr ""
+"Woocommerce için olan yan çubuk; arşiv ürün sayfasının tepesinde görüntülenir"
+
+#: core/libraries/vendors/woocommerce/init.php:134
+msgid "WooCommerce Sidebar"
+msgstr "Woocommerce yan çubuğu"
+
+#: core/libraries/vendors/woocommerce/init.php:136
+msgid ""
+"The woocommerce sidebar, It will display in archive product page on left or "
+"right"
+msgstr ""
+"Woocommerce için olan yan çubuk; arşiv ürün sayfasının sağında ya da solunda "
+"görüntülenir"
+
+#: core/libraries/vendors/woocommerce/init.php:200 
+#: core/libraries/vendors/woocommerce/init.php:206 
+#: core/libraries/vendors/woocommerce/templates/content-product.php:86
+msgid "Quick View"
+msgstr "Özet görünüm"
+
+#: core/libraries/vendors/woocommerce/init.php:289
+msgid "My Account"
+msgstr "Hesabım"
+
+#: core/libraries/vendors/woocommerce/init.php:290
+msgid "Logout"
+msgstr "Çıkış yap"
+
+#: core/libraries/vendors/woocommerce/init.php:292
+msgid "Login / Register"
+msgstr "Giriş / Kayıt ol"
+
+#: core/libraries/vendors/woocommerce/init.php:309
+msgid "View your shopping cart"
+msgstr "Alışveriş sepetinizi inceleyin"
+
+#: core/libraries/vendors/woocommerce/init.php:345
+#, php-format
+msgid "%s has been added to your cart."
+msgid_plural "%s have been added to your cart."
+msgstr[0] "%s sepetinize eklendi."
+msgstr[1] "%s sepetinize eklendi."
+
+#: core/libraries/vendors/woocommerce/init.php:350
+msgid "Continue Shopping"
+msgstr "Alış-verişe devam et"
+
+#: core/libraries/vendors/woocommerce/init.php:352
+msgid "View Cart"
+msgstr "Sepeti incele"
+
+#: core/libraries/vendors/woocommerce/init.php:671
+msgid "Enable AJAX add to cart buttons on product detail"
+msgstr "Ürün ayrıntısında  AJAX sepete ekle butonlarını  etkinleştir"
+
+#: core/libraries/vendors/openswatch/templates/variable.php:41 
+#: core/libraries/vendors/woocommerce/templates/single-product/add-to-cart/variable.php:31
+msgid "This product is currently out of stock and unavailable."
+msgstr "Bu ürün şu anda stokta yok ve tedarik edilemiyor."
+
+#: core/libraries/vendors/openswatch/templates/variable.php:94
+msgid "Clear selection"
+msgstr "Seçimi temizle"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:13
+msgid "Show blog post by ID or title"
+msgstr "Blog gönderilerini ID yhut başlıpa göre görüntüle"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:16 
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:16 
+#: core/libraries/vendors/visual-composer/maps/member.php:15 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:26 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:15 
+#: core/libraries/vendors/visual-composer/maps/service.php:15 
+#: core/libraries/vendors/visual-composer/maps/service.php:64 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:15 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:60 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:74 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:88
+msgid "Content"
+msgstr "İçerik"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:20
+msgid "Include special posts"
+msgstr "Özel gönderileri içer"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:21
+msgid "Enter posts title to display only those records."
+msgstr "SAdece o kayıtları göstermek üzere gönderi başlığı gir"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:34
+msgid "Content Outside Thumbnail"
+msgstr "Küçük görsel harici içerik "
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:35
+msgid "Content Inside Thumbnail"
+msgstr "Küçük görsel içinde içerik "
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:41
+msgid "Thumbnail size"
+msgstr "Küçük görsel boyutu"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:42
+msgid "width x height, example: 570x320"
+msgstr "Genişlik, yükseklik, örnek: 570 x 320"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:50 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:42 
+#: core/libraries/vendors/visual-composer/maps/products.php:210 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:23
+msgid "2 columns"
+msgstr "2 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:51 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:43 
+#: core/libraries/vendors/visual-composer/maps/products.php:211 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:24
+msgid "3 columns"
+msgstr "3 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:52 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:44 
+#: core/libraries/vendors/visual-composer/maps/products.php:212 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:25
+msgid "4 columns"
+msgstr "4 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:59
+msgid "How much items per page to show (-1 to show all posts)"
+msgstr "Sayfa başına kaç öğe gösterilsin (hepsi için -1)"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:65 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:64 
+#: core/libraries/vendors/visual-composer/maps/products.php:151
+msgid "Enable Slider"
+msgstr "Kaydırıcıyı etkinleştir"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:70 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:85 
+#: core/libraries/vendors/visual-composer/maps/products.php:176
+msgid "Enable Auto play"
+msgstr "Otomatik oynatmayı etkinleştir"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:79 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:95 
+#: core/libraries/vendors/visual-composer/maps/products.php:186 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:29
+msgid "Enable Navigation"
+msgstr "Navigasyonu etkinleştir"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:88 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:105 
+#: core/libraries/vendors/visual-composer/maps/products.php:196
+msgid "Enable Pagination"
+msgstr "Sayfalandırmayı etkinleştir"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:98 
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:160 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:115 
+#: core/libraries/vendors/visual-composer/maps/member.php:83 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:63 
+#: core/libraries/vendors/visual-composer/maps/product.php:54 
+#: core/libraries/vendors/visual-composer/maps/products.php:237 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:50 
+#: core/libraries/vendors/visual-composer/maps/service.php:88 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:47 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:37
+msgid "Extra class name"
+msgstr "Ekstra class adı"
+
+#: core/libraries/vendors/visual-composer/maps/blog.php:99 
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:161 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:116 
+#: core/libraries/vendors/visual-composer/maps/member.php:84 
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:64 
+#: core/libraries/vendors/visual-composer/maps/product.php:55 
+#: core/libraries/vendors/visual-composer/maps/products.php:238 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:51 
+#: core/libraries/vendors/visual-composer/maps/service.php:89 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:48 
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:38
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+"Belli bir içerik elemanını farklı şekillendir - bir class ismi ekleyin ve "
+"özel CSS içerisinden ona referans verin."
+
+#: core/libraries/vendors/visual-composer/maps/column.php:15 
+#: core/libraries/vendors/visual-composer/maps/column.php:40
+msgid "Background  Position"
+msgstr "Arkaplan yerleşimi"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:16 
+#: core/libraries/vendors/visual-composer/maps/column.php:41 
+#: core/libraries/vendors/visual-composer/maps/row.php:41 
+#: core/libraries/vendors/visual-composer/maps/row.php:66
+msgid "Sets the starting position of a background image."
+msgstr "Arkaplan resim yerleşiminin başlangıç noktasını belirler."
+
+#: core/libraries/vendors/visual-composer/maps/column.php:17 
+#: core/libraries/vendors/visual-composer/maps/column.php:42 
+#: core/libraries/vendors/visual-composer/maps/row.php:42 
+#: core/libraries/vendors/visual-composer/maps/row.php:67
+msgid "Design Options"
+msgstr "Tasarım Seçenekleri"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:22 
+#: core/libraries/vendors/visual-composer/maps/column.php:47 
+#: core/libraries/vendors/visual-composer/maps/row.php:47 
+#: core/libraries/vendors/visual-composer/maps/row.php:72
+msgid "Left Top"
+msgstr "Sol üst"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:23 
+#: core/libraries/vendors/visual-composer/maps/column.php:48 
+#: core/libraries/vendors/visual-composer/maps/row.php:48 
+#: core/libraries/vendors/visual-composer/maps/row.php:73
+msgid "Left Center"
+msgstr "Sol orta"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:24 
+#: core/libraries/vendors/visual-composer/maps/column.php:49 
+#: core/libraries/vendors/visual-composer/maps/row.php:49 
+#: core/libraries/vendors/visual-composer/maps/row.php:74
+msgid "Left Bottom"
+msgstr "Sol alt"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:25 
+#: core/libraries/vendors/visual-composer/maps/column.php:50 
+#: core/libraries/vendors/visual-composer/maps/row.php:50 
+#: core/libraries/vendors/visual-composer/maps/row.php:75
+msgid "Right Top"
+msgstr "Sağ üst"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:26 
+#: core/libraries/vendors/visual-composer/maps/column.php:51 
+#: core/libraries/vendors/visual-composer/maps/row.php:51 
+#: core/libraries/vendors/visual-composer/maps/row.php:76
+msgid "Right Center"
+msgstr "Sağ orta"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:27 
+#: core/libraries/vendors/visual-composer/maps/column.php:52 
+#: core/libraries/vendors/visual-composer/maps/row.php:52 
+#: core/libraries/vendors/visual-composer/maps/row.php:77
+msgid "Right Bottom"
+msgstr "Sağ alt"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:28 
+#: core/libraries/vendors/visual-composer/maps/column.php:53 
+#: core/libraries/vendors/visual-composer/maps/row.php:53 
+#: core/libraries/vendors/visual-composer/maps/row.php:78
+msgid "Center Top"
+msgstr "Orta üst"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:29 
+#: core/libraries/vendors/visual-composer/maps/column.php:54 
+#: core/libraries/vendors/visual-composer/maps/row.php:54 
+#: core/libraries/vendors/visual-composer/maps/row.php:79
+msgid "Center Center"
+msgstr "Orta orta"
+
+#: core/libraries/vendors/visual-composer/maps/column.php:30 
+#: core/libraries/vendors/visual-composer/maps/column.php:55 
+#: core/libraries/vendors/visual-composer/maps/row.php:55 
+#: core/libraries/vendors/visual-composer/maps/row.php:80
+msgid "Center Bottom"
+msgstr "Orta alt"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:14
+msgid "Google Maps"
+msgstr "Google Haritalar"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:21
+msgid "Address"
+msgstr "Adres"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:27
+msgid "Zoom Level ( 0 -> 20 )"
+msgstr "Yakınlaştırma düzeyi (0 ->20)"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:33
+msgid "Latitude"
+msgstr "Enlem"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:39
+msgid "Longitude"
+msgstr "Boylam"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:45
+msgid "Width"
+msgstr "Genişlik"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:46 
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:53
+msgid "Numeric value only, Unit is Pixel."
+msgstr "Sadece rakamsal veri, birim Pikseldir."
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:52
+msgid "Height"
+msgstr "Yükseklik"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:59
+msgid "Marker"
+msgstr "İmleç"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:69
+msgid "Marker Image"
+msgstr "İmleç görseli"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:70
+msgid "Change default Marker."
+msgstr "Varsayılan imleci değiştir."
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:79
+msgid "Content Info Map"
+msgstr "İçerik bilgi haritası"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:80
+msgid "Strong, br are accepted."
+msgstr "Koyu, br kabul edilir."
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:89
+msgid "Show content info map"
+msgstr "İçerik bilgi haritasını göster"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:101
+msgid "Show Traffic"
+msgstr "Trafiği göster"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:109
+msgid "Draggable"
+msgstr "Sürüklenebilir"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:121
+msgid "Hide Control"
+msgstr "Kontrolleri gizle"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:129
+msgid "Scroll wheel zooming"
+msgstr "Kaydırma tekeri ile yakınlık ayarı"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:137
+msgid "Map Type"
+msgstr "Harita çeşidi"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:140
+msgid "ROADMAP"
+msgstr "YOL HARİTASI"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:141
+msgid "SATELLITE"
+msgstr "UYDU"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:142
+msgid "HYBRID"
+msgstr "MELEZ"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:143
+msgid "TERRAIN"
+msgstr "ARAZİ"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:148
+msgid "Map style"
+msgstr "Harita tarzı"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:151
+msgid "None"
+msgstr "Hiçbiri"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:152
+msgid "Subtle Grayscale"
+msgstr "Hassas gri skalası"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:153
+msgid "Blue water"
+msgstr "Mavi su"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:154
+msgid "Pale Dawn"
+msgstr "Solgun Şafak"
+
+#: core/libraries/vendors/visual-composer/maps/google-maps.php:155
+msgid "Shades of Grey"
+msgstr "Koyuluk tonları"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:12
+msgid "Instagram"
+msgstr "Instagram"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:15
+msgid "Social"
+msgstr "Sosyal"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:19
+msgid "User ID"
+msgstr "Kullanıcı ID"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:25
+msgid "Access Token"
+msgstr "Erişim Dizgeciği"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:32
+msgid "How much items per page to show"
+msgstr "Sayfa başına kaç öğe görüntüleneceği"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:39 
+#: core/libraries/vendors/visual-composer/maps/products.php:207
+msgid "This parameter is not working if slider has enabled"
+msgstr "Kaydırıcı etkinlşetirildiğinde bu değişken işlevsizdir"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:45
+msgid "5 columns"
+msgstr "5 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:46
+msgid "6 columns"
+msgstr "6 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:47
+msgid "7 columns"
+msgstr "7 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:48
+msgid "8 columns"
+msgstr "8 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:49
+msgid "9 columns"
+msgstr "9 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:50
+msgid "10 columns"
+msgstr "10 sütun"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:59
+msgid "Gutter Width"
+msgstr "Sütunlar arası genişlik"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:67 
+#: core/libraries/vendors/visual-composer/maps/products.php:154
+msgid "No"
+msgstr "Hayır"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:68 
+#: core/libraries/vendors/visual-composer/maps/products.php:155 
+#: core/libraries/vendors/visual-composer/maps/row.php:22 
+#: core/libraries/vendors/visual-composer/maps/row.php:32
+msgid "Yes"
+msgstr "Evet"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:73 
+#: core/libraries/vendors/visual-composer/maps/products.php:164
+msgid "Items (Number only)"
+msgstr "Öğe (Sadece rakam)"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:74 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:86 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:96 
+#: core/libraries/vendors/visual-composer/maps/instagram.php:106 
+#: core/libraries/vendors/visual-composer/maps/products.php:165 
+#: core/libraries/vendors/visual-composer/maps/products.php:177 
+#: core/libraries/vendors/visual-composer/maps/products.php:187 
+#: core/libraries/vendors/visual-composer/maps/products.php:197
+msgid "Slider Settings"
+msgstr "Görsel kaydırma alanı ayarları"
+
+#: core/libraries/vendors/visual-composer/maps/instagram.php:75 
+#: core/libraries/vendors/visual-composer/maps/products.php:166
+msgid ""
+"Set the maximum amount of items displayed at a time with the widest browser "
+"width"
+msgstr ""
+"Tarayıcı penceresi en geniş durumdayken bir kerede görüntülenecek en fazla "
+"öğe sayısını ayarlayın"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:12
+msgid "Member"
+msgstr "Üye"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:19
+msgid "Avatar"
+msgstr "Avatar"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:29
+msgid "Job"
+msgstr "Meslek"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:34
+msgid "Facebook Link"
+msgstr "Facebook Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:40
+msgid "Twitter Link"
+msgstr "Twitter bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:46
+msgid "Dribbble Link"
+msgstr "Dribble Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:52
+msgid "Behance Link"
+msgstr "Behance Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:58
+msgid "Linkedin Link"
+msgstr "Linkedin Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:64
+msgid "Tumblr Link"
+msgstr "Tumblr Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:70
+msgid "Pinterest Link"
+msgstr "Pinterest Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/member.php:76
+msgid "Google Plus Link"
+msgstr "Google Plus Bağlantısı"
+
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:11
+msgid "All category"
+msgstr "Tüm kategoriler"
+
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:33
+msgid "2 Columns"
+msgstr "2 Sütun"
+
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:34
+msgid "3 Columns"
+msgstr "3 Sütun"
+
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:35
+msgid "4 Columns"
+msgstr "4 Sütun"
+
+#: core/libraries/vendors/visual-composer/maps/portfolio.php:54
+msgid "Enable Filter?"
+msgstr "Filtreyi etkinleştirilsin mi?"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:13 
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:35 
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:67 
+#: core/libraries/vendors/woocommerce/templates/checkout/review-order.php:25
+msgid "Product"
+msgstr "Ürün"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:14
+msgid "Show a single product by ID or SKU"
+msgstr "ID yahut SKUya göre tek ürün görüntüle"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:24 
+#: core/libraries/vendors/visual-composer/maps/products.php:49
+msgid "Style 1"
+msgstr "Tarz 1"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:25 
+#: core/libraries/vendors/visual-composer/maps/products.php:50
+msgid "Style 2"
+msgstr "Tarz 2"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:26 
+#: core/libraries/vendors/visual-composer/maps/products.php:51
+msgid "Style 3"
+msgstr "Tarz 3 "
+
+#: core/libraries/vendors/visual-composer/maps/product.php:27 
+#: core/libraries/vendors/visual-composer/maps/products.php:52
+msgid "Style 4"
+msgstr "Tarz dört"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:32
+msgid "Select identificator"
+msgstr "Tanımlayıcı seçiniz"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:34 
+#: core/libraries/vendors/visual-composer/maps/products.php:110
+msgid "Input product ID or product SKU or product title to see suggestions"
+msgstr "Önerileri görmek için ürün ID SKU ya da başlık bilgisi giriniz"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:46
+msgid "Enable countdown for sale product"
+msgstr "İndirimli ürün için geri sayımı etkinleştir"
+
+#: core/libraries/vendors/visual-composer/maps/product.php:47
+msgid "Setup sale schedule in product page first."
+msgstr "İndirimi öncelikle ürün sayfasında zamanlamayınız."
+
+#: core/libraries/vendors/visual-composer/maps/products.php:29 
+#: core/libraries/vendors/visual-composer/maps/products.php:109
+msgid "Products"
+msgstr "Ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:30
+msgid "Show multiple products by ID or SKU."
+msgstr "ID yahut SKU'ya göre ürünler göster"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:37
+msgid "List product style"
+msgstr "Ürün sıralama şekli"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:40
+msgid "Grid"
+msgstr "Izgara"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:41
+msgid "Masonry"
+msgstr "Almaşklı"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:58
+msgid "Display"
+msgstr "Göster"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:61
+msgid "All products"
+msgstr "Tüm ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:62
+msgid "Recent products"
+msgstr "Yeni Ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:63
+msgid "Featured products"
+msgstr ""
+"Öne çıkan Ürünler\n"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:64
+msgid "Sale products"
+msgstr "İndirimli Ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:65
+msgid "Best selling products"
+msgstr "En çok satanlar"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:66
+msgid "Top Rated Products"
+msgstr "En yüksek puan alan ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:67
+msgid "Products by category"
+msgstr "Kategoriye göre ürünler"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:73
+msgid "Order By"
+msgstr "Sıralama kriteri"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:78
+msgid "Date"
+msgstr "Tarih"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:80
+msgid "Author"
+msgstr "Yazan"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:81
+msgid "Modified"
+msgstr "Değiştirilmiş"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:82
+msgid "Random"
+msgstr "Rastgele"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:83
+msgid "Comment count"
+msgstr "Yorum sayısı"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:84
+msgid "Menu order"
+msgstr "Menü düzeni"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:94
+msgid "Order"
+msgstr "Sıralama"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:95
+#, php-format
+msgid ""
+"Designates the ascending or descending order. More at %s. Default by ASC"
+msgstr ""
+"Artan yahut azalan sıralamayı belirler.Daha çok  %s . Varsayılanı artandır. "
+
+#: core/libraries/vendors/visual-composer/maps/products.php:98
+msgid "Ascending"
+msgstr "Artan"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:99
+msgid "Descending"
+msgstr "Azalan"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:132
+msgid "Product Category"
+msgstr "Ürün kategorisi"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:218
+msgid "Enable Isotope Category Filter?"
+msgstr "Isotope kategori filtresi etkinleştirilsin mi?"
+
+#: core/libraries/vendors/visual-composer/maps/products.php:227
+msgid "Exclude sub-categories in filter?"
+msgstr "Filtrede alt-kategoriler hariç mi tutulsun?"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:12
+msgid "Promotion Banner"
+msgstr "Tanıtım bandı"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:19
+msgid "Image"
+msgstr "Görsel"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:24
+msgid "Link to"
+msgstr "Şuna bağla"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:29
+msgid "Text vertical align"
+msgstr "Metin yatay hizalaması"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:32 
+#: core/libraries/vendors/visual-composer/maps/service.php:52
+msgid "Top"
+msgstr "Üste"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:33
+msgid "Middle"
+msgstr "Ortada"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:34
+msgid "Bottom"
+msgstr "Alta"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:39
+msgid "Text horizontal align"
+msgstr "Metin yatay hizalaması"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:42 
+#: core/libraries/vendors/visual-composer/maps/service.php:54 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:37
+msgid "Left"
+msgstr "Sol"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:43
+msgid "Center"
+msgstr "Orta"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:44 
+#: core/libraries/vendors/visual-composer/maps/service.php:53 
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:38
+msgid "Right"
+msgstr "Sağ"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:56 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:88 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:120
+msgid "Text"
+msgstr "Metin"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:58 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:64 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:71 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:77 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:83
+msgid "Text 1"
+msgstr "Metin 1"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:62 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:94 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:126
+msgid "Font size"
+msgstr "Font boyutu"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:69 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:101 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:133
+msgid "Line height"
+msgstr "Çizgi yüksekliği"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:75 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:107 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:139
+msgid "Color"
+msgstr "Renk"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:81 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:113
+msgid "Margin bottom"
+msgstr "Alt kenarlık"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:90 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:96 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:103 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:109 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:115
+msgid "Text 2"
+msgstr "Metin 2"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:122 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:128 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:135 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:141 
+#: core/libraries/vendors/visual-composer/maps/promotion.php:147
+msgid "Text 3"
+msgstr "Metin 3"
+
+#: core/libraries/vendors/visual-composer/maps/promotion.php:145
+msgid "Make it as button"
+msgstr "Buton haline getir"
+
+#: core/libraries/vendors/visual-composer/maps/row.php:16
+msgid "Full width row?"
+msgstr "Satır tüm genişliğe yayılsın mı?"
+
+#: core/libraries/vendors/visual-composer/maps/row.php:17
+msgid "If checked row will be set to full width."
+msgstr "İşaretlenirse, satır tüm genişliğe ayarlanacaktır."
+
+#: core/libraries/vendors/visual-composer/maps/row.php:26
+msgid "Wrap Content"
+msgstr "İçeriği çerçevele"
+
+#: core/libraries/vendors/visual-composer/maps/row.php:27
+msgid ""
+"Wrap content to 1170px (You can change wrapper's width in theme options."
+msgstr ""
+"İçeriğiği 1170 px genişlikte çerçevele ( Çerçevenin genişliği tema "
+"seçeneklerinden değiştirilebilir.)"
+
+#: core/libraries/vendors/visual-composer/maps/row.php:40 
+#: core/libraries/vendors/visual-composer/maps/row.php:65
+msgid "Background Position"
+msgstr "Arkaplan yerleşimi"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:12
+msgid "Service"
+msgstr "Servis"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:29
+msgid "Icon Style"
+msgstr "Simge çeşidi"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:32
+msgid "Default"
+msgstr "Varsayılan"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:33
+msgid "Square"
+msgstr "Kare"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:34
+msgid "Circle"
+msgstr "Daire"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:39
+msgid "Icon Size"
+msgstr "Simge boyutu"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:42
+msgid "Small"
+msgstr "Küçük"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:43
+msgid "Medium"
+msgstr "Orta"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:44
+msgid "Large"
+msgstr "Büyük"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:49
+msgid "Icon Position"
+msgstr "Simge yerleşimi"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:69
+msgid "Icon Color"
+msgstr "Simge rengi"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:75
+msgid "Title Color"
+msgstr "Başlık rengi"
+
+#: core/libraries/vendors/visual-composer/maps/service.php:81
+msgid "Content Color"
+msgstr "İçerik rengi"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:12
+msgid "Vertical Slide"
+msgstr "Dikey kayma"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:22
+msgid "Speed"
+msgstr "Hız"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:23
+msgid "Number Only (ms)"
+msgstr "Sadece rakam (ms)"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:34
+msgid "Navigation Position"
+msgstr "Navigasyonun yerleşimi"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:57
+msgid "Content Left"
+msgstr "İçerik solda"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:71
+msgid "Content Right"
+msgstr "İçerik sağda"
+
+#: core/libraries/vendors/visual-composer/maps/vertical-slide.php:85
+msgid "Section"
+msgstr "Bölüm"
+
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:13
+msgid "Product Categories"
+msgstr "Ürün kategorileri"
+
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:31
+msgid "Exclude"
+msgstr "Hariç tut"
+
+#: core/libraries/vendors/visual-composer/maps/wc-categories.php:32
+msgid "Enter category id to exclude (Note: separate values by commas \",\")."
+msgstr ""
+"Haric tutulacak kategori IDlerini giriniz (Not: değerleri virgül ile \",\" "
+"ayırınız) "
+
+#: core/libraries/vendors/woocommerce/templates/content-product-image.php:37
+msgid "Placeholder"
+msgstr "Yer tutucu"
+
+#: core/libraries/vendors/woocommerce/templates/content-quickview-product.php:41
+#:  
+#: core/libraries/vendors/woocommerce/templates/single-product/product-image.php:65
+msgid "Awaiting product image"
+msgstr "Ürün imajı bekleniyor"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:36 
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:85
+msgid "Price"
+msgstr "Fiyat"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:37 
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:91
+msgid "Quantity"
+msgstr "Miktar"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:38 
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:108 
+#: core/libraries/vendors/woocommerce/templates/checkout/review-order.php:26 
+#: core/libraries/vendors/woocommerce/templates/checkout/review-order.php:116
+msgid "Total"
+msgstr "Toplam"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:80
+msgid "Available on backorder"
+msgstr "Önsipariş kabul edilir"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:119
+msgid "Remove this item"
+msgstr "Bu öğeyi çıkar"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:138
+msgid "Coupon"
+msgstr "Kupon"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:138
+msgid "Coupon code"
+msgstr "Kupon kodu"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:138
+msgid "Apply Coupon"
+msgstr ""
+"Kuponu kullan\n"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cart.php:144
+msgid "Update Cart"
+msgstr "Sepeti güncelle"
+
+#: core/libraries/vendors/woocommerce/templates/cart/cross-sells.php:48 
+#: core/libraries/vendors/woocommerce/templates/cart/cross-sells.php:68
+msgid "You may be interested in&hellip;"
+msgstr "İlgilinizi çekebilir&hellip;"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-billing.php:29
+msgid "Billing &amp; Shipping"
+msgstr "Fatura ve Gönderim"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-billing.php:33
+msgid "Billing Details"
+msgstr "Fatura Bilgileri"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-billing.php:54 
+#: core/libraries/vendors/woocommerce/templates/checkout/form-billing.php:89
+msgid "Create an account?"
+msgstr "Üyelik hesabı oluşturulsun mu?"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-billing.php:64
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+"Aşağıdaki bilgileri girerek bir üye hesabı oluşturunuz. Eğer zaten üye "
+"iseniz lütfen  yukarıdaki giriş kısmını kullanınız."
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr "ödeme için üye girişi yapmalısınız."
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-checkout.php:48
+msgid "Your order"
+msgstr "Siparişiniz"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-shipping.php:41
+msgid "Ship to a different address?"
+msgstr "Farklı bir adrese mi gönderilecek?"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/form-shipping.php:66
+msgid "Additional Information"
+msgstr "Ek Bilgi"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/review-order.php:69
+msgid "Subtotal"
+msgstr "Ara toplam"
+
+#: core/libraries/vendors/woocommerce/templates/checkout/terms.php:16
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\">terms &amp; "
+"conditions</a>"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Kullanıcı sözleşmesi</a> koşul ve "
+"şartlarını okudum, kabul ediyorum."
+
+#: core/libraries/vendors/woocommerce/templates/emails/woo-preview-emails.php:85
+msgid "Preview Email Templates"
+msgstr "E-posta taslakları önizlemesi "
+
+#: core/libraries/vendors/woocommerce/templates/emails/woo-preview-emails.php:87
+msgid "Click Here to preview all of your Email Templates with Orders"
+msgstr "Siparişlerle ilgili tüm e-posta taslaklarını görmek için tıklayın"
+
+#: core/libraries/vendors/woocommerce/templates/global/quantity-input.php:23
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Adet"
+
+#: core/libraries/vendors/woocommerce/templates/loop/loop-start.php:85
+msgid "All"
+msgstr "Hepsi"
+
+#: core/libraries/vendors/woocommerce/templates/loop/sale-flash.php:38 
+#: core/libraries/vendors/woocommerce/templates/single-product/sale-flash.php:28
+msgid "Sale"
+msgstr "İndirim"
+
+#: core/libraries/vendors/woocommerce/templates/loop/sale-flash.php:42 
+#: core/libraries/vendors/woocommerce/templates/single-product/sale-flash.php:32
+msgid "Sold Out"
+msgstr "Bitti"
+
+#: core/libraries/vendors/woocommerce/templates/loop/sale-flash.php:45 
+#: core/libraries/vendors/woocommerce/templates/single-product/sale-flash.php:44
+msgid "New"
+msgstr "Yeni"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:37 
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:56
+msgid "Login"
+msgstr "Giriş"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr "Kullanıcı adı ya da e-posta"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:48 
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:100
+msgid "Password"
+msgstr "Şifre"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:59
+msgid "Remember me"
+msgstr "Beni hatırla"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:63
+msgid "Lost your password?"
+msgstr "Şifremi unuttum"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:77 
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:114
+msgid "Register"
+msgstr ""
+"Kayıt Ol\n"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:86
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:93
+msgid "Email address"
+msgstr ""
+"E-posta adresi\n"
+
+#: core/libraries/vendors/woocommerce/templates/myaccount/form-login.php:107
+msgid "Anti-spam"
+msgstr "İstenmeyen e-postalara karşı"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/price.php:47
+msgid "In Stock"
+msgstr ""
+"Stokta\n"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/price.php:49
+msgid "Out of Stock"
+msgstr "Stokta yok"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/rating.php:49
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] "%s kullanıcı yorumuna göre"
+msgstr[1] "%s kullanıcı yorumuna göre"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/rating.php:52
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] "%s kullanıcı yorumu"
+msgstr[1] "%s kullanıcı yorumları"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/related.php:52 
+#: core/libraries/vendors/woocommerce/templates/single-product/related.php:71
+msgid "Related product(s)"
+msgstr "İlgili Ürün(ler)"
+
+#: core/libraries/vendors/woocommerce/templates/single-product/up-sells.php:53 
+#: core/libraries/vendors/woocommerce/templates/single-product/up-sells.php:71
+msgid "You may also like"
+msgstr "Bunları da beğenebilirsiniz"
+
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-1.php:97 
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-2.php:59 
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-3.php:64
+msgid "Size Guide"
+msgstr "Beden Tablosu"
+
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-1.php:100 
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-2.php:62 
+#: core/libraries/vendors/woocommerce/templates/extras/single/layout-3.php:67
+msgid "Delivery & Return"
+msgstr "Gönderim ve İade"
+
+#: 404.php:15
+msgid "Sorry! Page you are looking can&rsquo;t be found."
+msgstr "Üzgünüz, aradığınız sayfayı bulamadık."
+
+#: 404.php:16
+msgid "Go back to the "
+msgstr "Geri git"
+
+#: 404.php:16
+msgid "homepage"
+msgstr "anasayfa"
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "Comment (1)"
+msgstr "Yorum (1)"
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "Comment (%1$s)"
+msgid_plural "Comments (%1$s)"
+msgstr[0] "Yorum (%1$s)"
+msgstr[1] "Yorumlar (%1$s)"
+
+#: comments.php:62
+msgid "Comments are closed."
+msgstr "Yoruma kapatılmıştır."
+
+#: comments.php:69
+msgid "Your comment *"
+msgstr "Yorumunuz *"
+
+#: comments.php:74
+msgid "Your name *"
+msgstr "Adınız *"
+
+#: comments.php:77
+msgid "Your email *"
+msgstr "E-posta adresiniz *"
+
+#: comments.php:80
+msgid "Your website"
+msgstr "Web siteniz"
+
+#: comments.php:86
+msgid "Leave your comment"
+msgstr "Yorum yazın"
+
+#: comments.php:89
+msgid "Submit"
+msgstr "Gönder"
+
+#: single.php:40
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: single.php:44 core/libraries/janstudio/hooks/helper.php:448
+msgid "Page"
+msgstr "Sayfa"
+
+#: single.php:51
+msgid "Leave a comment"
+msgstr "Yorum yazın"
+
+#: single.php:51 views/post/content-masonry.php:23
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: single.php:51 views/post/content-masonry.php:23
+msgid "% Comments"
+msgstr "% Yorum"
+
+#: views/header/layout-1.php:64 views/header/layout-2.php:105 
+#: views/header/layout-3.php:83 views/header/layout-4.php:85 
+#: views/header/layout-5.php:76 views/header/layout-6.php:71 
+#: views/header/layout-7.php:52
+msgid "Search for..."
+msgstr "Ara :"
+
+#: views/header/layout-1.php:70 views/header/layout-2.php:112 
+#: views/header/layout-3.php:90 views/header/layout-4.php:92 
+#: views/header/layout-5.php:83 views/header/layout-6.php:78
+msgid "Menu"
+msgstr "Menü"
+
+#: views/header/layout-1.php:99 views/header/layout-2.php:141 
+#: views/header/layout-3.php:119 views/header/layout-4.php:121 
+#: views/header/layout-5.php:112 views/header/layout-6.php:107 
+#: views/header/layout-7.php:44
+msgid "Mini Cart"
+msgstr "Mini Sepet"
+
+#: views/header/layout-2.php:67 views/header/layout-2.php:89 
+#: views/header/layout-3.php:58 views/header/layout-4.php:60 
+#: views/header/layout-5.php:69 views/header/layout-6.php:27
+msgid "Add Menu"
+msgstr "Menü ekle"
+
+#: views/post/content-masonry.php:23
+msgid "0 Comment"
+msgstr "0 Yorum"
+
+#: views/post/content-masonry.php:25
+msgid "Read more"
+msgstr "Devamını oku"
+
+#: views/post/content-none.php:19
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Üzgünüz, aradıklarınızla eşleşen bir şey bulamadık. Lütfen başka anahtar "
+"kelimelerle yeniden deneyin."

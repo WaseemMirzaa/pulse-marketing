@@ -1,0 +1,467 @@
+/* =========================================================================
+   PulseLyft skin for the Gecko theme
+   -------------------------------------------------------------------------
+   Layers PulseLyft's "Editorial Studio" design language on top of Gecko so
+   the site can still be edited with the WPBakery Page Builder drag-and-drop
+   editor. Loaded AFTER Gecko's style.css (see inc/pulselyft.php), so these
+   rules win the cascade without touching Gecko's core.
+
+   The `.pl-*` component classes are meant to be dropped onto WPBakery rows,
+   columns and elements via the element's "Extra class name" field — that is
+   how a page keeps the PulseLyft look while staying drag-and-drop editable.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. Design tokens (mirror web/src + wordpress/pulselyft)
+   ------------------------------------------------------------------------- */
+:root {
+  --pl-font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --pl-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --pl-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --pl-paper: #ffffff;
+  --pl-page: #f3f1ec;
+  --pl-ink: #100e15;
+
+  --pl-lift: #6d28d9;
+  --pl-lift-bright: #a855f7;
+  --pl-lift-soft: rgba(109, 40, 217, 0.08);
+  --pl-accent-2: #db2777;
+  --pl-accent-3: #f59e0b;
+  --pl-grad: linear-gradient(100deg, #7c3aed 0%, #db2777 52%, #f59e0b 116%);
+  --pl-grad-soft: linear-gradient(120deg, rgba(124, 58, 237, 0.16), rgba(219, 39, 119, 0.10) 60%, rgba(245, 158, 11, 0.08));
+
+  --pl-heading: #100e15;
+  --pl-text: #3a3643;
+  --pl-text-muted: #6a6675;
+  --pl-text-faint: #8b8794;
+
+  --pl-line: rgba(16, 14, 21, 0.13);
+  --pl-line-soft: rgba(16, 14, 21, 0.08);
+  --pl-surface-2: rgba(16, 14, 21, 0.025);
+
+  --pl-btn-bg: #100e15;
+  --pl-btn-fg: #ffffff;
+  --pl-btn-bg-hover: #2a2533;
+
+  --pl-shadow-sm: 0 1px 2px rgba(16, 14, 21, 0.05);
+  --pl-shadow-card: 0 1px 2px rgba(16, 14, 21, 0.04), 0 22px 48px -34px rgba(16, 14, 21, 0.30);
+  --pl-shadow-lg: 0 36px 70px -32px rgba(16, 14, 21, 0.34);
+  --pl-shadow-pop: 0 16px 44px -16px rgba(124, 58, 237, 0.5);
+
+  --pl-r: 14px;
+  --pl-r-lg: 22px;
+  --pl-r-xl: 30px;
+  --pl-r-pill: 999px;
+  --pl-maxw: 75rem;
+  --pl-grid-line: rgba(16, 14, 21, 0.05);
+
+  --pl-mesh:
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(124, 58, 237, 0.16), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 92% 5%, rgba(219, 39, 119, 0.12), transparent 70%),
+    radial-gradient(ellipse 45% 40% at 60% 100%, rgba(245, 158, 11, 0.08), transparent 70%);
+}
+
+/* -------------------------------------------------------------------------
+   2. Global base — make the whole theme wear the PulseLyft skin
+   ------------------------------------------------------------------------- */
+body,
+body.jas-body {
+  font-family: var(--pl-font-sans);
+  background: var(--pl-page);
+  color: var(--pl-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: var(--pl-font-display);
+  color: var(--pl-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+body a { color: inherit; }
+body a:hover { color: var(--pl-lift); }
+
+::selection { background: rgba(124, 58, 237, 0.18); color: var(--pl-ink); }
+
+/* Gecko wrapper canvas */
+#jas-wrapper { background: var(--pl-page); overflow-x: hidden; }
+
+/* Container that matches PulseLyft's max width where we opt in */
+.pl-container,
+.pl-scope .jas-container { max-width: var(--pl-maxw); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 2.5rem); }
+
+/* Kill Gecko back-to-top default color, use pulse */
+#jas-backtop .bgp { background: var(--pl-ink) !important; }
+
+/* -------------------------------------------------------------------------
+   3. Buttons — restyle Gecko + WPBakery buttons to PulseLyft
+   ------------------------------------------------------------------------- */
+.pl-scope .jas-btn,
+.pl-scope .btn,
+.pl-btn,
+.vc_btn3.vc_btn3-style-flat,
+.vc_general.vc_btn3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--pl-font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--pl-r-pill);
+  border: 1px solid transparent;
+  text-transform: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+/* Primary / "lift" button — solid ink with pulse hover glow */
+.pl-btn--lift,
+.vc_btn3-color-primary,
+.vc_btn3-color-juicy_pink {
+  background: var(--pl-btn-bg) !important;
+  color: var(--pl-btn-fg) !important;
+  box-shadow: var(--pl-shadow-sm);
+}
+.pl-btn--lift:hover,
+.vc_btn3-color-primary:hover,
+.vc_btn3-color-juicy_pink:hover {
+  background: var(--pl-btn-bg-hover) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: var(--pl-shadow-pop);
+}
+
+/* Gradient button variant */
+.pl-btn--grad {
+  background: var(--pl-grad) !important;
+  color: #fff !important;
+  border: 0;
+}
+.pl-btn--grad:hover { transform: translateY(-2px); box-shadow: var(--pl-shadow-pop); color: #fff !important; }
+
+/* Secondary / ghost button */
+.pl-btn--secondary,
+.vc_btn3-color-default {
+  background: transparent !important;
+  color: var(--pl-heading) !important;
+  border: 1px solid var(--pl-line) !important;
+}
+.pl-btn--secondary:hover,
+.vc_btn3-color-default:hover {
+  border-color: var(--pl-heading) !important;
+  color: var(--pl-heading) !important;
+  transform: translateY(-2px);
+}
+.pl-btn .pl-arrow { transition: transform 0.18s ease; }
+.pl-btn:hover .pl-arrow { transform: translateX(3px); }
+
+/* -------------------------------------------------------------------------
+   4. Kicker / eyebrow label
+   ------------------------------------------------------------------------- */
+.pl-kicker {
+  font-family: var(--pl-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pl-text-muted);
+  margin: 0 0 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pl-kicker::before {
+  content: "";
+  width: 1.75rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--pl-grad);
+}
+.pl-kicker--lift { color: var(--pl-lift); }
+
+/* Gradient text run */
+.pl-grad,
+.pl-grad-text {
+  background: var(--pl-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+   5. Section rhythm — apply .pl-section to a WPBakery row
+   ------------------------------------------------------------------------- */
+.pl-section { position: relative; padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.pl-section--tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.pl-section--paper { background: var(--pl-paper); }
+.pl-section--grid::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--pl-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pl-grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000, transparent 75%);
+          mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000, transparent 75%);
+}
+
+/* Section heading block */
+.pl-sec-head { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+.pl-h2 {
+  font-family: var(--pl-font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--pl-heading);
+  margin: 0;
+}
+.pl-lede { color: var(--pl-text-muted); font-size: 1.05rem; max-width: 46ch; }
+
+/* -------------------------------------------------------------------------
+   6. HERO — type-forward with pulse mesh + hairline grid
+   ------------------------------------------------------------------------- */
+.pl-hero {
+  position: relative;
+  padding-block: clamp(4.5rem, 12vw, 9rem) clamp(3rem, 7vw, 5rem);
+  background: var(--pl-page);
+  overflow: hidden;
+}
+.pl-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--pl-mesh);
+  pointer-events: none;
+}
+.pl-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--pl-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pl-grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 30% 30%, #000, transparent 70%);
+          mask-image: radial-gradient(ellipse 60% 70% at 30% 30%, #000, transparent 70%);
+  pointer-events: none;
+}
+.pl-hero > .wpb_column,
+.pl-hero .pl-container { position: relative; z-index: 1; }
+
+.pl-hero__title,
+.pl-hero .wpb_text_column h1,
+h1.pl-hero__title {
+  font-family: var(--pl-font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--pl-heading);
+  margin: 0 0 1.5rem;
+  max-width: 16ch;
+}
+.pl-hero__sub {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  color: var(--pl-text-muted);
+  max-width: 52ch;
+  margin: 0 0 2rem;
+}
+.pl-hero__cta { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+
+/* Hero availability chip */
+.pl-hero__avail {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--pl-font-mono); font-size: 0.8rem; color: var(--pl-text-muted);
+}
+.pl-hero__dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--pl-accent-3);
+  box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6);
+  animation: pl-pulse 2s infinite;
+}
+@keyframes pl-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5); }
+  70%  { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+/* -------------------------------------------------------------------------
+   7. STAT blocks (hero + metrics) — .pl-stat on a WPBakery inner column
+   ------------------------------------------------------------------------- */
+.pl-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: clamp(1rem, 3vw, 2rem); }
+.pl-stat__value {
+  font-family: var(--pl-font-display);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--pl-heading);
+}
+.pl-stat__label {
+  font-family: var(--pl-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pl-text-muted);
+  margin-top: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------
+   8. LOGO strip
+   ------------------------------------------------------------------------- */
+.pl-logos { border-block: 1px solid var(--pl-line-soft); padding-block: 2rem; }
+.pl-logos__line {
+  font-family: var(--pl-font-mono); font-size: 0.75rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--pl-text-faint); text-align: center; margin-bottom: 1.5rem;
+}
+.pl-logos__row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(1.5rem, 5vw, 3.5rem); }
+.pl-logos__row span {
+  font-family: var(--pl-font-display); font-size: 1.35rem; font-weight: 600;
+  color: var(--pl-text-faint); opacity: 0.7; transition: opacity 0.2s ease, color 0.2s ease;
+}
+.pl-logos__row span:hover { opacity: 1; color: var(--pl-heading); }
+
+/* -------------------------------------------------------------------------
+   9. CAPABILITIES / services — interactive editorial list
+   ------------------------------------------------------------------------- */
+.pl-caps { border-top: 1px solid var(--pl-line); }
+.pl-cap {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: clamp(1.4rem, 3vw, 2.1rem) 0.5rem;
+  border-bottom: 1px solid var(--pl-line);
+  transition: background 0.2s ease, padding-inline 0.2s ease;
+}
+.pl-cap:hover { background: var(--pl-surface-2); padding-inline: 1.25rem 0.5rem; }
+.pl-cap__no { font-family: var(--pl-font-mono); font-size: 0.85rem; color: var(--pl-lift); }
+.pl-cap__title { font-family: var(--pl-font-display); font-size: clamp(1.25rem, 2.2vw, 1.7rem); font-weight: 600; margin: 0 0 0.35rem; }
+.pl-cap__desc { color: var(--pl-text-muted); margin: 0; max-width: 60ch; }
+.pl-cap__arrow { color: var(--pl-text-faint); transition: transform 0.2s ease, color 0.2s ease; font-size: 1.25rem; }
+.pl-cap:hover .pl-cap__arrow { color: var(--pl-lift); transform: translate(3px, -3px); }
+
+/* -------------------------------------------------------------------------
+   10. CARDS — portfolio / work / case studies / values / included
+   ------------------------------------------------------------------------- */
+.pl-card {
+  position: relative;
+  background: var(--pl-paper);
+  border: 1px solid var(--pl-line-soft);
+  border-radius: var(--pl-r-lg);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: var(--pl-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+}
+.pl-card:hover { transform: translateY(-4px); box-shadow: var(--pl-shadow-lg); border-color: var(--pl-line); }
+.pl-card__eyebrow { font-family: var(--pl-font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pl-lift); }
+.pl-card__title { font-family: var(--pl-font-display); font-size: 1.35rem; font-weight: 600; margin: 0.4rem 0 0.6rem; }
+.pl-card__body { color: var(--pl-text-muted); margin: 0; }
+.pl-card__result { font-family: var(--pl-font-display); font-size: 1.15rem; color: var(--pl-heading); margin-top: 0.75rem; }
+
+/* Media card with image on top (portfolio) */
+.pl-media-card { border-radius: var(--pl-r-lg); overflow: hidden; }
+.pl-media-card .wpb_single_image img { border-radius: var(--pl-r-lg) var(--pl-r-lg) 0 0; width: 100%; object-fit: cover; }
+
+/* Numbered process step */
+.pl-step { padding: clamp(1.4rem, 3vw, 2rem); border-radius: var(--pl-r-lg); background: var(--pl-paper); border: 1px solid var(--pl-line-soft); height: 100%; }
+.pl-step__n { font-family: var(--pl-font-mono); font-size: 2.4rem; font-weight: 600; line-height: 1; background: var(--pl-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.pl-step__title { font-family: var(--pl-font-display); font-size: 1.35rem; margin: 0.75rem 0 0.5rem; }
+.pl-step__body { color: var(--pl-text-muted); margin: 0; }
+
+/* -------------------------------------------------------------------------
+   11. TESTIMONIALS
+   ------------------------------------------------------------------------- */
+.pl-quote { background: var(--pl-paper); border: 1px solid var(--pl-line-soft); border-radius: var(--pl-r-lg); padding: clamp(1.6rem, 3vw, 2.4rem); box-shadow: var(--pl-shadow-card); height: 100%; }
+.pl-quote__text { font-family: var(--pl-font-display); font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.4; color: var(--pl-heading); margin: 0 0 1.5rem; }
+.pl-quote__who { display: flex; align-items: center; gap: 0.85rem; }
+.pl-quote__avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.pl-quote__name { font-weight: 600; color: var(--pl-heading); }
+.pl-quote__role { font-family: var(--pl-font-mono); font-size: 0.75rem; color: var(--pl-text-muted); }
+
+/* -------------------------------------------------------------------------
+   12. FAQ (uses WPBakery accordion) + generic accordion reskin
+   ------------------------------------------------------------------------- */
+.pl-faq .vc_tta-panel,
+.pl-faq .vc_tta-panel-heading { background: transparent !important; border: 0 !important; }
+.pl-faq .vc_tta-panel { border-bottom: 1px solid var(--pl-line) !important; }
+.pl-faq .vc_tta-panel-title > a {
+  font-family: var(--pl-font-display) !important;
+  font-size: 1.2rem !important;
+  color: var(--pl-heading) !important;
+  padding: 1.25rem 0 !important;
+}
+.pl-faq .vc_tta-panel-body { color: var(--pl-text-muted) !important; padding: 0 0 1.25rem !important; }
+.pl-faq .vc_tta-controls-icon::before,
+.pl-faq .vc_tta-controls-icon::after { border-color: var(--pl-lift) !important; }
+
+/* -------------------------------------------------------------------------
+   13. CTA band — full-bleed ink panel with pulse gradient edge
+   ------------------------------------------------------------------------- */
+.pl-cta {
+  position: relative;
+  background: var(--pl-ink);
+  color: #fff;
+  border-radius: var(--pl-r-xl);
+  padding: clamp(2.5rem, 6vw, 5rem);
+  overflow: hidden;
+}
+.pl-cta::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 120% at 100% 0%, rgba(124, 58, 237, 0.5), transparent 60%),
+              radial-gradient(ellipse 50% 100% at 0% 100%, rgba(219, 39, 119, 0.35), transparent 60%);
+  pointer-events: none;
+}
+.pl-cta > * { position: relative; z-index: 1; }
+.pl-cta .pl-h2, .pl-cta h2 { color: #fff; }
+.pl-cta .pl-kicker { color: var(--pl-accent-3); }
+.pl-cta__sub { color: rgba(255,255,255,0.8); max-width: 48ch; margin: 1rem 0 2rem; }
+.pl-cta .pl-btn--lift { background: #fff !important; color: var(--pl-ink) !important; }
+.pl-cta .pl-btn--lift:hover { background: var(--pl-page) !important; }
+
+/* -------------------------------------------------------------------------
+   14. Contact / book-call embeds
+   ------------------------------------------------------------------------- */
+.pl-embed-card { background: var(--pl-paper); border: 1px solid var(--pl-line-soft); border-radius: var(--pl-r-lg); padding: 0.5rem; box-shadow: var(--pl-shadow-card); overflow: hidden; }
+.pl-embed-card iframe { width: 100%; border: 0; border-radius: var(--pl-r); display: block; }
+.pl-contact-points { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.pl-contact-points li { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--pl-text-muted); margin-bottom: 0.75rem; }
+.pl-contact-points li::before { content: "→"; color: var(--pl-lift); }
+
+/* -------------------------------------------------------------------------
+   15. Header / footer polish (Gecko markup)
+   ------------------------------------------------------------------------- */
+.pl-scope #jas-header,
+body #jas-header { font-family: var(--pl-font-sans); }
+#jas-header .jas-menu > li > a { font-weight: 500; letter-spacing: 0.01em; }
+#jas-header .jas-menu > li > a:hover { color: var(--pl-lift); }
+#jas-footer { background: var(--pl-ink); color: rgba(255,255,255,0.72); }
+#jas-footer a { color: rgba(255,255,255,0.72); }
+#jas-footer a:hover { color: #fff; }
+#jas-footer .widget-title,
+#jas-footer h1, #jas-footer h2, #jas-footer h3, #jas-footer h4 { color: #fff; }
+
+/* -------------------------------------------------------------------------
+   16. Reveal-on-scroll (progressive; no-JS shows everything)
+   ------------------------------------------------------------------------- */
+.pl-reveal { opacity: 1; }
+.js .pl-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.js .pl-reveal.pl-in { opacity: 1; transform: none; }
+
+/* -------------------------------------------------------------------------
+   17. Responsive tweaks
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .pl-cap { grid-template-columns: 2.25rem 1fr; }
+  .pl-cap__arrow { display: none; }
+  .pl-hero__title { font-size: clamp(2.2rem, 11vw, 3.4rem); }
+}

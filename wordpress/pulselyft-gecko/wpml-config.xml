@@ -1,0 +1,263 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">portfolio</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="1">portfolio_cat</taxonomy>
+		<taxonomy translate="1">portfolio_client</taxonomy>
+		<taxonomy translate="1">portfolio_tag</taxonomy>
+	</taxonomies>
+	<custom-fields>
+		<custom-field action="translate">_edit_last</custom-field>
+		<custom-field action="translate">_custom_page_options</custom-field>
+		<custom-field action="translate">_custom_wc_options</custom-field>
+	</custom-fields>
+	<admin-texts>
+		<key name="_cs_options">
+			<key name="header-top-left" />
+			<key name="header-top-center" />
+			<key name="header-top-right" />
+			<key name="footer-copyright" />
+			<key name="wc-page-title" />
+			<key name="wc-page-desc" />
+			<key name="wc-single-shipping-return" />
+			<key name="wc-single-size-guide" />
+			<key name="wc-extra-content" />
+			<key name="wc-minicart-content" />
+			<key name="wc-cart-content" />
+			<key name="wc-checkout-content" />
+			<key name="maintenance-title" />
+			<key name="maintenance-message" />
+			<key name="maintenance-date" />
+			<key name="maintenance-month" />
+			<key name="maintenance-year" />
+		</key>
+	</admin-texts>
+	<shortcodes>
+		<shortcode>
+			<tag>vc_column_text</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_text_separator</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_message</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_toggle</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_tta_accordion</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_tta_tour</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_tta_tabs</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_tta_pageable</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_tta_section</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_custom_heading</tag>
+			<attributes>
+				<attribute>text</attribute>
+				<attribute>link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag encoding="base64">vc_raw_html</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_progress_bar</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_pie</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>label_value</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_round_chart</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_btn</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_cta</tag>
+			<attributes>
+				<attribute>h2</attribute>
+				<attribute>h4</attribute>
+				<attribute>btn_title</attribute>
+				<attribute>btn_link</attribute>
+				<attribute>i_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_line_chart</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_single_image</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_gallery</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_images_carousel</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_widget_sidebar</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_posts_slider</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_video</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_gmaps</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_flickr</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_search</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_meta</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_recentcomments</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_calendar</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_pages</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_tagcloud</tag>
+			<attributes>
+				<attribute>taxonomy</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_custommenu</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_text</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_posts</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_categories</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_archives</tag>
+		</shortcode>
+		<shortcode>
+			<tag>vc_wp_rss</tag>
+			 <attributes>
+				<attribute>items</attribute>
+				<attribute>title</attribute>
+				<attribute>url</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>jas_addons_google_maps</tag>
+			 <attributes>
+				<attribute>infowindow</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>jas_addons_promotion</tag>
+			 <attributes>
+				<attribute>text_1</attribute>
+				<attribute>text_2</attribute>
+				<attribute>text_3</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>jas_addons_service</tag>
+			 <attributes>
+				<attribute>title</attribute>
+				<attribute>entry</attribute>
+			</attributes>
+		</shortcode>
+	</shortcodes>
+</wpml-config>
