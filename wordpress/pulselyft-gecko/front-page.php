@@ -1,8 +1,8 @@
 <?php
 /**
- * All pages — render the WPBakery page content full-width between the
+ * Front page — render the WPBakery page content full-width between the
  * PulseLyft header and footer. Deliberately skips Gecko's page-title banner,
- * container and sidebar so pages match the PulseLyft design exactly.
+ * container and sidebar so the homepage matches the PulseLyft design exactly.
  *
  * @package PulseLyft
  */

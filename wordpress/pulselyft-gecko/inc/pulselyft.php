@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PULSELYFT_GECKO_VERSION', '1.1.0' );
+define( 'PULSELYFT_GECKO_VERSION', '1.1.1' );
 
 /* =========================================================================
    1. Front-end assets — replace Gecko's look with PulseLyft's
