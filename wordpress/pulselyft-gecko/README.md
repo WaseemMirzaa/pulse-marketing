@@ -11,31 +11,59 @@ edit, and add sections without touching code.
 > is edited through the Customizer). Use **this** one when you want visual
 > drag-and-drop editing; use the other when you want a zero-plugin classic theme.
 
+## 100% PulseLyft, pixel for pixel
+
+This build renders the **exact same front-end** as the hand-coded `wordpress/pulselyft`
+theme — same markup, same classes, same interactions:
+
+- `assets/css/pulselyft-skin.css` **is the real PulseLyft stylesheet** (the same
+  766-line `style.css`), plus a short "WPBakery layout-neutralizer" appended at
+  the end so builder wrappers don't disturb the section layouts.
+- `assets/js/pulselyft-skin.js` **is the real PulseLyft `main.js`** — theme
+  toggle (light/dark), sticky/shrinking header, scroll progress + scrollspy,
+  scroll-reveals, animated stat counters, logo marquee, single-open FAQ, and the
+  floating chat assistant.
+- `header.php` / `footer.php` render the real PulseLyft chrome (fixed nav, logo,
+  editorial footer, back-to-top, chat) — not Gecko's framework header/footer.
+- Gecko's own front-end CSS/JS is **dequeued** so nothing competes with the
+  PulseLyft look.
+
 ## What's in the box
 
 ```
 pulselyft-gecko/
-├── style.css                     ← rebranded Gecko header + Gecko base CSS
+├── style.css                     ← theme header (Gecko base CSS retained but dequeued on front-end)
 ├── functions.php                 ← Gecko bootstrap + loads inc/pulselyft.php
+├── header.php · footer.php       ← the real PulseLyft chrome (nav, footer, chat)
 ├── inc/pulselyft.php             ← PulseLyft brand layer (see below)
-├── assets/css/pulselyft-skin.css ← the PulseLyft skin (design tokens + components)
-├── assets/js/pulselyft-skin.js   ← scroll-reveal progressive enhancement
-├── pulselyft-pages/*.html        ← WPBakery content for each page
+├── assets/css/pulselyft-skin.css ← the real PulseLyft stylesheet + WPBakery neutralizer
+├── assets/js/pulselyft-skin.js   ← the real PulseLyft main.js (toggle, reveals, counters…)
+├── pulselyft-pages/*.html        ← WPBakery content for each page (exact section markup)
 │   ├── home.html  about.html  services.html  pricing.html  contact.html
-└── core/ views/ assets/ …        ← the unmodified Gecko framework
+└── core/ views/ assets/ …        ← the Gecko framework (kept for WPBakery + admin)
 ```
 
-`inc/pulselyft.php` is the only PHP we add. It:
+`inc/pulselyft.php` is the brand layer. It:
 
-1. **Enqueues the skin** (fonts + `pulselyft-skin.css`) *after* Gecko's stylesheet
-   so brand rules win the cascade — Gecko itself is left untouched and upgradeable.
-2. **Adds a `pl-scope` body class** the skin hooks onto.
-3. **Auto-provisions the site on first activation** — creates Home, About,
-   Services, Pricing and Contact pages from `pulselyft-pages/*.html`, sets Home as
-   the static front page, builds a primary menu, and flags every page as a
-   WPBakery page (`_wpb_vc_js_status = true`) so it opens straight into the
-   drag-and-drop editor. Guarded by an option, so re-activating never overwrites
-   your edits.
+1. **Swaps Gecko's look for PulseLyft's** — dequeues `jas-gecko-style`,
+   `jas-gecko-animated`, its Google font and `theme.js`, then enqueues the
+   PulseLyft fonts, stylesheet and behaviour.
+2. **Adds a flat nav-link walker** so the WordPress menu matches the PulseLyft
+   header markup exactly.
+3. **Registers no-plugin fallbacks** for the `vc_row` / `vc_column` /
+   `vc_column_text` shortcodes the pages use — so the site renders correctly
+   **even before the WPBakery plugin is installed**, and defers to the real
+   plugin (and its drag-and-drop editor) once it's active.
+4. **Auto-provisions the site** — creates Home, About, Services, Pricing and
+   Contact from `pulselyft-pages/*.html`, sets Home as the static front page,
+   builds the primary menu, and flags every page as a WPBakery page
+   (`_wpb_vc_js_status = true`). Re-runs once per shipped **version** so content
+   fixes land on upgrade; between versions it never touches your edits.
+
+> **Heads-up on upgrades:** because provisioning re-runs when the theme version
+> changes, bumping the version **refreshes the five pages from the shipped
+> `.html` files**, overwriting edits to *those* pages. Duplicate a page (or work
+> on new pages) if you need edits to survive a theme version bump.
 
 ## Install
 
